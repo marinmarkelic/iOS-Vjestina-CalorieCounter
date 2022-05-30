@@ -7,6 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C66C2D7283FBCB6006A6BF0 /* Other.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66C2D6283FBCB6006A6BF0 /* Other.swift */; };
+		9C66C2DA283FD3C4006A6BF0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66C2D9283FD3C4006A6BF0 /* HomeViewController.swift */; };
+		9C66C2DC283FD6B8006A6BF0 /* CaloriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66C2DB283FD6B8006A6BF0 /* CaloriesView.swift */; };
+		9C66C2DE283FD96C006A6BF0 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66C2DD283FD96C006A6BF0 /* Colors.swift */; };
+		9C66C2E02840082C006A6BF0 /* CaloriesHistoryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66C2DF2840082C006A6BF0 /* CaloriesHistoryView.swift */; };
+		9C66C2E228400972006A6BF0 /* CaloriesHistoryBarChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66C2E128400972006A6BF0 /* CaloriesHistoryBarChart.swift */; };
+		9C66C2E72843B4D8006A6BF0 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66C2E62843B4D8006A6BF0 /* NetworkService.swift */; };
+		9C66C2E92843B560006A6BF0 /* RequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66C2E82843B560006A6BF0 /* RequestError.swift */; };
+		9C66C2EB2843B595006A6BF0 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66C2EA2843B595006A6BF0 /* Result.swift */; };
+		9C66C2EF2843C01C006A6BF0 /* Codables.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66C2EE2843C01C006A6BF0 /* Codables.swift */; };
+		9C66C2F12843C040006A6BF0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66C2F02843C040006A6BF0 /* Constants.swift */; };
+		9C66C2F32843C062006A6BF0 /* Groups.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66C2F22843C062006A6BF0 /* Groups.swift */; };
+		9C66C2F6284578B9006A6BF0 /* NutritionRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66C2F5284578B9006A6BF0 /* NutritionRepository.swift */; };
+		9C66C2F828457980006A6BF0 /* NutritionDatabaseDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66C2F728457980006A6BF0 /* NutritionDatabaseDataSource.swift */; };
+		9C66C2FA2845799E006A6BF0 /* NutritionNetworkDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66C2F92845799E006A6BF0 /* NutritionNetworkDataSource.swift */; };
+		9C66C2FC28457D46006A6BF0 /* ViewModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66C2FB28457D46006A6BF0 /* ViewModels.swift */; };
 		9CA346B5283F80E200F6329A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA346B4283F80E200F6329A /* AppDelegate.swift */; };
 		9CA346B9283F80E200F6329A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA346B8283F80E200F6329A /* ViewController.swift */; };
 		9CA346BE283F80E400F6329A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CA346BD283F80E400F6329A /* Assets.xcassets */; };
@@ -15,9 +31,28 @@
 		9CA346D2283F8AED00F6329A /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 9CA346D1283F8AED00F6329A /* SnapKit */; };
 		9CA346D5283F921700F6329A /* Charts in Frameworks */ = {isa = PBXBuildFile; productRef = 9CA346D4283F921700F6329A /* Charts */; };
 		9CA346D7283F928300F6329A /* CustomPieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA346D6283F928300F6329A /* CustomPieChartView.swift */; };
+		9CA346D9283FACA100F6329A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CA346D8283FACA100F6329A /* LaunchScreen.storyboard */; };
+		9CA346DC283FADBF00F6329A /* BMR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA346DB283FADBF00F6329A /* BMR.swift */; };
+		9CA346DE283FAFDA00F6329A /* ProgressPieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA346DD283FAFDA00F6329A /* ProgressPieChart.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		9C66C2D6283FBCB6006A6BF0 /* Other.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Other.swift; sourceTree = "<group>"; };
+		9C66C2D9283FD3C4006A6BF0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		9C66C2DB283FD6B8006A6BF0 /* CaloriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaloriesView.swift; sourceTree = "<group>"; };
+		9C66C2DD283FD96C006A6BF0 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
+		9C66C2DF2840082C006A6BF0 /* CaloriesHistoryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaloriesHistoryView.swift; sourceTree = "<group>"; };
+		9C66C2E128400972006A6BF0 /* CaloriesHistoryBarChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaloriesHistoryBarChart.swift; sourceTree = "<group>"; };
+		9C66C2E62843B4D8006A6BF0 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		9C66C2E82843B560006A6BF0 /* RequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestError.swift; sourceTree = "<group>"; };
+		9C66C2EA2843B595006A6BF0 /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		9C66C2EE2843C01C006A6BF0 /* Codables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Codables.swift; sourceTree = "<group>"; };
+		9C66C2F02843C040006A6BF0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		9C66C2F22843C062006A6BF0 /* Groups.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Groups.swift; sourceTree = "<group>"; };
+		9C66C2F5284578B9006A6BF0 /* NutritionRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionRepository.swift; sourceTree = "<group>"; };
+		9C66C2F728457980006A6BF0 /* NutritionDatabaseDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionDatabaseDataSource.swift; sourceTree = "<group>"; };
+		9C66C2F92845799E006A6BF0 /* NutritionNetworkDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionNetworkDataSource.swift; sourceTree = "<group>"; };
+		9C66C2FB28457D46006A6BF0 /* ViewModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModels.swift; sourceTree = "<group>"; };
 		9CA346B1283F80E200F6329A /* CalorieCounterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalorieCounterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CA346B4283F80E200F6329A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9CA346B8283F80E200F6329A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -26,6 +61,9 @@
 		9CA346C9283F871A00F6329A /* TestViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestViewController.swift; sourceTree = "<group>"; };
 		9CA346CB283F882300F6329A /* MockData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockData.swift; sourceTree = "<group>"; };
 		9CA346D6283F928300F6329A /* CustomPieChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomPieChartView.swift; sourceTree = "<group>"; };
+		9CA346D8283FACA100F6329A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
+		9CA346DB283FADBF00F6329A /* BMR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMR.swift; sourceTree = "<group>"; };
+		9CA346DD283FAFDA00F6329A /* ProgressPieChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressPieChart.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +79,40 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9C66C2D8283FD3B3006A6BF0 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				9C66C2D9283FD3C4006A6BF0 /* HomeViewController.swift */,
+				9C66C2DB283FD6B8006A6BF0 /* CaloriesView.swift */,
+				9C66C2DF2840082C006A6BF0 /* CaloriesHistoryView.swift */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		9C66C2E52843B4BD006A6BF0 /* NetworkService */ = {
+			isa = PBXGroup;
+			children = (
+				9C66C2E62843B4D8006A6BF0 /* NetworkService.swift */,
+				9C66C2E82843B560006A6BF0 /* RequestError.swift */,
+				9C66C2EA2843B595006A6BF0 /* Result.swift */,
+				9C66C2EE2843C01C006A6BF0 /* Codables.swift */,
+				9C66C2F02843C040006A6BF0 /* Constants.swift */,
+				9C66C2F22843C062006A6BF0 /* Groups.swift */,
+			);
+			path = NetworkService;
+			sourceTree = "<group>";
+		};
+		9C66C2F4284578A0006A6BF0 /* NutritionDataRepository */ = {
+			isa = PBXGroup;
+			children = (
+				9C66C2F5284578B9006A6BF0 /* NutritionRepository.swift */,
+				9C66C2F728457980006A6BF0 /* NutritionDatabaseDataSource.swift */,
+				9C66C2F92845799E006A6BF0 /* NutritionNetworkDataSource.swift */,
+				9C66C2FB28457D46006A6BF0 /* ViewModels.swift */,
+			);
+			path = NutritionDataRepository;
+			sourceTree = "<group>";
+		};
 		9CA346A8283F80E200F6329A = {
 			isa = PBXGroup;
 			children = (
@@ -60,12 +132,18 @@
 		9CA346B3283F80E200F6329A /* CalorieCounterApp */ = {
 			isa = PBXGroup;
 			children = (
+				9C66C2F4284578A0006A6BF0 /* NutritionDataRepository */,
+				9C66C2E52843B4BD006A6BF0 /* NetworkService */,
+				9C66C2D8283FD3B3006A6BF0 /* Home */,
+				9CA346DA283FAD9500F6329A /* Formulas */,
 				9CA346CD283F88E500F6329A /* Charts */,
 				9CA346C8283F870600F6329A /* Test */,
 				9CA346B4283F80E200F6329A /* AppDelegate.swift */,
 				9CA346B8283F80E200F6329A /* ViewController.swift */,
 				9CA346BD283F80E400F6329A /* Assets.xcassets */,
 				9CA346C2283F80E400F6329A /* Info.plist */,
+				9CA346D8283FACA100F6329A /* LaunchScreen.storyboard */,
+				9C66C2DD283FD96C006A6BF0 /* Colors.swift */,
 			);
 			path = CalorieCounterApp;
 			sourceTree = "<group>";
@@ -83,8 +161,19 @@
 			isa = PBXGroup;
 			children = (
 				9CA346D6283F928300F6329A /* CustomPieChartView.swift */,
+				9CA346DD283FAFDA00F6329A /* ProgressPieChart.swift */,
+				9C66C2E128400972006A6BF0 /* CaloriesHistoryBarChart.swift */,
 			);
 			path = Charts;
+			sourceTree = "<group>";
+		};
+		9CA346DA283FAD9500F6329A /* Formulas */ = {
+			isa = PBXGroup;
+			children = (
+				9CA346DB283FADBF00F6329A /* BMR.swift */,
+				9C66C2D6283FBCB6006A6BF0 /* Other.swift */,
+			);
+			path = Formulas;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -154,6 +243,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9CA346BE283F80E400F6329A /* Assets.xcassets in Resources */,
+				9CA346D9283FACA100F6329A /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -164,11 +254,29 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9C66C2DC283FD6B8006A6BF0 /* CaloriesView.swift in Sources */,
+				9C66C2F12843C040006A6BF0 /* Constants.swift in Sources */,
+				9C66C2DE283FD96C006A6BF0 /* Colors.swift in Sources */,
+				9C66C2F32843C062006A6BF0 /* Groups.swift in Sources */,
+				9C66C2D7283FBCB6006A6BF0 /* Other.swift in Sources */,
 				9CA346B9283F80E200F6329A /* ViewController.swift in Sources */,
+				9C66C2EF2843C01C006A6BF0 /* Codables.swift in Sources */,
+				9CA346DC283FADBF00F6329A /* BMR.swift in Sources */,
 				9CA346D7283F928300F6329A /* CustomPieChartView.swift in Sources */,
+				9C66C2EB2843B595006A6BF0 /* Result.swift in Sources */,
+				9C66C2E72843B4D8006A6BF0 /* NetworkService.swift in Sources */,
+				9C66C2FC28457D46006A6BF0 /* ViewModels.swift in Sources */,
+				9C66C2F828457980006A6BF0 /* NutritionDatabaseDataSource.swift in Sources */,
 				9CA346CC283F882300F6329A /* MockData.swift in Sources */,
+				9C66C2DA283FD3C4006A6BF0 /* HomeViewController.swift in Sources */,
+				9CA346DE283FAFDA00F6329A /* ProgressPieChart.swift in Sources */,
+				9C66C2FA2845799E006A6BF0 /* NutritionNetworkDataSource.swift in Sources */,
 				9CA346CA283F871A00F6329A /* TestViewController.swift in Sources */,
+				9C66C2E92843B560006A6BF0 /* RequestError.swift in Sources */,
 				9CA346B5283F80E200F6329A /* AppDelegate.swift in Sources */,
+				9C66C2F6284578B9006A6BF0 /* NutritionRepository.swift in Sources */,
+				9C66C2E228400972006A6BF0 /* CaloriesHistoryBarChart.swift in Sources */,
+				9C66C2E02840082C006A6BF0 /* CaloriesHistoryView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -301,6 +409,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CalorieCounterApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -326,6 +435,7 @@
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CalorieCounterApp/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (

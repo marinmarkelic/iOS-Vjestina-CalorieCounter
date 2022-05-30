@@ -10,6 +10,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window.rootViewController = TestViewController()
         window.makeKeyAndVisible()
         self.window = window
+        
+        
         return true
     }
     

@@ -1,7 +1,7 @@
 import Charts
 import UIKit
 
-class CustomPieChartView: PieChartView{
+class ProgressPieChart: PieChartView{
     override init(frame: CGRect) {
         super.init(frame: frame)
         
@@ -22,12 +22,12 @@ class CustomPieChartView: PieChartView{
         
         // 2. Set ChartDataSet
         let pieChartDataSet = PieChartDataSet(entries: dataEntries, label: nil)
-        pieChartDataSet.colors = colorsOfCharts(numbersOfColor: dataPoints.count)
+//        pieChartDataSet.colors = colorsOfCharts(numbersOfColor: dataPoints.count)
+        pieChartDataSet.colors = [.red, .lightGray]
 //        pieChartDataSet.yValuePosition = .outsideSlice
 //        pieChartDataSet.valueTextColor = .black
-//        pieChartDataSet.drawValuesEnabled = false
-        
-        
+        pieChartDataSet.drawValuesEnabled = false
+        setExtraOffsets(left: -10, top: -10, right: -10, bottom: -10)
         // 3. Set ChartData
         let pieChartData = PieChartData(dataSet: pieChartDataSet)
         let format = NumberFormatter()
