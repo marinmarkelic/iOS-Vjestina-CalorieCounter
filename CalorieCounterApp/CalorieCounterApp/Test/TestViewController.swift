@@ -35,7 +35,7 @@ class TestViewController: UIViewController {
         chc = CaloriesHistoryBarChart()
         
         NutritionRepository().loadNutritionData(itemDescription: "carrot"){
-            self.pieChart.customizeChart(dataPoints: $0.getArrayOfNames(), values: $0.getArrayOfValues().map( {Double($0)} ))
+            self.pieChart.customizeChart(dataPoints: $0.getArrayOfNamesForGrams(), values: $0.getArrayOfValuesForGrams().map( {Double($0)} ))
         }
         
         chc.customizeChart(dataPoints: mockHistoryNames, values: mockHistoryValues)
