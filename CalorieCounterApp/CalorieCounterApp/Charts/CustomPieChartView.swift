@@ -25,7 +25,7 @@ class CustomPieChartView: PieChartView{
         pieChartDataSet.colors = colorsOfCharts(numbersOfColor: dataPoints.count)
 //        pieChartDataSet.yValuePosition = .outsideSlice
 //        pieChartDataSet.valueTextColor = .black
-//        pieChartDataSet.drawValuesEnabled = false
+        pieChartDataSet.drawValuesEnabled = false
         
         
         // 3. Set ChartData

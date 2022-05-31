@@ -11,13 +11,18 @@ class NutritionRepository{
     }
     
     func loadNutritionData(itemDescription: String, completionHandler: @escaping (_: NutritionItemViewModel) -> Void){
-        networkDataSource.loadNutritionData(itemDescription: "egg"){
-            guard let items = $0 else{
+        networkDataSource.loadNutritionData(itemDescription: itemDescription){
+            guard let items = $0,
+            let first = items.items.first else{
                 return
             }
             
-            completionHandler(NutritionItemViewModel(items.items.first!))
+            completionHandler(NutritionItemViewModel(first))
         }
+    }
+    
+    func addItem(_ item: NutritionItemViewModel){
+        
     }
     
 }

@@ -1,0 +1,82 @@
+import UIKit
+import SnapKit
+
+class MealAddView: UIView{
+    var meal: NutritionItemViewModel!
+    
+    var mainView: UIView!
+    
+    var label: UILabel!
+    
+    var addButton: UIButton!
+    
+    var amountTextField: UITextField!
+
+    init() {
+        super.init(frame: .zero)
+    }
+    
+    required init?(coder: NSCoder) {
+        fatalError("init(coder:) has not been implemented")
+    }
+    
+    func set(_ items: NutritionItemViewModel){
+        self.meal = items
+                
+        buildViews()
+        addConstraints()
+    }
+    
+    func buildViews(){
+        mainView = UIView()
+        mainView.backgroundColor = elementBackgroundColor
+        mainView.layer.cornerRadius = 8
+        mainView.clipsToBounds = true
+        
+        label = UILabel()
+        label.text = "Add item"
+        label.textColor = elementTitleColor
+        
+        amountTextField = UITextField()
+        amountTextField.text = "100.0"
+        amountTextField.backgroundColor = .black
+        amountTextField.textColor = .white
+        
+        addButton = UIButton()
+        addButton.setTitle("Add", for: .normal)
+        addButton.addTarget(self, action: #selector(clickedAddButton), for: .touchUpInside)
+
+        
+        addSubview(mainView)
+        mainView.addSubview(label)
+        mainView.addSubview(amountTextField)
+        addSubview(addButton)
+    }
+    
+    @objc
+    func clickedAddButton(){
+        print("add")
+    }
+    
+    func addConstraints(){
+        mainView.snp.makeConstraints{
+            $0.edges.equalToSuperview()
+        }
+        
+        label.snp.makeConstraints{
+            $0.leading.top.equalToSuperview().offset(20)
+        }
+        
+        amountTextField.snp.makeConstraints{
+            $0.leading.equalToSuperview().offset(20)
+            $0.top.equalTo(label.snp.bottom).offset(10)
+            $0.bottom.equalToSuperview().offset(-10)
+        }
+        
+        addButton.snp.makeConstraints{
+            $0.top.equalTo(label.snp.bottom).offset(10)
+            $0.bottom.equalToSuperview().offset(-10)
+            $0.leading.equalTo(amountTextField.snp.trailing).offset(20)
+        }
+    }
+}

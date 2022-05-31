@@ -31,8 +31,27 @@ struct NutritionItemViewModel: Codable{
         cholesterol_mg = nutritionItem.cholesterol_mg
     }
     
+    func valueForName(name: String) -> Float{
+        switch name{
+        case "Sugar":
+            return sugar_g
+        case "Fiber":
+            return fiber_g
+        case "Protein":
+            return protein_g
+        case "Carbohydrates":
+            return carbohydrates_total_g
+        case "Carbs":
+            return carbohydrates_total_g
+        case "Total Fat":
+            return fat_total_g
+        default:
+            return 0
+        }
+    }
+    
     func getArrayOfNamesForGrams() -> [String]{
-        return ["sugar", "fiber", "protein", "carbs", "tfat"]
+        return ["Sugar", "Fiber", "Protein", "Carbohydrates", "Total Fat"]
     }
     
     func getArrayOfValuesForGrams() -> [Float]{

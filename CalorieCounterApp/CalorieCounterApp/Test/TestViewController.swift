@@ -47,8 +47,8 @@ class TestViewController: UIViewController {
     }
     
     func configureProgressPieChart(){
-        progressPieChart.customizeChart(dataPoints: ["done", "remaining"], values: [1000.0, 250.0])
-//        progressPieChart.customizeChart(dataPoints: ["done", "remaining"], values: [Double(1000.0), Double(getMockBMR() - 1000)])
+//        progressPieChart.customizeChart(dataPoints: ["done", "remaining"], values: [1000.0, 250.0])
+        progressPieChart.customizeChart(dataPoints: ["done", "remaining"], values: [Double(1000.0), Double(getMockBMR() - 1000)])
         progressPieChart.drawEntryLabelsEnabled = false
         progressPieChart.isUserInteractionEnabled = false
         progressPieChart.legend.enabled = false
