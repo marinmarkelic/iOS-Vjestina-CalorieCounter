@@ -11,6 +11,7 @@ class HomeViewController: ViewController{
     var contentView: UIView!
     
     var label: UILabel!
+    var historyView: CaloriesHistoryView!
     var caloriesView: CaloriesView!
     var nutrientsView: NutrientsView!
     var consumedItemsView: ConsumedItemsView!
@@ -54,6 +55,12 @@ class HomeViewController: ViewController{
         scrollView.showsVerticalScrollIndicator = false
         contentView = UIView()
         
+        historyView = CaloriesHistoryView()
+        let data = NutritionRepository().fetchAllDailyNutrition()
+        if data != nil{
+            historyView.historyChart.customizeChart(dataPoints: data!.map({$0.date}), values: data!.map({$0.calories}))
+        }
+        
         label = UILabel()
         label.text = "Today"
         label.textColor = .lightGray
@@ -67,6 +74,7 @@ class HomeViewController: ViewController{
         
         view.addSubview(scrollView)
         scrollView.addSubview(contentView)
+        contentView.addSubview(historyView)
         contentView.addSubview(label)
         contentView.addSubview(caloriesView)
         contentView.addSubview(nutrientsView)
@@ -85,8 +93,14 @@ class HomeViewController: ViewController{
             $0.width.equalToSuperview()
         }
         
-        label.snp.makeConstraints{
+        historyView.snp.makeConstraints{
             $0.top.equalToSuperview().offset(20)
+            $0.leading.trailing.equalToSuperview()
+            $0.height.equalTo(200)
+        }
+        
+        label.snp.makeConstraints{
+            $0.top.equalTo(historyView.snp.bottom).offset(20)
             $0.leading.trailing.equalToSuperview()
         }
         

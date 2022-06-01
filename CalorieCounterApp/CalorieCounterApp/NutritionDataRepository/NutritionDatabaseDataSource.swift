@@ -19,7 +19,11 @@ class NutritionDatabaseDataSource{
             
             print("created new daily nutrition")
             
-            dailyNutrition.date = Date().formatted(date: .numeric, time: .omitted)
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy/MM/dd"
+            dailyNutrition.date = dateFormatter.string(from: Date())
+            
+//            dailyNutrition.date = Date().formatted(date: .numeric, time: .omitted)
         }
         else{
             dailyNutrition = fetchDailyNutrition()!
@@ -62,7 +66,11 @@ class NutritionDatabaseDataSource{
             
             print("created new daily nutrition")
             
-            dailyNutrition.date = Date().formatted(date: .numeric, time: .omitted)
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy/MM/dd"
+            dailyNutrition.date = dateFormatter.string(from: Date())
+            
+//            dailyNutrition.date = Date().formatted(date: .numeric, time: .omitted)
         }
         else{
             dailyNutrition = fetchDailyNutrition()!
@@ -76,7 +84,9 @@ class NutritionDatabaseDataSource{
     func fetchDailyNutrition() -> DailyNutrition?{
         let fetchRequest = DailyNutrition.fetchRequest()
         
-        let date = Date().formatted(date: .numeric, time: .omitted)
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "yyyy/MM/dd"
+        let date = dateFormatter.string(from: Date())
         
         let predicate = NSPredicate(format: "date = %@", "\(date)")
         
@@ -92,16 +102,16 @@ class NutritionDatabaseDataSource{
         }
     }
     
-    func fetchAllDailyNutrition() -> [DailyNutrition]?{
-        let fetchRequest = DailyNutrition.fetchRequest()
-        
-        do{
-            return try managedContext.fetch(fetchRequest)
-        }catch let error as NSError{
-            print("Error \(error), Info: \(error.userInfo)")
-            return nil
-        }
-    }
+//    func fetchAllDailyNutrition() -> [DailyNutrition]?{
+//        let fetchRequest = DailyNutrition.fetchRequest()
+//
+//        do{
+//            return try managedContext.fetch(fetchRequest)
+//        }catch let error as NSError{
+//            print("Error \(error), Info: \(error.userInfo)")
+//            return nil
+//        }
+//    }
     
     func fetchAllDailyNutritionItems() -> [DailyNutritionItem]?{
         guard let dailyNutrition = fetchDailyNutrition() else{
@@ -114,6 +124,19 @@ class NutritionDatabaseDataSource{
         return items
     }
     
+    func fetchAllDailyNutrition() -> [DailyNutrition]?{
+        let fetchRequest = DailyNutrition.fetchRequest()
+        
+        let sortDescriptor = NSSortDescriptor(key: "date", ascending: true)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        
+        do{
+            return try managedContext.fetch(fetchRequest)
+        }catch let error as NSError{
+            print("Error \(error), Info: \(error.userInfo)")
+            return nil
+        }
+    }
     
     func del(){
         managedContext.reset()

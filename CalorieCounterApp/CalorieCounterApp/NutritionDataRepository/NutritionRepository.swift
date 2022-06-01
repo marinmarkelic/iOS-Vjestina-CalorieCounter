@@ -10,7 +10,6 @@ class NutritionRepository{
         databaseDataSource = NutritionDatabaseDataSource()
         
 //        databaseDataSource.del()
-        
     }
     
     func loadNutritionData(itemDescription: String, completionHandler: @escaping (_: NutritionItemViewModel) -> Void){
@@ -22,6 +21,19 @@ class NutritionRepository{
             
             completionHandler(NutritionItemViewModel(first))
         }
+    }
+    
+    func fetchAllDailyNutrition() -> [DailyNutritionViewModel]?{
+        guard let data = databaseDataSource.fetchAllDailyNutrition() else{
+            return nil
+        }
+        
+        var dailyNutritionViewModelArr: [DailyNutritionViewModel] = []
+        for i in data{
+            dailyNutritionViewModelArr.append(DailyNutritionViewModel(i))
+        }
+        
+        return dailyNutritionViewModelArr
     }
     
     func fetchDailyNutrition() -> DailyNutritionViewModel?{
