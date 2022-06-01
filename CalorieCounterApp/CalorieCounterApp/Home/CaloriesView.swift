@@ -50,7 +50,7 @@ class CaloriesView: UIView{
         enteredLabel.textColor = elementEnteredTextColor
         
         totalLabel = UILabel()
-        totalLabel.text = "/ \(getMockBMR() - consumedCalories) kcal"
+        totalLabel.text = "/ \(getMockBMR()) kcal"
         totalLabel.textColor = elementTotalTextColor
         
         progressPieChart = ProgressPieChart()
@@ -71,12 +71,12 @@ class CaloriesView: UIView{
         progressPieChart.legend.enabled = false
         progressPieChart.holeRadiusPercent = 0.85
         let attributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        let attributedText = NSAttributedString(string: "\(Int(consumedCalories / (getMockBMR() - consumedCalories) * 100))%", attributes: attributes)
+        let attributedText = NSAttributedString(string: "\(Int(consumedCalories / getMockBMR() * 100))%", attributes: attributes)
         progressPieChart.centerAttributedText = attributedText
         progressPieChart.holeColor = nil
         
         progressPieChart.minOffset = 0
-        }
+    }
     
     func addConstraints(){
         mainView.snp.makeConstraints{

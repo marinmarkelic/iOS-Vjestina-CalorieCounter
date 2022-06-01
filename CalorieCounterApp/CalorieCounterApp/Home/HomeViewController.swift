@@ -12,6 +12,7 @@ class HomeViewController: ViewController{
     
     var label: UILabel!
     var caloriesView: CaloriesView!
+    var nutrientsView: NutrientsView!
     
     
     
@@ -25,7 +26,7 @@ class HomeViewController: ViewController{
         
         dailyNutrition = NutritionRepository().fetchDailyNutrition()
         if dailyNutrition == nil{
-            print("HWC daaily nut nil")
+            print("HWC daily nutrition nil")
         }
         
         buildViews()
@@ -50,11 +51,14 @@ class HomeViewController: ViewController{
         
         caloriesView = CaloriesView(consumedCalories: dailyNutrition.calories)
         
+        nutrientsView = NutrientsView(dailyNutrition: dailyNutrition)
+        
         
         view.addSubview(scrollView)
         scrollView.addSubview(contentView)
         contentView.addSubview(label)
         contentView.addSubview(caloriesView)
+        contentView.addSubview(nutrientsView)
     }
     
     func addConstraints(){
@@ -78,6 +82,13 @@ class HomeViewController: ViewController{
             $0.top.equalTo(label.snp.bottom).offset(10)
             $0.leading.trailing.equalToSuperview()
             $0.height.equalTo(100)
+        }
+        
+        nutrientsView.snp.makeConstraints{
+            $0.top.equalTo(caloriesView.snp.bottom).offset(10)
+            $0.leading.trailing.equalToSuperview()
+            $0.height.equalTo(100)
+            $0.bottom.equalTo(contentView)
         }
     }
 }

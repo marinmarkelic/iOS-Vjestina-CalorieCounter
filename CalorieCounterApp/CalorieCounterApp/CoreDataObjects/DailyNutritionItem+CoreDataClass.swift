@@ -27,4 +27,6 @@ public class DailyNutritionItem: NSManagedObject {
         self.protein_g = item.protein_g
         self.carbohydrates_total_g = item.carbohydrates_total_g
     }
+    
+    
 }

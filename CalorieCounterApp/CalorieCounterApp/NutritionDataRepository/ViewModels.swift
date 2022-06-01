@@ -87,4 +87,17 @@ struct DailyNutritionViewModel{
         potassium_mg = dailyNutrition.potassium_mg
         cholesterol_mg = dailyNutrition.cholesterol_mg
     }
+    
+    func getValue(name: String) -> Float{
+        switch name{
+        case "Protein":
+            return protein_g
+        case "Total Fat":
+            return fat_total_g
+        case "Carbs":
+            return carbohydrates_total_g
+        default:
+            return 0
+        }
+    }
 }

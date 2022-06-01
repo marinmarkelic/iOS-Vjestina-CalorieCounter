@@ -10,9 +10,7 @@ class MealDetailsCell: UICollectionViewCell{
     
     override init(frame: CGRect) {
         super.init(frame: frame)
-        
-        backgroundColor = .yellow
-        
+                
         buildViews()
         addConstraints()
     }
