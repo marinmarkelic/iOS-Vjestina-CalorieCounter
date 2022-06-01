@@ -21,8 +21,20 @@ class NutritionRepository{
         }
     }
     
-    func addItem(_ item: NutritionItemViewModel){
+    func fetchDailyNutrition() -> DailyNutritionViewModel?{
+        guard let dailyNutrition = databaseDataSource.fetchDailyNutrition() else{
+            return nil
+        }
         
+        return DailyNutritionViewModel(dailyNutrition)
+    }
+    
+    func addItem(_ item: NutritionItemViewModel, completionHandler: (Bool) -> Void){
+        print("adding item repo")
+        let result = databaseDataSource.addDailyNutritionItem(item: item)
+        
+        print(databaseDataSource.fetchAllDailyNutrition())
+        completionHandler(result)
     }
     
 }

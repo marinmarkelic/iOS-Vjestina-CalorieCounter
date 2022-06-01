@@ -55,7 +55,25 @@ class MealAddView: UIView{
     
     @objc
     func clickedAddButton(){
-        print("add")
+        NutritionRepository().addItem(meal){
+            var message = ""
+            switch $0{
+            case true:
+                message = "Added item"
+            case false:
+                message = "Failed to add item"
+            }
+            
+            DispatchQueue.main.async {
+                let alert = UIAlertController(title: message, message: nil, preferredStyle: UIAlertController.Style.alert)
+                
+                // add an action (button)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                
+                // show the alert
+                self.window?.rootViewController?.present(alert, animated: true, completion: nil)
+            }
+        }
     }
     
     func addConstraints(){

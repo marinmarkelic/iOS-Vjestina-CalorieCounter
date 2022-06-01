@@ -2,7 +2,7 @@ import CoreData
 
 class CoreDataStack {
     lazy var persistentContainer: NSPersistentContainer = {
-        let container = NSPersistentContainer(name: "iOSVjestina")
+        let container = NSPersistentContainer(name: "Database")
         container.loadPersistentStores(completionHandler: {
             (storeDescription, error) in
             if let error = error as NSError? {

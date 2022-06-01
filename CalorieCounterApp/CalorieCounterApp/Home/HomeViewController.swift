@@ -3,6 +3,8 @@ import SnapKit
 
 class HomeViewController: ViewController{
     
+    var dailyNutrition: DailyNutritionViewModel!
+    
     var mainView: UIView!
     
     var scrollView: UIScrollView!
@@ -11,7 +13,6 @@ class HomeViewController: ViewController{
     var label: UILabel!
     var caloriesView: CaloriesView!
     
-    var mealChartView: MealChartView!
     
     
     override func viewDidLoad() {
@@ -21,6 +22,11 @@ class HomeViewController: ViewController{
     
     init(){
         super.init(nibName: nil, bundle: nil)
+        
+        dailyNutrition = NutritionRepository().fetchDailyNutrition()
+        if dailyNutrition == nil{
+            print("HWC daaily nut nil")
+        }
         
         buildViews()
         addConstraints()
@@ -39,21 +45,16 @@ class HomeViewController: ViewController{
         contentView = UIView()
         
         label = UILabel()
-        label.text = "Calories"
+        label.text = "Today"
         label.textColor = .lightGray
         
-        caloriesView = CaloriesView()
+        caloriesView = CaloriesView(consumedCalories: dailyNutrition.calories)
         
-        mealChartView = MealChartView()
-//        NutritionRepository().loadNutritionData(itemDescription: "egg", completionHandler: {
-//            self.MealChartView.set($0)
-//        })
         
         view.addSubview(scrollView)
         scrollView.addSubview(contentView)
         contentView.addSubview(label)
         contentView.addSubview(caloriesView)
-        contentView.addSubview(mealChartView)
     }
     
     func addConstraints(){
@@ -77,12 +78,6 @@ class HomeViewController: ViewController{
             $0.top.equalTo(label.snp.bottom).offset(10)
             $0.leading.trailing.equalToSuperview()
             $0.height.equalTo(100)
-        }
-        
-        mealChartView.snp.makeConstraints{
-            $0.top.equalTo(caloriesView.snp.bottom).offset(10)
-            $0.leading.trailing.equalToSuperview()
-            $0.bottom.equalTo(contentView)
         }
     }
 }

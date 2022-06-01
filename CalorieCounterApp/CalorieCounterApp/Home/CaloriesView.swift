@@ -3,6 +3,8 @@ import SnapKit
 
 class CaloriesView: UIView{
     
+    var consumedCalories: Float!
+    
     var mainView: UIView!
     
     var labelView: UIView!
@@ -11,6 +13,15 @@ class CaloriesView: UIView{
     var totalLabel: UILabel!
     
     var progressPieChart: ProgressPieChart!
+    
+    init(consumedCalories: Float){
+        super.init(frame: .zero)
+        
+        self.consumedCalories = consumedCalories
+        
+        buildViews()
+        addConstraints()
+    }
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -31,15 +42,15 @@ class CaloriesView: UIView{
         labelView = UIView()
         
         receivedLabel = UILabel()
-        receivedLabel.text = "Received"
+        receivedLabel.text = "Consumed"
         receivedLabel.textColor = elementTitleColor
         
         enteredLabel = UILabel()
-        enteredLabel.text = "1645"
+        enteredLabel.text = String(consumedCalories)
         enteredLabel.textColor = elementEnteredTextColor
         
         totalLabel = UILabel()
-        totalLabel.text = " / 2030 kcal"
+        totalLabel.text = "/ \(getMockBMR() - consumedCalories) kcal"
         totalLabel.textColor = elementTotalTextColor
         
         progressPieChart = ProgressPieChart()
@@ -54,13 +65,13 @@ class CaloriesView: UIView{
     }
     
     func configureProgressPieChart(){
-        progressPieChart.customizeChart(dataPoints: ["done", "remaining"], values: [1000.0, 250.0])
+        progressPieChart.customizeChart(dataPoints: ["done", "remaining"], values: [Double(consumedCalories), Double(getMockBMR() - consumedCalories)])
         progressPieChart.drawEntryLabelsEnabled = false
         progressPieChart.isUserInteractionEnabled = false
         progressPieChart.legend.enabled = false
         progressPieChart.holeRadiusPercent = 0.85
         let attributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        let attributedText = NSAttributedString(string: "\(Int(250.0/1000.0 * 100))%", attributes: attributes)
+        let attributedText = NSAttributedString(string: "\(Int(consumedCalories / (getMockBMR() - consumedCalories) * 100))%", attributes: attributes)
         progressPieChart.centerAttributedText = attributedText
         progressPieChart.holeColor = nil
         

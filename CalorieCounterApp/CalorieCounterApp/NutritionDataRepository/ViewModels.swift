@@ -58,3 +58,33 @@ struct NutritionItemViewModel: Codable{
         return [sugar_g, fiber_g, protein_g, carbohydrates_total_g, fat_total_g]
     }
 }
+
+struct DailyNutritionViewModel{
+    let date: String
+    let calories: Float
+    let sugar_g: Float
+    let fiber_g: Float
+    let serving_size_g: Float
+    let fat_saturated_g: Float
+    let protein_g: Float
+    let carbohydrates_total_g: Float
+    let fat_total_g: Float
+    let sodium_mg: Float
+    let potassium_mg: Float
+    let cholesterol_mg: Float
+    
+    init(_ dailyNutrition: DailyNutrition) {
+        date = dailyNutrition.date ?? ""
+        calories = dailyNutrition.calories
+        sugar_g = dailyNutrition.sugar_g
+        fiber_g = dailyNutrition.fiber_g
+        serving_size_g = dailyNutrition.serving_size_g
+        fat_saturated_g = dailyNutrition.fat_saturated_g
+        protein_g = dailyNutrition.protein_g
+        carbohydrates_total_g = dailyNutrition.carbohydrates_total_g
+        fat_total_g = dailyNutrition.fat_total_g
+        sodium_mg = dailyNutrition.sodium_mg
+        potassium_mg = dailyNutrition.potassium_mg
+        cholesterol_mg = dailyNutrition.cholesterol_mg
+    }
+}

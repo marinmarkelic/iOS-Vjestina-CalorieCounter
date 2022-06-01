@@ -1,4 +1,112 @@
+import CoreData
+
 class NutritionDatabaseDataSource{
     var coreDataStack: CoreDataStack!
     var managedContext: NSManagedObjectContext!
+    
+    init(){
+        coreDataStack = CoreDataStack()
+        managedContext = coreDataStack.persistentContainer.viewContext
+    }
+    
+    func addDailyNutritionItem(item: NutritionItemViewModel) -> Bool{
+        print("adding item DS")
+        var dailyNutrition: DailyNutrition
+        
+        if fetchDailyNutrition() == nil{
+            let entity = NSEntityDescription.entity(forEntityName: "DailyNutrition", in: managedContext)!
+            dailyNutrition = DailyNutrition(entity: entity, insertInto: managedContext)
+            
+            print("created new daily nutrition")
+            
+            dailyNutrition.date = Date().formatted(date: .numeric, time: .omitted)
+        }
+        else{
+            dailyNutrition = fetchDailyNutrition()!
+            print("fetched existing daily nutrition")
+        }
+
+        
+        dailyNutrition.sugar_g += item.sugar_g
+        dailyNutrition.fiber_g += item.fiber_g
+        dailyNutrition.sodium_mg += item.sodium_mg
+        dailyNutrition.potassium_mg += item.potassium_mg
+        dailyNutrition.fat_saturated_g += item.fat_saturated_g
+        dailyNutrition.fat_total_g += item.fat_total_g
+        dailyNutrition.calories += item.calories
+        dailyNutrition.cholesterol_mg += item.cholesterol_mg
+        dailyNutrition.protein_g += item.protein_g
+        dailyNutrition.carbohydrates_total_g += item.carbohydrates_total_g
+        
+        
+        let entity = NSEntityDescription.entity(forEntityName: "DailyNutritionItem", in: managedContext)!
+        let dailyNutritionItem = DailyNutritionItem(item: item, entity: entity, insertInto: managedContext)
+        dailyNutrition.addToItems(dailyNutritionItem)
+        
+        do{
+            try managedContext.save()
+            return true
+        }
+        catch let error as NSError{
+            print("Error \(error), Info: \(error.userInfo)")
+            return false
+        }
+    }
+    
+
+    
+    func fetchDailyNutrition() -> DailyNutrition?{
+        let fetchRequest = DailyNutrition.fetchRequest()
+        
+        let date = Date().formatted(date: .numeric, time: .omitted)
+        
+        let predicate = NSPredicate(format: "date = %@", "\(date)")
+        
+        fetchRequest.returnsObjectsAsFaults = false
+        fetchRequest.predicate = predicate
+        fetchRequest.fetchLimit = 1
+        
+        do{
+            return try managedContext.fetch(fetchRequest).first
+        }catch let error as NSError{
+            print("Error \(error), Info: \(error.userInfo)")
+            return nil
+        }
+    }
+    
+    func fetchAllDailyNutrition() -> [DailyNutrition]?{
+        let fetchRequest = DailyNutrition.fetchRequest()
+        
+        do{
+            return try managedContext.fetch(fetchRequest)
+        }catch let error as NSError{
+            print("Error \(error), Info: \(error.userInfo)")
+            return nil
+        }
+    }
+    
+    
+    func del(){
+        managedContext.reset()
+
+        var fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "DailyNutrition")
+        var deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+
+        do {
+            try managedContext.execute(deleteRequest)
+        } catch _ as NSError {
+            // TODO: handle the error
+        }
+
+        fetchRequest = NSFetchRequest(entityName: "DailyNutritionItem")
+        deleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+
+        do {
+            try managedContext.execute(deleteRequest)
+        } catch _ as NSError {
+            // TODO: handle the error
+        }
+
+        try? managedContext.save()
+    }
 }
