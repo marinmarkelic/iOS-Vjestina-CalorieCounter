@@ -24,7 +24,6 @@ class NutrientsCell: UICollectionViewCell{
         self.name.text = name
         self.value = value
         
-        print(value)
         
         configureProgressPieChart()
         progressPieChart.notifyDataSetChanged()
