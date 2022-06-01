@@ -2,7 +2,7 @@ import UIKit
 import SnapKit
 
 class MealChartView: UIView{
-    var mainView = UIView()
+    var mainView: UIView!
     
     var items: NutritionItemViewModel!
     
@@ -27,19 +27,22 @@ class MealChartView: UIView{
     }
     
     func buildViews(){
-        mainView = UIView()
+        if mainView == nil{
+            mainView = UIView()
+            titleLabel = UILabel()
+            itemNameLabel = UILabel()
+            pieChart = CustomPieChartView()
+        }
+        
         mainView.backgroundColor = elementBackgroundColor
         mainView.layer.cornerRadius = 8
         
-        titleLabel = UILabel()
         titleLabel.text = "Nutritional information"
         titleLabel.textColor = elementTitleColor
         
-        itemNameLabel = UILabel()
         itemNameLabel.text = items.name.capitalized
         itemNameLabel.textColor = elementEnteredTextColor
         
-        pieChart = CustomPieChartView()
         configurePieChart()
         pieChart.customizeChart(dataPoints: items.getArrayOfNamesForGrams(), values: items.getArrayOfValuesForGrams().map({Double($0)}))
 

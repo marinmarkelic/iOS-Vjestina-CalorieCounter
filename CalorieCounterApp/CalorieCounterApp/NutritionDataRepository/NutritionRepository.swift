@@ -8,6 +8,7 @@ class NutritionRepository{
     init() {
         networkDataSource = NutritionNetworkDataSource()
         databaseDataSource = NutritionDatabaseDataSource()
+        
     }
     
     func loadNutritionData(itemDescription: String, completionHandler: @escaping (_: NutritionItemViewModel) -> Void){

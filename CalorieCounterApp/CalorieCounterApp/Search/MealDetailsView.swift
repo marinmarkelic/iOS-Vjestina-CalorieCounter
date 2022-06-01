@@ -5,9 +5,8 @@ class MealDetailsView: UIView{
     
     var meal: NutritionItemViewModel!
     
-    var mainView = UIView()
+    var mainView: UIView!
     
-    var collectionViewContainer: UIView!
     var collectionView: UICollectionView!
     
     var portionSizeLabel: UILabel!
@@ -23,31 +22,32 @@ class MealDetailsView: UIView{
     func set(_ items: NutritionItemViewModel){
         self.meal = items
         
-       
-                
         buildViews()
         addConstraints()
     }
     
     func buildViews(){
-        mainView = UIView()
+        if mainView == nil{
+            mainView = UIView()
+            
+            let collectionViewLayout = UICollectionViewFlowLayout()
+            collectionViewLayout.scrollDirection = .horizontal
+            collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout)
+            
+            portionSizeLabel = UILabel()
+        }
+        
+        
         mainView.backgroundColor = .none
         mainView.layer.cornerRadius = 8
         mainView.clipsToBounds = true
         
-        collectionViewContainer = UIView()
-        
-        let collectionViewLayout = UICollectionViewFlowLayout()
-        collectionViewLayout.scrollDirection = .horizontal
-        
-        collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout)
         collectionView.register(MealDetailsCell.self, forCellWithReuseIdentifier: MealDetailsCell.reuseIdentifier)
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.backgroundColor = .none
         collectionView.showsHorizontalScrollIndicator = false
         
-        portionSizeLabel = UILabel()
         portionSizeLabel.textColor = elementTitleColor
         if meal == nil{
             portionSizeLabel.text = "Portion size: " + String(0) + " g"
@@ -55,13 +55,11 @@ class MealDetailsView: UIView{
         }
         else{
             portionSizeLabel.text = "Portion size: " + String(meal.serving_size_g) + " g"
-
         }
         
         addSubview(mainView)
         mainView.addSubview(collectionView)
         mainView.addSubview(portionSizeLabel)
-//        collectionViewContainer.addSubview(collectionView)
         
     }
     
@@ -69,16 +67,9 @@ class MealDetailsView: UIView{
         mainView.snp.makeConstraints{
             $0.edges.equalToSuperview()
         }
-        
-//        collectionViewContainer.snp.makeConstraints{
-//            $0.leading.trailing.top.equalToSuperview()
-//            $0.bottom.equalTo(portionSizeLabel.snp.top)
-//            $0.height.equalTo(100)
-//        }
 
         collectionView.snp.makeConstraints{
             $0.leading.trailing.top.equalToSuperview()
-            
             $0.height.equalTo(100)
         }
         
@@ -137,7 +128,7 @@ extension MealDetailsView: UICollectionViewDelegateFlowLayout {
 
         let collectionViewWidth = collectionView.frame.width
         let itemWidth = (collectionViewWidth - 2 * 10) / 4
-        let itemHeight = CGFloat(collectionViewContainer.frame.height / 1.4)
+        let itemHeight = CGFloat(frame.height / 1.4)
 
         return CGSize(width: itemWidth, height: CGFloat(100))
     }

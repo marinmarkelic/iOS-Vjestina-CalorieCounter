@@ -28,21 +28,25 @@ class MealAddView: UIView{
     }
     
     func buildViews(){
-        mainView = UIView()
+        if mainView == nil{
+            mainView = UIView()
+            amountTextField = UITextField()
+            label = UILabel()
+            addButton = UIButton()
+
+        }
+        
         mainView.backgroundColor = elementBackgroundColor
         mainView.layer.cornerRadius = 8
         mainView.clipsToBounds = true
         
-        label = UILabel()
         label.text = "Add item"
         label.textColor = elementTitleColor
         
-        amountTextField = UITextField()
         amountTextField.text = "100.0"
         amountTextField.backgroundColor = .black
         amountTextField.textColor = .white
         
-        addButton = UIButton()
         addButton.setTitle("Add", for: .normal)
         addButton.addTarget(self, action: #selector(clickedAddButton), for: .touchUpInside)
 
