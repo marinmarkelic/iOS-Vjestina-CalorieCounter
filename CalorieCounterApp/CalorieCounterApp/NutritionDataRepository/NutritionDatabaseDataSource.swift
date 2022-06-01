@@ -53,7 +53,25 @@ class NutritionDatabaseDataSource{
         }
     }
     
-
+    func loadDailyNutrition() -> DailyNutrition{
+        var dailyNutrition: DailyNutrition
+        
+        if fetchDailyNutrition() == nil{
+            let entity = NSEntityDescription.entity(forEntityName: "DailyNutrition", in: managedContext)!
+            dailyNutrition = DailyNutrition(entity: entity, insertInto: managedContext)
+            
+            print("created new daily nutrition")
+            
+            dailyNutrition.date = Date().formatted(date: .numeric, time: .omitted)
+        }
+        else{
+            dailyNutrition = fetchDailyNutrition()!
+            print("fetched existing daily nutrition")
+        }
+        
+        try? managedContext.save()
+        return dailyNutrition
+    }
     
     func fetchDailyNutrition() -> DailyNutrition?{
         let fetchRequest = DailyNutrition.fetchRequest()

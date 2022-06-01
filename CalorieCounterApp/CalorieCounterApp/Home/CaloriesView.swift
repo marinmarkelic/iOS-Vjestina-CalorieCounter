@@ -37,6 +37,8 @@ class CaloriesView: UIView{
     func reloadData(consumedCalories: Float){
         self.consumedCalories = consumedCalories
         
+        enteredLabel.text = String(consumedCalories)
+
         configureProgressPieChart()
         progressPieChart.notifyDataSetChanged()
         progressPieChart.data!.notifyDataChanged()

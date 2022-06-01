@@ -22,11 +22,7 @@ class NutritionRepository{
     }
     
     func fetchDailyNutrition() -> DailyNutritionViewModel?{
-        guard let dailyNutrition = databaseDataSource.fetchDailyNutrition() else{
-            return nil
-        }
-        
-        return DailyNutritionViewModel(dailyNutrition)
+        return DailyNutritionViewModel(databaseDataSource.loadDailyNutrition())
     }
     
     func addItem(_ item: NutritionItemViewModel, completionHandler: (Bool) -> Void){
