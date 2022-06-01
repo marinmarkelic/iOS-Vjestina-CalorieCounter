@@ -37,6 +37,13 @@ class HomeViewController: ViewController{
         fatalError("init(coder:) has not been implemented")
     }
     
+    func reloadData(){
+        dailyNutrition = NutritionRepository().fetchDailyNutrition()
+        
+        caloriesView.reloadData(consumedCalories: dailyNutrition.calories)
+        nutrientsView.reloadData(dailyNutrition: dailyNutrition)
+    }
+    
     func buildViews(){
         view.backgroundColor = appBackgroundColor
         

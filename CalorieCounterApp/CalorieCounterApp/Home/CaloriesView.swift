@@ -34,6 +34,14 @@ class CaloriesView: UIView{
         fatalError("init(coder:) has not been implemented")
     }
     
+    func reloadData(consumedCalories: Float){
+        self.consumedCalories = consumedCalories
+        
+        configureProgressPieChart()
+        progressPieChart.notifyDataSetChanged()
+        progressPieChart.data!.notifyDataChanged()
+    }
+    
     func buildViews(){
         mainView = UIView()
         mainView.backgroundColor = elementBackgroundColor

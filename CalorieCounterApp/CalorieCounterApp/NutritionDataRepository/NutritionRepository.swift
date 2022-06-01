@@ -33,7 +33,6 @@ class NutritionRepository{
         print("adding item repo")
         let result = databaseDataSource.addDailyNutritionItem(item: item)
         
-        print(databaseDataSource.fetchAllDailyNutrition())
         completionHandler(result)
     }
     

@@ -32,4 +32,14 @@ class MovieTabBarController: UITabBarController, UITabBarControllerDelegate{
         
         viewControllers = [homeViewController, mealSearchViewController]
     }
+    
+    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        
+        if let vc = viewController as? HomeViewController {
+            vc.reloadData()
+        }
+//        else if let vc = viewController as? MealSearchViewController {
+//            vc.reloadData()
+//        }
+    }
 }

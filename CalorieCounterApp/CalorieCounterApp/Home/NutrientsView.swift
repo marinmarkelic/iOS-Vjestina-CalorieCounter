@@ -20,6 +20,12 @@ class NutrientsView: UIView{
         fatalError("init(coder:) has not been implemented")
     }
     
+    func reloadData(dailyNutrition: DailyNutritionViewModel){
+        self.dailyNutrition = dailyNutrition
+        
+        collectionView.reloadData()
+    }
+    
     func buildViews(){
         backgroundColor = .none
         layer.cornerRadius = 8
@@ -54,7 +60,6 @@ extension NutrientsView: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print(getArrayOfNamesForGrams().count)
 //        guard let _ = meal else{
 //            return 0
 //        }
