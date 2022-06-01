@@ -103,6 +103,17 @@ class NutritionDatabaseDataSource{
         }
     }
     
+    func fetchAllDailyNutritionItems() -> [DailyNutritionItem]?{
+        guard let dailyNutrition = fetchDailyNutrition() else{
+            return nil
+        }
+        
+        let itemsSet = dailyNutrition.value(forKey: "items") as? NSSet
+        let items = itemsSet?.allObjects as? [DailyNutritionItem]
+        
+        return items
+    }
+    
     
     func del(){
         managedContext.reset()
@@ -113,7 +124,7 @@ class NutritionDatabaseDataSource{
         do {
             try managedContext.execute(deleteRequest)
         } catch _ as NSError {
-            // TODO: handle the error
+            return
         }
 
         fetchRequest = NSFetchRequest(entityName: "DailyNutritionItem")
@@ -122,7 +133,7 @@ class NutritionDatabaseDataSource{
         do {
             try managedContext.execute(deleteRequest)
         } catch _ as NSError {
-            // TODO: handle the error
+            return
         }
 
         try? managedContext.save()

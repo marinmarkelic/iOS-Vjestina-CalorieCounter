@@ -31,14 +31,14 @@
 		9C66C3092846812E006A6BF0 /* MealAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66C3082846812E006A6BF0 /* MealAddView.swift */; };
 		9C66C30B2846A9D1006A6BF0 /* CoreDataStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66C30A2846A9D1006A6BF0 /* CoreDataStack.swift */; };
 		9C66C30E2846AAA3006A6BF0 /* Database.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 9C66C30C2846AAA3006A6BF0 /* Database.xcdatamodeld */; };
-		9C66C31C2846AE05006A6BF0 /* DailyNutritionItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66C3182846AE05006A6BF0 /* DailyNutritionItem+CoreDataClass.swift */; };
-		9C66C31D2846AE05006A6BF0 /* DailyNutritionItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66C3192846AE05006A6BF0 /* DailyNutritionItem+CoreDataProperties.swift */; };
 		9C66C3242846AF79006A6BF0 /* DailyNutrition+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66C3222846AF79006A6BF0 /* DailyNutrition+CoreDataClass.swift */; };
 		9C66C327284749BD006A6BF0 /* DailyNutrition+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66C326284749BD006A6BF0 /* DailyNutrition+CoreDataProperties.swift */; };
 		9C66C32D28476330006A6BF0 /* NutrientsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66C32C28476330006A6BF0 /* NutrientsView.swift */; };
 		9C66C32F28476C24006A6BF0 /* NutrientsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66C32E28476C24006A6BF0 /* NutrientsCell.swift */; };
 		9C66C331284774CB006A6BF0 /* MovieTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66C330284774CB006A6BF0 /* MovieTabBarController.swift */; };
 		9C66C333284775AE006A6BF0 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66C332284775AE006A6BF0 /* AppRouter.swift */; };
+		9C66C33C284783DF006A6BF0 /* DailyNutritionItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66C33A284783DF006A6BF0 /* DailyNutritionItem+CoreDataClass.swift */; };
+		9C66C33D284783DF006A6BF0 /* DailyNutritionItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66C33B284783DF006A6BF0 /* DailyNutritionItem+CoreDataProperties.swift */; };
 		9CA346B5283F80E200F6329A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA346B4283F80E200F6329A /* AppDelegate.swift */; };
 		9CA346B9283F80E200F6329A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA346B8283F80E200F6329A /* ViewController.swift */; };
 		9CA346BE283F80E400F6329A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 9CA346BD283F80E400F6329A /* Assets.xcassets */; };
@@ -77,14 +77,14 @@
 		9C66C3082846812E006A6BF0 /* MealAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MealAddView.swift; sourceTree = "<group>"; };
 		9C66C30A2846A9D1006A6BF0 /* CoreDataStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataStack.swift; sourceTree = "<group>"; };
 		9C66C30D2846AAA3006A6BF0 /* Database.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Database.xcdatamodel; sourceTree = "<group>"; };
-		9C66C3182846AE05006A6BF0 /* DailyNutritionItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DailyNutritionItem+CoreDataClass.swift"; sourceTree = "<group>"; };
-		9C66C3192846AE05006A6BF0 /* DailyNutritionItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DailyNutritionItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		9C66C3222846AF79006A6BF0 /* DailyNutrition+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "DailyNutrition+CoreDataClass.swift"; path = "../../DailyNutrition+CoreDataClass.swift"; sourceTree = "<group>"; };
 		9C66C326284749BD006A6BF0 /* DailyNutrition+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DailyNutrition+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		9C66C32C28476330006A6BF0 /* NutrientsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutrientsView.swift; sourceTree = "<group>"; };
 		9C66C32E28476C24006A6BF0 /* NutrientsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutrientsCell.swift; sourceTree = "<group>"; };
 		9C66C330284774CB006A6BF0 /* MovieTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTabBarController.swift; sourceTree = "<group>"; };
 		9C66C332284775AE006A6BF0 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
+		9C66C33A284783DF006A6BF0 /* DailyNutritionItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DailyNutritionItem+CoreDataClass.swift"; sourceTree = "<group>"; };
+		9C66C33B284783DF006A6BF0 /* DailyNutritionItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DailyNutritionItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		9CA346B1283F80E200F6329A /* CalorieCounterApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CalorieCounterApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9CA346B4283F80E200F6329A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9CA346B8283F80E200F6329A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -164,8 +164,8 @@
 		9C66C3172846AD81006A6BF0 /* CoreDataObjects */ = {
 			isa = PBXGroup;
 			children = (
-				9C66C3182846AE05006A6BF0 /* DailyNutritionItem+CoreDataClass.swift */,
-				9C66C3192846AE05006A6BF0 /* DailyNutritionItem+CoreDataProperties.swift */,
+				9C66C33A284783DF006A6BF0 /* DailyNutritionItem+CoreDataClass.swift */,
+				9C66C33B284783DF006A6BF0 /* DailyNutritionItem+CoreDataProperties.swift */,
 				9C66C3222846AF79006A6BF0 /* DailyNutrition+CoreDataClass.swift */,
 				9C66C326284749BD006A6BF0 /* DailyNutrition+CoreDataProperties.swift */,
 			);
@@ -330,6 +330,7 @@
 				9C66C2EF2843C01C006A6BF0 /* Codables.swift in Sources */,
 				9C66C3092846812E006A6BF0 /* MealAddView.swift in Sources */,
 				9CA346DC283FADBF00F6329A /* BMR.swift in Sources */,
+				9C66C33D284783DF006A6BF0 /* DailyNutritionItem+CoreDataProperties.swift in Sources */,
 				9CA346D7283F928300F6329A /* CustomPieChartView.swift in Sources */,
 				9C66C2EB2843B595006A6BF0 /* Result.swift in Sources */,
 				9C66C2E72843B4D8006A6BF0 /* NetworkService.swift in Sources */,
@@ -337,16 +338,15 @@
 				9C66C307284624E7006A6BF0 /* MealDetailsCell.swift in Sources */,
 				9C66C30B2846A9D1006A6BF0 /* CoreDataStack.swift in Sources */,
 				9C66C2F828457980006A6BF0 /* NutritionDatabaseDataSource.swift in Sources */,
-				9C66C31D2846AE05006A6BF0 /* DailyNutritionItem+CoreDataProperties.swift in Sources */,
 				9C66C32F28476C24006A6BF0 /* NutrientsCell.swift in Sources */,
 				9CA346CC283F882300F6329A /* MockData.swift in Sources */,
-				9C66C31C2846AE05006A6BF0 /* DailyNutritionItem+CoreDataClass.swift in Sources */,
 				9C66C333284775AE006A6BF0 /* AppRouter.swift in Sources */,
 				9C66C2DA283FD3C4006A6BF0 /* HomeViewController.swift in Sources */,
 				9C66C30128460C69006A6BF0 /* MealSearchViewController.swift in Sources */,
 				9CA346DE283FAFDA00F6329A /* ProgressPieChart.swift in Sources */,
 				9C66C2FA2845799E006A6BF0 /* NutritionNetworkDataSource.swift in Sources */,
 				9C66C32D28476330006A6BF0 /* NutrientsView.swift in Sources */,
+				9C66C33C284783DF006A6BF0 /* DailyNutritionItem+CoreDataClass.swift in Sources */,
 				9C66C3242846AF79006A6BF0 /* DailyNutrition+CoreDataClass.swift in Sources */,
 				9C66C30528462153006A6BF0 /* MealDetailsView.swift in Sources */,
 				9CA346CA283F871A00F6329A /* TestViewController.swift in Sources */,

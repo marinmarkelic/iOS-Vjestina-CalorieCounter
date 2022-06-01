@@ -2,7 +2,7 @@
 //  DailyNutritionItem+CoreDataClass.swift
 //  CalorieCounterApp
 //
-//  Created by Marin on 31.05.2022..
+//  Created by Marin on 01.06.2022..
 //
 //
 
@@ -11,7 +11,7 @@ import CoreData
 
 @objc(DailyNutritionItem)
 public class DailyNutritionItem: NSManagedObject {
-        convenience init(item: NutritionItemViewModel, entity: NSEntityDescription, insertInto context: NSManagedObjectContext!) {
+    convenience init(item: NutritionItemViewModel, entity: NSEntityDescription, insertInto context: NSManagedObjectContext!) {
         self.init(entity: entity, insertInto:  context)
         
         self.sugar_g = item.sugar_g
@@ -26,7 +26,9 @@ public class DailyNutritionItem: NSManagedObject {
         self.cholesterol_mg = item.cholesterol_mg
         self.protein_g = item.protein_g
         self.carbohydrates_total_g = item.carbohydrates_total_g
+        
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "HH:mm"
+        self.time = dateFormatter.string(from: Date())
     }
-    
-    
 }
