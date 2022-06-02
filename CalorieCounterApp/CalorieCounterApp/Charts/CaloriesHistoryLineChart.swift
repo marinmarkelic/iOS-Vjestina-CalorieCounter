@@ -26,10 +26,23 @@ class CaloriesHistoryLineChart: LineChartView, IAxisValueFormatter{
       
         var dataEntries: [ChartDataEntry] = []
         for i in 0..<dataPoints.count {
-            let dataEntry = ChartDataEntry(x: Double(dataPoints[i].split(separator: "/")[2]) ?? 0, y: Double(values[i]))
+            
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy/MM/dd"
+            let d = dateFormatter.date(from: dataPoints[i])
+
+
+            let date = Date(timeIntervalSinceReferenceDate: 0)
+            let days = Calendar.current.dateComponents([.day], from: date, to: d!)
+            
+            let dataEntry = ChartDataEntry(x: Double(days.day ?? 0), y: Double(values[i]))
           dataEntries.append(dataEntry)
         }
         let lineChartDataSet = LineChartDataSet(entries: dataEntries, label: nil)
+        lineChartDataSet.drawValuesEnabled = false
+        lineChartDataSet.drawCirclesEnabled = false
+        lineChartDataSet.mode = .cubicBezier
+        lineChartDataSet.cubicIntensity = 0.2
         
         let lineChartData = LineChartData(dataSet: lineChartDataSet)
         lineChartData.setValueTextColor(.white)

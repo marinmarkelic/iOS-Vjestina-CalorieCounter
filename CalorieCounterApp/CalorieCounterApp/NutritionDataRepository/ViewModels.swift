@@ -105,6 +105,10 @@ struct DailyNutritionViewModel{
             return fat_total_g
         case "Carbs":
             return carbohydrates_total_g
+        case "Sugar":
+            return sugar_g
+        case "Fiber":
+            return fiber_g
         default:
             return 0
         }

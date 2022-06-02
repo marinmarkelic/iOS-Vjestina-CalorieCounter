@@ -22,6 +22,8 @@ class AppRouter: AppRouterProtocol{
     func setupNavigationController(){
 //        navigationController?.navigationBar.backgroundColor = UIColor(red: 11.0/256.0, green: 37.0/256.0, blue: 63.0/256.0, alpha: 1.0)
     }
+    
+    
 }
 
 protocol AppRouterProtocol{

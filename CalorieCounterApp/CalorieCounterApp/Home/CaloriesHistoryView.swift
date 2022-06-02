@@ -18,6 +18,11 @@ class CaloriesHistoryView: UIView{
         fatalError("init(coder:) has not been implemented")
     }
     
+    func reloadData(dataPoints: [String], values: [Float]){
+        historyChart.customizeChart(dataPoints: dataPoints, values: values)
+        historyChart.notifyDataSetChanged()
+    }
+    
     func buildViews(){
         mainView = UIView()
 //        mainView.backgroundColor = elementBackgroundColor
@@ -31,7 +36,6 @@ class CaloriesHistoryView: UIView{
 //        historyChart.maxVisibleCount = 7
         historyChart.legend.enabled = false
 
-        
         
         addSubview(mainView)
         addSubview(historyChart)

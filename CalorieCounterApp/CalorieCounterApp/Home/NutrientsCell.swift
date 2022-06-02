@@ -23,7 +23,8 @@ class NutrientsCell: UICollectionViewCell{
     func set(name: String, value: Float){
         self.name.text = name
         self.value = value
-        
+                
+        progressPieChart.setColor(color: chooseColor(name: name))
         
         configureProgressPieChart()
         progressPieChart.notifyDataSetChanged()
@@ -68,6 +69,10 @@ class NutrientsCell: UICollectionViewCell{
             return calculateDailyFatGrams(calories: getMockBMR())
         case "Carbs":
             return calculateDailyCarbsGrams(calories: getMockBMR())
+        case "Sugar":
+            return calculateDailySugarGrams()
+        case "Fiber":
+            return calculateDailyFiberGrams()
         default:
             return 0
         }

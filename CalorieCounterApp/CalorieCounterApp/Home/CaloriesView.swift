@@ -64,6 +64,7 @@ class CaloriesView: UIView{
         totalLabel.textColor = elementTotalTextColor
         
         progressPieChart = ProgressPieChart()
+        progressPieChart.setColor(color: chooseColor(name: "Calories"))
         configureProgressPieChart()
         
         addSubview(mainView)

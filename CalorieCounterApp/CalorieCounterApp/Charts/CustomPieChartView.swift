@@ -22,7 +22,7 @@ class CustomPieChartView: PieChartView{
         
         // 2. Set ChartDataSet
         let pieChartDataSet = PieChartDataSet(entries: dataEntries, label: nil)
-        pieChartDataSet.colors = colorsOfCharts(numbersOfColor: dataPoints.count)
+        pieChartDataSet.colors = colorsOfCharts(dataPoints: dataPoints)
 //        pieChartDataSet.yValuePosition = .outsideSlice
 //        pieChartDataSet.valueTextColor = .black
         pieChartDataSet.drawValuesEnabled = false
@@ -44,14 +44,10 @@ class CustomPieChartView: PieChartView{
         data = pieChartData
     }
     
-    private func colorsOfCharts(numbersOfColor: Int) -> [UIColor] {
+    private func colorsOfCharts(dataPoints: [String]) -> [UIColor] {
         var colors: [UIColor] = []
-        for _ in 0..<numbersOfColor {
-            let red = Double(arc4random_uniform(256))
-            let green = Double(arc4random_uniform(256))
-            let blue = Double(arc4random_uniform(256))
-            let color = UIColor(red: CGFloat(red/255), green: CGFloat(green/255), blue: CGFloat(blue/255), alpha: 1)
-            colors.append(color)
+        for dp in dataPoints {
+            colors.append(chooseColor(name: dp))
         }
         return colors
     }

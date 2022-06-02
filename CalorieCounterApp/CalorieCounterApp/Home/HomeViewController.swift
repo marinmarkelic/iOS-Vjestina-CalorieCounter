@@ -44,6 +44,11 @@ class HomeViewController: ViewController{
         caloriesView.reloadData(consumedCalories: dailyNutrition.calories)
         nutrientsView.reloadData(dailyNutrition: dailyNutrition)
         consumedItemsView.reloadData(dailyNutrition: dailyNutrition)
+        
+        let data = NutritionRepository().fetchAllDailyNutrition()
+        if data != nil{
+            historyView.reloadData(dataPoints: data!.map({$0.date}), values: data!.map({$0.calories}))
+        }
     }
     
     func buildViews(){
@@ -58,7 +63,8 @@ class HomeViewController: ViewController{
         historyView = CaloriesHistoryView()
         let data = NutritionRepository().fetchAllDailyNutrition()
         if data != nil{
-            historyView.historyChart.customizeChart(dataPoints: data!.map({$0.date}), values: data!.map({$0.calories}))
+            historyView.reloadData(dataPoints: data!.map({$0.date}), values: data!.map({$0.calories}))
+//            historyView.historyChart.customizeChart(dataPoints: data!.map({$0.date}), values: data!.map({$0.calories}))
         }
         
         label = UILabel()
