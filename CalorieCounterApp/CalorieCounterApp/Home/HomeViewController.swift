@@ -42,6 +42,7 @@ class HomeViewController: ViewController{
         
         caloriesView.reloadData(consumedCalories: dailyNutrition.calories)
         nutrientsView.reloadData(dailyNutrition: dailyNutrition)
+        consumedItemsView.reloadData(dailyNutrition: dailyNutrition)
     }
     
     func buildViews(){

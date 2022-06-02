@@ -27,13 +27,16 @@ class ConsumedItemsView: UIView{
     
     func reloadData(dailyNutrition: DailyNutritionViewModel){
         self.dailyNutrition = dailyNutrition
+        
+        for view in stackView.arrangedSubviews {
+            view.removeFromSuperview()
+        }
+        addStackViewElements()
     }
     
     func buildViews(){
-        
-        
         stackViewContainer = UIView()
-        stackViewContainer.backgroundColor = elementBackgroundColor
+        stackViewContainer.backgroundColor = .none
         stackViewContainer.layer.cornerRadius = 8
         stackViewContainer.clipsToBounds = true
         
@@ -47,29 +50,6 @@ class ConsumedItemsView: UIView{
         stackView.distribution = .equalSpacing // 3.
         stackView.spacing = 10
         
-//        let a1 = TempCell(color: .red)
-//        let a2 = TempCell(color: .green)
-//
-//
-//        stackView.addArrangedSubview(a1)
-//        stackView.addArrangedSubview(a2)
-        
-//        for i in 1..<100{
-//                let vw = UIButton(type: .system)
-//            vw.setTitle("button \(i)", for: .normal)
-//                stackView.addArrangedSubview(vw)
-//            }
-        
-//        a1.snp.makeConstraints{
-//            $0.height.equalTo(100)
-//            $0.leading.trailing.equalToSuperview()
-//        }
-//
-//        a2.snp.makeConstraints{
-//            $0.height.equalTo(100)
-//            $0.leading.trailing.equalToSuperview()
-//        }
-        
         addStackViewElements()
         
         addSubview(label)
@@ -78,7 +58,7 @@ class ConsumedItemsView: UIView{
     }
     
     func addStackViewElements(){
-        for i in dailyNutrition.items{
+        for i in dailyNutrition.items.sorted(by: {$0.time > $1.time}){
             let view = ConsumedItemView(dailyNutritionItem: i)
             
             stackView.addArrangedSubview(view)
