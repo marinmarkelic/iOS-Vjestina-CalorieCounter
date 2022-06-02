@@ -13,7 +13,7 @@ class HomeViewController: ViewController{
     var label: UILabel!
     var caloriesView: CaloriesView!
     var nutrientsView: NutrientsView!
-    
+    var consumedItemsView: ConsumedItemsView!
     
     
     override func viewDidLoad() {
@@ -50,6 +50,7 @@ class HomeViewController: ViewController{
         mainView = UIView()
         
         scrollView = UIScrollView()
+        scrollView.showsVerticalScrollIndicator = false
         contentView = UIView()
         
         label = UILabel()
@@ -60,12 +61,15 @@ class HomeViewController: ViewController{
         
         nutrientsView = NutrientsView(dailyNutrition: dailyNutrition)
         
+        consumedItemsView = ConsumedItemsView(dailyNutrition: dailyNutrition)
+        
         
         view.addSubview(scrollView)
         scrollView.addSubview(contentView)
         contentView.addSubview(label)
         contentView.addSubview(caloriesView)
         contentView.addSubview(nutrientsView)
+        contentView.addSubview(consumedItemsView)
     }
     
     func addConstraints(){
@@ -95,7 +99,14 @@ class HomeViewController: ViewController{
             $0.top.equalTo(caloriesView.snp.bottom).offset(10)
             $0.leading.trailing.equalToSuperview()
             $0.height.equalTo(100)
-            $0.bottom.equalTo(contentView)
+        }
+        
+        consumedItemsView.snp.makeConstraints{
+//            $0.edges.equalToSuperview()
+            $0.top.equalTo(nutrientsView.snp.bottom).offset(10)
+            $0.leading.trailing.equalToSuperview()
+            $0.bottom.equalToSuperview()
+
         }
     }
 }

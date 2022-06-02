@@ -1,3 +1,5 @@
+import CoreData
+
 struct NutritionItemsViewModel: Codable{
     let items: [NutritionItem]
 }
@@ -73,6 +75,8 @@ struct DailyNutritionViewModel{
     let potassium_mg: Float
     let cholesterol_mg: Float
     
+    let items: [DailyNutritionItemViewModel]
+    
     init(_ dailyNutrition: DailyNutrition) {
         date = dailyNutrition.date ?? ""
         calories = dailyNutrition.calories
@@ -86,6 +90,11 @@ struct DailyNutritionViewModel{
         sodium_mg = dailyNutrition.sodium_mg
         potassium_mg = dailyNutrition.potassium_mg
         cholesterol_mg = dailyNutrition.cholesterol_mg
+        
+        let itemsSet = dailyNutrition.value(forKey: "items") as? NSSet
+        let items = itemsSet?.allObjects as? [DailyNutritionItem]
+        
+        self.items = items!.map({DailyNutritionItemViewModel($0)})
     }
     
     func getValue(name: String) -> Float{
@@ -99,5 +108,37 @@ struct DailyNutritionViewModel{
         default:
             return 0
         }
+    }
+}
+
+struct DailyNutritionItemViewModel{
+    let time: String
+    let name: String
+    let calories: Float
+    let sugar_g: Float
+    let fiber_g: Float
+    let serving_size_g: Float
+    let fat_saturated_g: Float
+    let protein_g: Float
+    let carbohydrates_total_g: Float
+    let fat_total_g: Float
+    let sodium_mg: Float
+    let potassium_mg: Float
+    let cholesterol_mg: Float
+    
+    init(_ dailyNutritionItem: DailyNutritionItem) {
+        time = dailyNutritionItem.time ?? ""
+        name = dailyNutritionItem.name ?? ""
+        calories = dailyNutritionItem.calories
+        sugar_g = dailyNutritionItem.sugar_g
+        fiber_g = dailyNutritionItem.fiber_g
+        serving_size_g = dailyNutritionItem.serving_size_g
+        fat_saturated_g = dailyNutritionItem.fat_saturated_g
+        protein_g = dailyNutritionItem.protein_g
+        carbohydrates_total_g = dailyNutritionItem.carbohydrates_total_g
+        fat_total_g = dailyNutritionItem.fat_total_g
+        sodium_mg = dailyNutritionItem.sodium_mg
+        potassium_mg = dailyNutritionItem.potassium_mg
+        cholesterol_mg = dailyNutritionItem.cholesterol_mg
     }
 }
