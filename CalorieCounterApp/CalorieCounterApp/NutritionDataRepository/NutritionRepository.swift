@@ -40,6 +40,10 @@ class NutritionRepository{
         return DailyNutritionViewModel(databaseDataSource.loadDailyNutrition())
     }
     
+    func deleteItem(_ item: DailyNutritionItemViewModel){
+        databaseDataSource.deleteDailyNutritionItem(name: item.name, time: item.time, servingSize: item.serving_size_g)
+    }
+    
     func addItem(_ item: NutritionItemViewModel, completionHandler: (Bool) -> Void){
         print("adding item repo")
         let result = databaseDataSource.addDailyNutritionItem(item: item)

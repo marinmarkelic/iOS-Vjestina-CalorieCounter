@@ -8,6 +8,8 @@ class ConsumedItemView: UIView{
     var time: UILabel!
     var calories: UILabel!
     
+    var closeButton: UIButton!
+    
     init(dailyNutritionItem: DailyNutritionItemViewModel) {
         super.init(frame: .zero)
         
@@ -38,9 +40,25 @@ class ConsumedItemView: UIView{
         calories.textColor = .lightGray
         calories.text = "\(dailyNutritionItem.calories) kcal"
         
+        closeButton = UIButton()
+        closeButton.setImage(UIImage(systemName: "cross"), for: .normal)
+        closeButton.addTarget(self, action: #selector(clickedCloseButton), for: .touchUpInside)
+
         addSubview(title)
         addSubview(time)
         addSubview(calories)
+        addSubview(closeButton)
+    }
+    
+    @objc
+    func clickedCloseButton(){
+        print("click")
+        
+        UIView.animate(withDuration: 0.3, animations: {
+            self.isHidden = true
+        }, completion: {_ in
+            NutritionRepository().deleteItem(self.dailyNutritionItem)
+        })
     }
     
     func addConstraints(){
@@ -56,6 +74,10 @@ class ConsumedItemView: UIView{
         calories.snp.makeConstraints{
             $0.leading.equalToSuperview().offset(10)
             $0.top.equalTo(title.snp.bottom).offset(20)
+        }
+        
+        closeButton.snp.makeConstraints{
+            $0.bottom.trailing.equalToSuperview().offset(-10)
         }
     }
     

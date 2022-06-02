@@ -3,7 +3,7 @@ import Charts
 
 class CaloriesHistoryLineChart: LineChartView, IAxisValueFormatter{
     func stringForValue(_ value: Double, axis: AxisBase?) -> String {
-        print(value)
+//        print(value)
         return String(value == 1 ? 1 : 0)
     }
     
@@ -41,6 +41,7 @@ class CaloriesHistoryLineChart: LineChartView, IAxisValueFormatter{
         let lineChartDataSet = LineChartDataSet(entries: dataEntries, label: nil)
         lineChartDataSet.drawValuesEnabled = false
         lineChartDataSet.drawCirclesEnabled = false
+        lineChartDataSet.lineWidth = 2.5
         lineChartDataSet.mode = .cubicBezier
         lineChartDataSet.cubicIntensity = 0.2
         

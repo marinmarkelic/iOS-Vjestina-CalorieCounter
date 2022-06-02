@@ -102,17 +102,6 @@ class NutritionDatabaseDataSource{
         }
     }
     
-//    func fetchAllDailyNutrition() -> [DailyNutrition]?{
-//        let fetchRequest = DailyNutrition.fetchRequest()
-//
-//        do{
-//            return try managedContext.fetch(fetchRequest)
-//        }catch let error as NSError{
-//            print("Error \(error), Info: \(error.userInfo)")
-//            return nil
-//        }
-//    }
-    
     func fetchAllDailyNutritionItems() -> [DailyNutritionItem]?{
         guard let dailyNutrition = fetchDailyNutrition() else{
             return nil
@@ -122,6 +111,40 @@ class NutritionDatabaseDataSource{
         let items = itemsSet?.allObjects as? [DailyNutritionItem]
         
         return items
+    }
+    
+    func deleteDailyNutritionItem(name: String, time: String, servingSize: Float){
+        guard let dailyNutrition = fetchDailyNutrition() else{
+            print("Failed to fetch DN in delete item")
+            return
+        }
+        
+        let itemsSet = dailyNutrition.value(forKey: "items") as? NSSet
+        let items = itemsSet?.allObjects as? [DailyNutritionItem]
+        
+        guard let items = items else{
+            return
+        }
+        
+        if items.isEmpty{
+            return
+        }
+        
+        let item = items[0]
+        
+        dailyNutrition.sugar_g -= item.sugar_g
+        dailyNutrition.fiber_g -= item.fiber_g
+        dailyNutrition.sodium_mg -= item.sodium_mg
+        dailyNutrition.potassium_mg -= item.potassium_mg
+        dailyNutrition.fat_saturated_g -= item.fat_saturated_g
+        dailyNutrition.fat_total_g -= item.fat_total_g
+        dailyNutrition.calories -= item.calories
+        dailyNutrition.cholesterol_mg -= item.cholesterol_mg
+        dailyNutrition.protein_g -= item.protein_g
+        dailyNutrition.carbohydrates_total_g -= item.carbohydrates_total_g
+        
+        dailyNutrition.removeFromItems(item)
+        try? managedContext.save()
     }
     
     func fetchAllDailyNutrition() -> [DailyNutrition]?{
