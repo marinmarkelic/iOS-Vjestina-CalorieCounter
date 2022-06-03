@@ -21,6 +21,7 @@ class CaloriesHistoryView: UIView{
     func reloadData(dataPoints: [String], values: [Float]){
         historyChart.customizeChart(dataPoints: dataPoints, values: values)
         historyChart.notifyDataSetChanged()
+        historyChart.animate(yAxisDuration: 0.5, easingOption: .linear)
     }
     
     func buildViews(){
@@ -29,6 +30,7 @@ class CaloriesHistoryView: UIView{
         mainView.layer.cornerRadius = 8
         
         historyChart = CaloriesHistoryLineChart()
+        historyChart.animate(yAxisDuration: 0.5, easingOption: .linear)
         historyChart.xAxis.drawAxisLineEnabled = false
         historyChart.xAxis.drawGridLinesEnabled = false
         historyChart.leftAxis.drawAxisLineEnabled = false

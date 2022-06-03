@@ -4,9 +4,7 @@ import SnapKit
 class HomeViewController: ViewController{
     
     var dailyNutrition: DailyNutritionViewModel!
-    
-    var mainView: UIView!
-    
+        
     var scrollView: UIScrollView!
     var contentView: UIView!
     
@@ -53,9 +51,7 @@ class HomeViewController: ViewController{
     
     func buildViews(){
         view.backgroundColor = appBackgroundColor
-        
-        mainView = UIView()
-        
+                
         scrollView = UIScrollView()
         scrollView.showsVerticalScrollIndicator = false
         contentView = UIView()
@@ -75,7 +71,7 @@ class HomeViewController: ViewController{
         
         nutrientsView = NutrientsView(dailyNutrition: dailyNutrition)
         
-        consumedItemsView = ConsumedItemsView(dailyNutrition: dailyNutrition)
+        consumedItemsView = ConsumedItemsView(dailyNutrition: dailyNutrition, ConsumedItemViewDelegate: self)
         
         
         view.addSubview(scrollView)
@@ -135,3 +131,8 @@ class HomeViewController: ViewController{
 // Put on the last element
 //  $0.bottom.equalTo(contentView)
 
+extension HomeViewController: ConsumedItemViewDelegate{
+    func reloadHomeData() {
+        reloadData()
+    }
+}

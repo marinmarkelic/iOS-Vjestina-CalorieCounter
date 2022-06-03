@@ -76,6 +76,7 @@ class CaloriesView: UIView{
     }
     
     func configureProgressPieChart(){
+        progressPieChart.animate(xAxisDuration: 0.5, easingOption: .easeInCirc)
         progressPieChart.customizeChart(dataPoints: ["done", "remaining"], values: [Double(consumedCalories), Double(getMockBMR() - consumedCalories)])
         progressPieChart.drawEntryLabelsEnabled = false
         progressPieChart.isUserInteractionEnabled = false

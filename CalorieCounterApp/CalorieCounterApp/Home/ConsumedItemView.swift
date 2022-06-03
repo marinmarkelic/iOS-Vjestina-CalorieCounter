@@ -3,6 +3,7 @@ import SnapKit
 
 class ConsumedItemView: UIView{
     var dailyNutritionItem: DailyNutritionItemViewModel!
+    var delegate: ConsumedItemViewDelegate!
     
     var title: UILabel!
     var time: UILabel!
@@ -10,10 +11,11 @@ class ConsumedItemView: UIView{
     
     var closeButton: UIButton!
     
-    init(dailyNutritionItem: DailyNutritionItemViewModel) {
+    init(dailyNutritionItem: DailyNutritionItemViewModel, delegate: ConsumedItemViewDelegate) {
         super.init(frame: .zero)
         
         self.dailyNutritionItem = dailyNutritionItem
+        self.delegate = delegate
         
         buildViews()
         addConstraints()
@@ -58,6 +60,7 @@ class ConsumedItemView: UIView{
             self.isHidden = true
         }, completion: {_ in
             NutritionRepository().deleteItem(self.dailyNutritionItem)
+            self.delegate.reloadHomeData()
         })
     }
     
@@ -81,4 +84,8 @@ class ConsumedItemView: UIView{
         }
     }
     
+}
+
+protocol ConsumedItemViewDelegate{
+    func reloadHomeData()
 }

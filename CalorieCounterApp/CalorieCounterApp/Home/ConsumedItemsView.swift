@@ -3,19 +3,19 @@ import SnapKit
 
 class ConsumedItemsView: UIView{
     var dailyNutrition: DailyNutritionViewModel!
+    var ConsumedItemViewDelegate: ConsumedItemViewDelegate!
     
     var stackViewContainer: UIView!
         
     var label: UILabel!
     var stackView: UIStackView!
     
-    
-    var isus: TempCell!
-    
-    init(dailyNutrition: DailyNutritionViewModel) {
+        
+    init(dailyNutrition: DailyNutritionViewModel, ConsumedItemViewDelegate: ConsumedItemViewDelegate) {
         super.init(frame: .zero)
         
         self.dailyNutrition = dailyNutrition
+        self.ConsumedItemViewDelegate = ConsumedItemViewDelegate
         
         buildViews()
         addConstraints()
@@ -59,7 +59,7 @@ class ConsumedItemsView: UIView{
     
     func addStackViewElements(){
         for i in dailyNutrition.items.sorted(by: {$0.time > $1.time}){
-            let view = ConsumedItemView(dailyNutritionItem: i)
+            let view = ConsumedItemView(dailyNutritionItem: i, delegate: ConsumedItemViewDelegate)
             
             stackView.addArrangedSubview(view)
                                     
@@ -83,37 +83,5 @@ class ConsumedItemsView: UIView{
         stackView.snp.makeConstraints{
             $0.edges.equalToSuperview()
         }
-    }
-}
-
-class TempCell: UIView{
-    var view: UIView!
-    var label: UILabel!
-
-    
-    init(color: UIColor) {
-        super.init(frame: .zero)
-        backgroundColor = color
-        
-        translatesAutoresizingMaskIntoConstraints = false
-        
-        view = UIView()
-        
-        label = UILabel()
-        label.text = "oof"
-        
-                
-        addSubview(view)
-        view.addSubview(label)
-        
-        
-        label.snp.makeConstraints{
-            $0.top.equalToSuperview().offset(10)
-            $0.leading.equalToSuperview().offset(10)
-        }
-    }
-    
-    required init?(coder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
     }
 }

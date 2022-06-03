@@ -27,6 +27,8 @@ class ProgressPieChart: PieChartView{
 //        pieChartDataSet.valueTextColor = .black
         pieChartDataSet.drawValuesEnabled = false
         setExtraOffsets(left: -10, top: -10, right: -10, bottom: -10)
+        
+        
         let pieChartData = PieChartData(dataSet: pieChartDataSet)
         
         let format = NumberFormatter()

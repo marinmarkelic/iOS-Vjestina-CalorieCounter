@@ -2,8 +2,9 @@ import UIKit
 import SnapKit
 
 class MealSearchViewController: ViewController{
-    
-    var mainView: UIView!
+        
+    var scrollView: UIScrollView!
+    var contentView: UIView!
     
     var searchBar: SearchBarView!
     var mealChart: MealChartView!
@@ -23,7 +24,10 @@ class MealSearchViewController: ViewController{
     }
     
     func buildViews(){
-        mainView = UIView()
+        
+        scrollView = UIScrollView()
+        scrollView.showsVerticalScrollIndicator = false
+        contentView = UIView()
         
         searchBar = SearchBarView()
         searchBar.delegate = self
@@ -34,18 +38,24 @@ class MealSearchViewController: ViewController{
         
         mealAdd = MealAddView()
         
-        view.addSubview(mainView)
-        mainView.addSubview(searchBar)
-        mainView.addSubview(mealChart)
-        mainView.addSubview(mealDetails)
-        mainView.addSubview(mealAdd)
+        view.addSubview(scrollView)
+        scrollView.addSubview(contentView)
+        contentView.addSubview(searchBar)
+        contentView.addSubview(mealChart)
+        contentView.addSubview(mealDetails)
+        contentView.addSubview(mealAdd)
     }
     
     func addConstraints(){
-        mainView.snp.makeConstraints{
+        scrollView.snp.makeConstraints{
             $0.top.bottom.equalTo(view.safeAreaLayoutGuide)
-            $0.leading.equalToSuperview().offset(10)
-            $0.trailing.equalToSuperview().offset(-10)
+            $0.leading.equalTo(view.safeAreaLayoutGuide).offset(10)
+            $0.trailing.equalTo(view.safeAreaLayoutGuide).offset(-10)
+        }
+        
+        contentView.snp.makeConstraints{
+            $0.edges.equalToSuperview()
+            $0.width.equalToSuperview()
         }
         
         searchBar.snp.makeConstraints{
@@ -63,7 +73,7 @@ class MealSearchViewController: ViewController{
         }
         
         mealAdd.snp.makeConstraints{
-            $0.leading.trailing.equalToSuperview()
+            $0.leading.trailing.bottom.equalToSuperview()
             $0.top.equalTo(mealDetails.snp.bottom).offset(15)
         }
     }
