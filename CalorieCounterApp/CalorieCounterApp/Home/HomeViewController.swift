@@ -60,7 +60,6 @@ class HomeViewController: ViewController{
         let data = NutritionRepository().fetchAllDailyNutrition()
         if data != nil{
             historyView.reloadData(dataPoints: data!.map({$0.date}), values: data!.map({$0.calories}))
-//            historyView.historyChart.customizeChart(dataPoints: data!.map({$0.date}), values: data!.map({$0.calories}))
         }
         
         label = UILabel()

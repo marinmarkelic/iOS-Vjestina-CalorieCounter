@@ -51,6 +51,14 @@
 		9CA346DC283FADBF00F6329A /* BMR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA346DB283FADBF00F6329A /* BMR.swift */; };
 		9CA346DE283FAFDA00F6329A /* ProgressPieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA346DD283FAFDA00F6329A /* ProgressPieChart.swift */; };
 		9CCA4F522849FC4900542C90 /* ProgressPieChartTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCA4F512849FC4900542C90 /* ProgressPieChartTwo.swift */; };
+		9CCA4F54284A0D2D00542C90 /* ProgressPieChartThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCA4F53284A0D2D00542C90 /* ProgressPieChartThree.swift */; };
+		9CCA4F57284A21AB00542C90 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCA4F56284A21AB00542C90 /* UserInfoViewController.swift */; };
+		9CCA4F59284A234300542C90 /* GenderSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCA4F58284A234300542C90 /* GenderSelection.swift */; };
+		9CCA4F5B284A236100542C90 /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCA4F5A284A236100542C90 /* RadioButton.swift */; };
+		9CCA4F5D284A2CAF00542C90 /* HeightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCA4F5C284A2CAF00542C90 /* HeightView.swift */; };
+		9CCA4F5F284A2DCF00542C90 /* HeightViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCA4F5E284A2DCF00542C90 /* HeightViewCell.swift */; };
+		9CCA4F61284A3B5300542C90 /* WeightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCA4F60284A3B5300542C90 /* WeightView.swift */; };
+		9CCA4F63284A3BC500542C90 /* WeightViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCA4F62284A3BC500542C90 /* WeightViewCell.swift */; };
 		9CFE49CB2848A12A00017400 /* ConsumedItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFE49CA2848A12A00017400 /* ConsumedItemView.swift */; };
 		DC44FC6C983E98990523B204 /* Pods_CalorieCounterApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F8277843FF4610C92442D6C /* Pods_CalorieCounterApp.framework */; };
 /* End PBXBuildFile section */
@@ -102,6 +110,14 @@
 		9CA346DB283FADBF00F6329A /* BMR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMR.swift; sourceTree = "<group>"; };
 		9CA346DD283FAFDA00F6329A /* ProgressPieChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressPieChart.swift; sourceTree = "<group>"; };
 		9CCA4F512849FC4900542C90 /* ProgressPieChartTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressPieChartTwo.swift; sourceTree = "<group>"; };
+		9CCA4F53284A0D2D00542C90 /* ProgressPieChartThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressPieChartThree.swift; sourceTree = "<group>"; };
+		9CCA4F56284A21AB00542C90 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
+		9CCA4F58284A234300542C90 /* GenderSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderSelection.swift; sourceTree = "<group>"; };
+		9CCA4F5A284A236100542C90 /* RadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButton.swift; sourceTree = "<group>"; };
+		9CCA4F5C284A2CAF00542C90 /* HeightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightView.swift; sourceTree = "<group>"; };
+		9CCA4F5E284A2DCF00542C90 /* HeightViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightViewCell.swift; sourceTree = "<group>"; };
+		9CCA4F60284A3B5300542C90 /* WeightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightView.swift; sourceTree = "<group>"; };
+		9CCA4F62284A3BC500542C90 /* WeightViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightViewCell.swift; sourceTree = "<group>"; };
 		9CFE49CA2848A12A00017400 /* ConsumedItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumedItemView.swift; sourceTree = "<group>"; };
 		D95A26164EF45B1F2FF35C94 /* Pods-CalorieCounterApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalorieCounterApp.debug.xcconfig"; path = "Target Support Files/Pods-CalorieCounterApp/Pods-CalorieCounterApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -221,6 +237,7 @@
 		9CA346B3283F80E200F6329A /* CalorieCounterApp */ = {
 			isa = PBXGroup;
 			children = (
+				9CCA4F55284A209200542C90 /* UserInfo */,
 				9C66C3172846AD81006A6BF0 /* CoreDataObjects */,
 				9C66C2FD28459296006A6BF0 /* Search */,
 				9C66C2F4284578A0006A6BF0 /* NutritionDataRepository */,
@@ -257,6 +274,7 @@
 				9CA346DD283FAFDA00F6329A /* ProgressPieChart.swift */,
 				9C66C2E128400972006A6BF0 /* CaloriesHistoryLineChart.swift */,
 				9CCA4F512849FC4900542C90 /* ProgressPieChartTwo.swift */,
+				9CCA4F53284A0D2D00542C90 /* ProgressPieChartThree.swift */,
 			);
 			path = Charts;
 			sourceTree = "<group>";
@@ -270,6 +288,20 @@
 			path = Formulas;
 			sourceTree = "<group>";
 		};
+		9CCA4F55284A209200542C90 /* UserInfo */ = {
+			isa = PBXGroup;
+			children = (
+				9CCA4F56284A21AB00542C90 /* UserInfoViewController.swift */,
+				9CCA4F58284A234300542C90 /* GenderSelection.swift */,
+				9CCA4F5A284A236100542C90 /* RadioButton.swift */,
+				9CCA4F5C284A2CAF00542C90 /* HeightView.swift */,
+				9CCA4F5E284A2DCF00542C90 /* HeightViewCell.swift */,
+				9CCA4F60284A3B5300542C90 /* WeightView.swift */,
+				9CCA4F62284A3BC500542C90 /* WeightViewCell.swift */,
+			);
+			path = UserInfo;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -281,7 +313,6 @@
 				9CA346AD283F80E200F6329A /* Sources */,
 				9CA346AE283F80E200F6329A /* Frameworks */,
 				9CA346AF283F80E200F6329A /* Resources */,
-				A797E72CD084BC79CD0B221C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -346,23 +377,6 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		A797E72CD084BC79CD0B221C /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CalorieCounterApp/Pods-CalorieCounterApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CalorieCounterApp/Pods-CalorieCounterApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CalorieCounterApp/Pods-CalorieCounterApp-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		FCB633EA93B6F6D806713D71 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -393,10 +407,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C66C331284774CB006A6BF0 /* MovieTabBarController.swift in Sources */,
+				9CCA4F54284A0D2D00542C90 /* ProgressPieChartThree.swift in Sources */,
 				9C66C2FF284592D9006A6BF0 /* MealChartView.swift in Sources */,
 				9C66C2DC283FD6B8006A6BF0 /* CaloriesView.swift in Sources */,
 				9C66C30E2846AAA3006A6BF0 /* Database.xcdatamodeld in Sources */,
 				9C66C2F12843C040006A6BF0 /* Constants.swift in Sources */,
+				9CCA4F57284A21AB00542C90 /* UserInfoViewController.swift in Sources */,
+				9CCA4F59284A234300542C90 /* GenderSelection.swift in Sources */,
 				9C66C2DE283FD96C006A6BF0 /* Colors.swift in Sources */,
 				9C66C2F32843C062006A6BF0 /* Groups.swift in Sources */,
 				9C66C2D7283FBCB6006A6BF0 /* Other.swift in Sources */,
@@ -410,12 +427,17 @@
 				9C66C2E72843B4D8006A6BF0 /* NetworkService.swift in Sources */,
 				9C66C2FC28457D46006A6BF0 /* ViewModels.swift in Sources */,
 				9C66C307284624E7006A6BF0 /* MealDetailsCell.swift in Sources */,
+				9CCA4F5D284A2CAF00542C90 /* HeightView.swift in Sources */,
 				9C66C30B2846A9D1006A6BF0 /* CoreDataStack.swift in Sources */,
 				9C66C2F828457980006A6BF0 /* NutritionDatabaseDataSource.swift in Sources */,
 				9C66C32F28476C24006A6BF0 /* NutrientsCell.swift in Sources */,
 				9CA346CC283F882300F6329A /* MockData.swift in Sources */,
+				9CCA4F5F284A2DCF00542C90 /* HeightViewCell.swift in Sources */,
 				9C66C333284775AE006A6BF0 /* AppRouter.swift in Sources */,
 				9C66C2DA283FD3C4006A6BF0 /* HomeViewController.swift in Sources */,
+				9CCA4F5B284A236100542C90 /* RadioButton.swift in Sources */,
+				9CCA4F61284A3B5300542C90 /* WeightView.swift in Sources */,
+				9CCA4F63284A3BC500542C90 /* WeightViewCell.swift in Sources */,
 				9C66C30128460C69006A6BF0 /* MealSearchViewController.swift in Sources */,
 				9CA346DE283FAFDA00F6329A /* ProgressPieChart.swift in Sources */,
 				9C66C2FA2845799E006A6BF0 /* NutritionNetworkDataSource.swift in Sources */,

@@ -7,221 +7,59 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0554805E4D06A704749F595F005DDFA7 /* LionheartExtensions-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 651EC23010BA8D649D7C53E75838F614 /* LionheartExtensions-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		14FFC4C5C8F03C99E8DA91697E19E1C2 /* UIWindow+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9FACCD00AA71C1E7DF6B91795DEA741D /* UIWindow+LionheartExtensions.swift */; };
-		179A3F75255CF0B6199F8F3AA132E062 /* Optional+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 08BD404E4C8012F4B9DFAFEF7C2E37C9 /* Optional+LionheartExtensions.swift */; };
-		182E46FAA2281E3D2B261ED1CAF1181A /* UIView+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73B66A0915E7210B0ED4AA3ECB660A33 /* UIView+LionheartExtensions.swift */; };
-		1ACD301DAFA7B095B467E2B63BBE9ED8 /* Any+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC0F98BF3F52F1F0A6FA5F0F58A7AEB0 /* Any+LionheartExtensions.swift */; };
-		1B96FE56EA83D8C1086593FB3F53585A /* UIScreen+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CAA7490AF86A50A7E419F3B467C531CF /* UIScreen+LionheartExtensions.swift */; };
-		2614BD624173A0EBC72FD3B3DFC75ED9 /* Summable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DF1FCB84B42A12F92C0F38F785006211 /* Summable.swift */; };
-		2CC5B0E46DD1355EDBF7AFB144008C99 /* ColorRepresentation.swift in Sources */ = {isa = PBXBuildFile; fileRef = EA250469284C0BF9BA8EEB3B43BDBA78 /* ColorRepresentation.swift */; };
-		2F3BFCAFF58EF7C782AE136A36025BA2 /* Array+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D12D207B96321C74D1A801D3D42D34D /* Array+LionheartExtensions.swift */; };
-		368ED343FC11A5832B7D38101C195AA0 /* ActivityIndicatorButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = CC76582EEC55ADF68A882C24A931FD34 /* ActivityIndicatorButton.swift */; };
-		44B5335B8A369B7B34CF617C9CB3780F /* UIDevice+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C22AE5A0CB79FC07DF98C42B1917F55 /* UIDevice+LionheartExtensions.swift */; };
-		4691D87094482EDAD23DF34AC7ED302F /* Bundle+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3CC71BDB34357DC12E08CAD47DF8CB1 /* Bundle+LionheartExtensions.swift */; };
-		4913E745CE536954CC8111C35E1EC0DD /* CustomButtonType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3BEAFDCA0D9F9A7859F80F94393A2397 /* CustomButtonType.swift */; };
-		4C5B60D4F6A81472A1C77B0C8EDA08D0 /* UIPrintPageRenderer+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1E4AFC604D793EF01EAD1227F99965E2 /* UIPrintPageRenderer+LionheartExtensions.swift */; };
-		57ABFF954BAF061523F0E7F141318D4A /* WKWebView+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897332F4E9F61535FA254FFA4C91CBFF /* WKWebView+LionheartExtensions.swift */; };
-		5AA7950A31DCC3C54D99DF0B3DF85333 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		5BB24DCF83B3D57F9214C300C2E2DC45 /* UIApplicationDelegate+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 894B21CBC01DE7855885FD901CED96FA /* UIApplicationDelegate+LionheartExtensions.swift */; };
-		60BFA83C7F6915400026921CB963D574 /* ConcentricProgressRingView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = DB534EFEAD43D5BC0D099DA76EA366D8 /* ConcentricProgressRingView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6B76BF25198BEF0E5C1604221E80DFD0 /* String+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B156DDC17F0A3184FA7BB6ABC54F933F /* String+LionheartExtensions.swift */; };
-		73877B8CDA4ACA4AE85F4AE1F603BEF5 /* DateFormatter+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 392F97A789A3C7538F06DDB924485DC9 /* DateFormatter+LionheartExtensions.swift */; };
-		7E1BF88BD751DAF41ABB2719B78E81E3 /* LionheartExtensions-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = B654195B78DABBBA6703244EF9F8182D /* LionheartExtensions-dummy.m */; };
-		7EBC99397354336204E7B125429BA6D7 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		808BA60C48B2FFDFC8798053D41DE4B6 /* Pods-CalorieCounterApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FBF3C880D27B7A892422ECC12A13895 /* Pods-CalorieCounterApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8248EFEA90BB2E4FFB5F698FFB99C563 /* NSURLSession+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1A4096626E5EA8ACEC722EBB0D064FC0 /* NSURLSession+LionheartExtensions.swift */; };
-		863762B33D082B00DB761BA503DD5DDF /* UIAlertController+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B922D1371E09EBADC329DEDADDFA7773 /* UIAlertController+LionheartExtensions.swift */; };
-		900D5DAF23851A32C36273BF8E9E25CC /* IndexPath+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E3740D9ACD3DC3EC9D8CF6760A57BA86 /* IndexPath+LionheartExtensions.swift */; };
-		92113DA939DD26782FE809B3A5864D8F /* UIImage+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F28E0D998EDF7EA11AE56886EB9E5B9 /* UIImage+LionheartExtensions.swift */; };
-		9554FE8A9B4109EE45DBFCEA4174BBB1 /* UIApplication+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E1C0E462FDACACE5C7B7526A46745E /* UIApplication+LionheartExtensions.swift */; };
-		A7AC51DC47B8EC5F35E1D6C33F824FB9 /* TitleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97A99899A8A7C213E1F6D1915A9926D8 /* TitleButton.swift */; };
-		AAA5860AAE2126F9E1A2D345A083BB46 /* FileManager+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8100DCB950D9C44434792465CA322680 /* FileManager+LionheartExtensions.swift */; };
-		B0AC909653DD8F0A3C09D2B98595C73D /* UIColor+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8218EB10E57570F7E147B62E130794E8 /* UIColor+LionheartExtensions.swift */; };
-		B48A5FC09A39DBCE9713454C7E44DDEC /* Main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 34AAD23A00478FC42AE6BF7FC33E33EB /* Main.swift */; };
-		C322CB0163A493AE105EED80FCAAE950 /* ConcentricProgressRingView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A99BCDF174FE70F37D842B32211957D1 /* ConcentricProgressRingView-dummy.m */; };
-		C4797526232AEC57A89C8AA6C614489F /* UIFont+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E434B15404B5BB9FA47B3588882BA40 /* UIFont+LionheartExtensions.swift */; };
-		C4F21B4988501951993D1FBF3EBEF327 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		C6EE4398E11949E6BFE2B54994A1786F /* NSRegularExpression+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89DC70669436EDF7A9A00A9620F9BAC9 /* NSRegularExpression+LionheartExtensions.swift */; };
-		C9BFE29118CC5AF0BED826DCDF935307 /* UIViewController+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 55A0C37E3D7A5B0C278DB6B6FDF40E8A /* UIViewController+LionheartExtensions.swift */; };
-		CB8DFE5FF8F369225ABC8CF080869666 /* Functional.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF0A0244685C6D47C84E6B6BA44289C0 /* Functional.swift */; };
-		D317001378154D9DC6FD5BDC263FB29E /* ConcentricProgressRing.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6844A5B2C6F30FC5A10540A069ACF36 /* ConcentricProgressRing.swift */; };
-		DF3BA8D7B56E4F44F9D1522E492BDAC8 /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = B778D2E900794FEBA317C7D7988A16D2 /* File.swift */; };
-		E8D192F0B89856C80A7969AB844F1330 /* Pods-CalorieCounterApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EEFBF24C01E03AD5F810D0E4E591235 /* Pods-CalorieCounterApp-dummy.m */; };
-		F17F42BFD3C0D16E02EC8921F135AA51 /* Int+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 584133B61029D6E3F295205A3A582653 /* Int+LionheartExtensions.swift */; };
-		F309FB8C666E348BE647269016EB368B /* NSDecimalNumber+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E57E2FA42AB6BBBF4F5F7191B9AF8D80 /* NSDecimalNumber+LionheartExtensions.swift */; };
-		F5D30FABE3C7F00F26A71F7E3DF3787B /* CIImage+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3B33069B8483E6EDC0C29CA1E5BB3BD8 /* CIImage+LionheartExtensions.swift */; };
-		FE83E7C968A3036C9BF40EB56F409DF0 /* UITextField+LionheartExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 558784BBC2671ABFB6E8DDD5DC455F3B /* UITextField+LionheartExtensions.swift */; };
+		3EC507C96D9F273563FD87CDE7D74E87 /* Pods-CalorieCounterApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9573F9BCDE96F790E7B9E9EA51D42FB6 /* Pods-CalorieCounterApp-dummy.m */; };
+		882E49E6ADCAB14A592FFE6E6878F2D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		918063B36B022C88D3D14879D3B151E4 /* Pods-CalorieCounterApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E78AC5AA826C24F65B4D8DD9BFCE26C /* Pods-CalorieCounterApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
 
-/* Begin PBXContainerItemProxy section */
-		1ADCE85C5FD143F1A871F6FF120BEA12 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8F4A96A89FB295E15665620AFFCE1DDE;
-			remoteInfo = LionheartExtensions;
-		};
-		6E12D3E407C0D54C0F41E14DCE4961B4 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 8F4A96A89FB295E15665620AFFCE1DDE;
-			remoteInfo = LionheartExtensions;
-		};
-		F679DB874D0DF4AE00C4CF49A721F0F6 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 7F9F152482955A392E61D7014E6D153E;
-			remoteInfo = ConcentricProgressRingView;
-		};
-/* End PBXContainerItemProxy section */
-
 /* Begin PBXFileReference section */
-		07D3B7761B705783B5A1058492AB8E5B /* Pods-CalorieCounterApp-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CalorieCounterApp-Info.plist"; sourceTree = "<group>"; };
-		08BD404E4C8012F4B9DFAFEF7C2E37C9 /* Optional+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Optional+LionheartExtensions.swift"; path = "Pod/Classes/Core/Optional+LionheartExtensions.swift"; sourceTree = "<group>"; };
-		0BF62B2896164A83336138A29983B4A8 /* Pods-CalorieCounterApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CalorieCounterApp-acknowledgements.markdown"; sourceTree = "<group>"; };
-		0D9054E80BC10B16282265A2A4171374 /* ConcentricProgressRingView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ConcentricProgressRingView.debug.xcconfig; sourceTree = "<group>"; };
-		0F28E0D998EDF7EA11AE56886EB9E5B9 /* UIImage+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIImage+LionheartExtensions.swift"; path = "Pod/Classes/Core/UIImage+LionheartExtensions.swift"; sourceTree = "<group>"; };
-		1A4096626E5EA8ACEC722EBB0D064FC0 /* NSURLSession+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSURLSession+LionheartExtensions.swift"; path = "Pod/Classes/Core/NSURLSession+LionheartExtensions.swift"; sourceTree = "<group>"; };
-		1C22AE5A0CB79FC07DF98C42B1917F55 /* UIDevice+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIDevice+LionheartExtensions.swift"; path = "Pod/Classes/Core/UIDevice+LionheartExtensions.swift"; sourceTree = "<group>"; };
-		1E4AFC604D793EF01EAD1227F99965E2 /* UIPrintPageRenderer+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIPrintPageRenderer+LionheartExtensions.swift"; path = "Pod/Classes/Core/UIPrintPageRenderer+LionheartExtensions.swift"; sourceTree = "<group>"; };
-		2037B90A8BF33291FCFB33F8471705DF /* LionheartExtensions */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = LionheartExtensions; path = LionheartExtensions.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		2337093038BCFA356AFDB462C742EFDD /* Pods-CalorieCounterApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CalorieCounterApp.release.xcconfig"; sourceTree = "<group>"; };
-		34AAD23A00478FC42AE6BF7FC33E33EB /* Main.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Main.swift; path = Pod/Classes/Main.swift; sourceTree = "<group>"; };
+		26FC6E53A24871E5B8361B0003C32070 /* Pods-CalorieCounterApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CalorieCounterApp-acknowledgements.markdown"; sourceTree = "<group>"; };
+		33F7B4FBB51EF01D027E2D64A996FFEB /* Pods-CalorieCounterApp-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CalorieCounterApp-Info.plist"; sourceTree = "<group>"; };
+		34692EA17B5030D7C6C1C853549E0067 /* Pods-CalorieCounterApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CalorieCounterApp-acknowledgements.plist"; sourceTree = "<group>"; };
 		380C92673B0E646BB249C734DEB68F02 /* Pods-CalorieCounterApp */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-CalorieCounterApp"; path = Pods_CalorieCounterApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		392F97A789A3C7538F06DDB924485DC9 /* DateFormatter+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "DateFormatter+LionheartExtensions.swift"; path = "Pod/Classes/Core/DateFormatter+LionheartExtensions.swift"; sourceTree = "<group>"; };
-		3B33069B8483E6EDC0C29CA1E5BB3BD8 /* CIImage+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CIImage+LionheartExtensions.swift"; path = "Pod/Classes/Core/CIImage+LionheartExtensions.swift"; sourceTree = "<group>"; };
-		3BEAFDCA0D9F9A7859F80F94393A2397 /* CustomButtonType.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomButtonType.swift; path = Pod/Classes/CustomButtonType.swift; sourceTree = "<group>"; };
-		44CA823102CAAA1D2A4F2CDECDF697E0 /* Pods-CalorieCounterApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CalorieCounterApp.modulemap"; sourceTree = "<group>"; };
-		4FBF3C880D27B7A892422ECC12A13895 /* Pods-CalorieCounterApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CalorieCounterApp-umbrella.h"; sourceTree = "<group>"; };
-		52DF9F65CD632D2CC088757B2A7B0134 /* ConcentricProgressRingView */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ConcentricProgressRingView; path = ConcentricProgressRingView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		558784BBC2671ABFB6E8DDD5DC455F3B /* UITextField+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UITextField+LionheartExtensions.swift"; path = "Pod/Classes/Core/UITextField+LionheartExtensions.swift"; sourceTree = "<group>"; };
-		55A0C37E3D7A5B0C278DB6B6FDF40E8A /* UIViewController+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIViewController+LionheartExtensions.swift"; path = "Pod/Classes/Core/UIViewController+LionheartExtensions.swift"; sourceTree = "<group>"; };
-		584133B61029D6E3F295205A3A582653 /* Int+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Int+LionheartExtensions.swift"; path = "Pod/Classes/Core/Int+LionheartExtensions.swift"; sourceTree = "<group>"; };
-		5D12D207B96321C74D1A801D3D42D34D /* Array+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Array+LionheartExtensions.swift"; path = "Pod/Classes/Core/Array+LionheartExtensions.swift"; sourceTree = "<group>"; };
-		5EEFBF24C01E03AD5F810D0E4E591235 /* Pods-CalorieCounterApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CalorieCounterApp-dummy.m"; sourceTree = "<group>"; };
-		651EC23010BA8D649D7C53E75838F614 /* LionheartExtensions-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LionheartExtensions-umbrella.h"; sourceTree = "<group>"; };
-		677F34403BE4DECFC5608058FD10A50C /* ConcentricProgressRingView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ConcentricProgressRingView.modulemap; sourceTree = "<group>"; };
-		696C26CC83E894BA438E52A34C406A50 /* ConcentricProgressRingView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ConcentricProgressRingView.release.xcconfig; sourceTree = "<group>"; };
+		4E1E14D38D1F9942470374500DE3D887 /* Pods-CalorieCounterApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CalorieCounterApp.debug.xcconfig"; sourceTree = "<group>"; };
+		5FFF80CC23E4779CD6A642DD0A1A7A3A /* Pods-CalorieCounterApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CalorieCounterApp.release.xcconfig"; sourceTree = "<group>"; };
+		72545747D337D67E7466CE7C162E286F /* Pods-CalorieCounterApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CalorieCounterApp.modulemap"; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		73B66A0915E7210B0ED4AA3ECB660A33 /* UIView+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIView+LionheartExtensions.swift"; path = "Pod/Classes/Core/UIView+LionheartExtensions.swift"; sourceTree = "<group>"; };
-		7BF7C0400BFFF34075517DABEAEB8C99 /* Pods-CalorieCounterApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CalorieCounterApp-frameworks.sh"; sourceTree = "<group>"; };
-		7E434B15404B5BB9FA47B3588882BA40 /* UIFont+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIFont+LionheartExtensions.swift"; path = "Pod/Classes/Core/UIFont+LionheartExtensions.swift"; sourceTree = "<group>"; };
-		8100DCB950D9C44434792465CA322680 /* FileManager+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "FileManager+LionheartExtensions.swift"; path = "Pod/Classes/Core/FileManager+LionheartExtensions.swift"; sourceTree = "<group>"; };
-		8218EB10E57570F7E147B62E130794E8 /* UIColor+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIColor+LionheartExtensions.swift"; path = "Pod/Classes/Core/UIColor+LionheartExtensions.swift"; sourceTree = "<group>"; };
-		88D1C3F123F625316EC36BF02BFF8395 /* LionheartExtensions.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = LionheartExtensions.modulemap; sourceTree = "<group>"; };
-		894B21CBC01DE7855885FD901CED96FA /* UIApplicationDelegate+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIApplicationDelegate+LionheartExtensions.swift"; path = "Pod/Classes/Core/UIApplicationDelegate+LionheartExtensions.swift"; sourceTree = "<group>"; };
-		897332F4E9F61535FA254FFA4C91CBFF /* WKWebView+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "WKWebView+LionheartExtensions.swift"; path = "Pod/Classes/Core/WKWebView+LionheartExtensions.swift"; sourceTree = "<group>"; };
-		89DC70669436EDF7A9A00A9620F9BAC9 /* NSRegularExpression+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSRegularExpression+LionheartExtensions.swift"; path = "Pod/Classes/Core/NSRegularExpression+LionheartExtensions.swift"; sourceTree = "<group>"; };
-		97A99899A8A7C213E1F6D1915A9926D8 /* TitleButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TitleButton.swift; path = Pod/Classes/TitleButton.swift; sourceTree = "<group>"; };
-		9D4644405A664B0D52FF10B800B50B98 /* ConcentricProgressRingView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ConcentricProgressRingView-prefix.pch"; sourceTree = "<group>"; };
+		8E78AC5AA826C24F65B4D8DD9BFCE26C /* Pods-CalorieCounterApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CalorieCounterApp-umbrella.h"; sourceTree = "<group>"; };
+		9573F9BCDE96F790E7B9E9EA51D42FB6 /* Pods-CalorieCounterApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CalorieCounterApp-dummy.m"; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		9FACCD00AA71C1E7DF6B91795DEA741D /* UIWindow+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIWindow+LionheartExtensions.swift"; path = "Pod/Classes/Core/UIWindow+LionheartExtensions.swift"; sourceTree = "<group>"; };
-		A99BCDF174FE70F37D842B32211957D1 /* ConcentricProgressRingView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ConcentricProgressRingView-dummy.m"; sourceTree = "<group>"; };
-		ABB3FD052230D2A16CDC93CA3C06643F /* LionheartExtensions.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LionheartExtensions.debug.xcconfig; sourceTree = "<group>"; };
-		AF0A0244685C6D47C84E6B6BA44289C0 /* Functional.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Functional.swift; path = Pod/Classes/Functional.swift; sourceTree = "<group>"; };
-		B156DDC17F0A3184FA7BB6ABC54F933F /* String+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "String+LionheartExtensions.swift"; path = "Pod/Classes/Core/String+LionheartExtensions.swift"; sourceTree = "<group>"; };
-		B34445AC4366902D3D65AA2E7070798B /* ConcentricProgressRingView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ConcentricProgressRingView-Info.plist"; sourceTree = "<group>"; };
-		B654195B78DABBBA6703244EF9F8182D /* LionheartExtensions-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "LionheartExtensions-dummy.m"; sourceTree = "<group>"; };
-		B778D2E900794FEBA317C7D7988A16D2 /* File.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = File.swift; path = Pod/Classes/File.swift; sourceTree = "<group>"; };
-		B922D1371E09EBADC329DEDADDFA7773 /* UIAlertController+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIAlertController+LionheartExtensions.swift"; path = "Pod/Classes/Core/UIAlertController+LionheartExtensions.swift"; sourceTree = "<group>"; };
-		BBAF970461E329937DDA1C886D263C15 /* LionheartExtensions.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LionheartExtensions.release.xcconfig; sourceTree = "<group>"; };
-		C1C51F5EA08195645FFEA05640C6C607 /* LionheartExtensions-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "LionheartExtensions-prefix.pch"; sourceTree = "<group>"; };
-		C3CC71BDB34357DC12E08CAD47DF8CB1 /* Bundle+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Bundle+LionheartExtensions.swift"; path = "Pod/Classes/Core/Bundle+LionheartExtensions.swift"; sourceTree = "<group>"; };
-		CAA7490AF86A50A7E419F3B467C531CF /* UIScreen+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIScreen+LionheartExtensions.swift"; path = "Pod/Classes/Core/UIScreen+LionheartExtensions.swift"; sourceTree = "<group>"; };
-		CC0F98BF3F52F1F0A6FA5F0F58A7AEB0 /* Any+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Any+LionheartExtensions.swift"; path = "Pod/Classes/Core/Any+LionheartExtensions.swift"; sourceTree = "<group>"; };
-		CC76582EEC55ADF68A882C24A931FD34 /* ActivityIndicatorButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ActivityIndicatorButton.swift; path = Pod/Classes/ActivityIndicatorButton.swift; sourceTree = "<group>"; };
-		D6844A5B2C6F30FC5A10540A069ACF36 /* ConcentricProgressRing.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ConcentricProgressRing.swift; path = ConcentricProgressRingView/Classes/ConcentricProgressRing.swift; sourceTree = "<group>"; };
-		DB534EFEAD43D5BC0D099DA76EA366D8 /* ConcentricProgressRingView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ConcentricProgressRingView-umbrella.h"; sourceTree = "<group>"; };
-		DF1FCB84B42A12F92C0F38F785006211 /* Summable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Summable.swift; path = Pod/Classes/Summable.swift; sourceTree = "<group>"; };
-		E2E1C0E462FDACACE5C7B7526A46745E /* UIApplication+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "UIApplication+LionheartExtensions.swift"; path = "Pod/Classes/Core/UIApplication+LionheartExtensions.swift"; sourceTree = "<group>"; };
-		E3740D9ACD3DC3EC9D8CF6760A57BA86 /* IndexPath+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "IndexPath+LionheartExtensions.swift"; path = "Pod/Classes/Core/IndexPath+LionheartExtensions.swift"; sourceTree = "<group>"; };
-		E57E2FA42AB6BBBF4F5F7191B9AF8D80 /* NSDecimalNumber+LionheartExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "NSDecimalNumber+LionheartExtensions.swift"; path = "Pod/Classes/Core/NSDecimalNumber+LionheartExtensions.swift"; sourceTree = "<group>"; };
-		EA250469284C0BF9BA8EEB3B43BDBA78 /* ColorRepresentation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ColorRepresentation.swift; path = Pod/Classes/ColorRepresentation.swift; sourceTree = "<group>"; };
-		EEBE5689299AA01DBF23A2591B10852B /* LionheartExtensions-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "LionheartExtensions-Info.plist"; sourceTree = "<group>"; };
-		F5CDFA1B97A0C910B20B52240893AA2C /* Pods-CalorieCounterApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CalorieCounterApp-acknowledgements.plist"; sourceTree = "<group>"; };
-		FB869153AF97C9BFB5A6E625983684F7 /* Pods-CalorieCounterApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CalorieCounterApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		16DA524A638B3A9F8629E6F2428EAD67 /* Frameworks */ = {
+		6EAA02FEFC38FE9087CC0B4075C6DB19 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7EBC99397354336204E7B125429BA6D7 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		3B2330734E200E44382E2F40C7A1AD8E /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				5AA7950A31DCC3C54D99DF0B3DF85333 /* Foundation.framework in Frameworks */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		461B9166E9D70E00C93D547987BA45BC /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				C4F21B4988501951993D1FBF3EBEF327 /* Foundation.framework in Frameworks */,
+				882E49E6ADCAB14A592FFE6E6878F2D9 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0605297EC1B6B596A53C9965F680195E /* Pods */ = {
+		06F2759BB8FDE691FF3DD0C6E65C0A95 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				620356257CD823D94B1A37BC68D4235F /* ConcentricProgressRingView */,
-				A99F62C50521F36F66DEC0189F048F04 /* LionheartExtensions */,
+				380C92673B0E646BB249C734DEB68F02 /* Pods-CalorieCounterApp */,
 			);
-			name = Pods;
+			name = Products;
 			sourceTree = "<group>";
 		};
-		0FB44A9634487EBAFAE0DDEA1FF27D9B /* Core */ = {
+		24AE7593D457FA7A15163D7AA2724A6D /* Pods-CalorieCounterApp */ = {
 			isa = PBXGroup;
 			children = (
-				CC76582EEC55ADF68A882C24A931FD34 /* ActivityIndicatorButton.swift */,
-				CC0F98BF3F52F1F0A6FA5F0F58A7AEB0 /* Any+LionheartExtensions.swift */,
-				5D12D207B96321C74D1A801D3D42D34D /* Array+LionheartExtensions.swift */,
-				C3CC71BDB34357DC12E08CAD47DF8CB1 /* Bundle+LionheartExtensions.swift */,
-				3B33069B8483E6EDC0C29CA1E5BB3BD8 /* CIImage+LionheartExtensions.swift */,
-				EA250469284C0BF9BA8EEB3B43BDBA78 /* ColorRepresentation.swift */,
-				3BEAFDCA0D9F9A7859F80F94393A2397 /* CustomButtonType.swift */,
-				392F97A789A3C7538F06DDB924485DC9 /* DateFormatter+LionheartExtensions.swift */,
-				B778D2E900794FEBA317C7D7988A16D2 /* File.swift */,
-				8100DCB950D9C44434792465CA322680 /* FileManager+LionheartExtensions.swift */,
-				AF0A0244685C6D47C84E6B6BA44289C0 /* Functional.swift */,
-				E3740D9ACD3DC3EC9D8CF6760A57BA86 /* IndexPath+LionheartExtensions.swift */,
-				584133B61029D6E3F295205A3A582653 /* Int+LionheartExtensions.swift */,
-				34AAD23A00478FC42AE6BF7FC33E33EB /* Main.swift */,
-				E57E2FA42AB6BBBF4F5F7191B9AF8D80 /* NSDecimalNumber+LionheartExtensions.swift */,
-				89DC70669436EDF7A9A00A9620F9BAC9 /* NSRegularExpression+LionheartExtensions.swift */,
-				1A4096626E5EA8ACEC722EBB0D064FC0 /* NSURLSession+LionheartExtensions.swift */,
-				08BD404E4C8012F4B9DFAFEF7C2E37C9 /* Optional+LionheartExtensions.swift */,
-				B156DDC17F0A3184FA7BB6ABC54F933F /* String+LionheartExtensions.swift */,
-				DF1FCB84B42A12F92C0F38F785006211 /* Summable.swift */,
-				97A99899A8A7C213E1F6D1915A9926D8 /* TitleButton.swift */,
-				B922D1371E09EBADC329DEDADDFA7773 /* UIAlertController+LionheartExtensions.swift */,
-				E2E1C0E462FDACACE5C7B7526A46745E /* UIApplication+LionheartExtensions.swift */,
-				894B21CBC01DE7855885FD901CED96FA /* UIApplicationDelegate+LionheartExtensions.swift */,
-				8218EB10E57570F7E147B62E130794E8 /* UIColor+LionheartExtensions.swift */,
-				1C22AE5A0CB79FC07DF98C42B1917F55 /* UIDevice+LionheartExtensions.swift */,
-				7E434B15404B5BB9FA47B3588882BA40 /* UIFont+LionheartExtensions.swift */,
-				0F28E0D998EDF7EA11AE56886EB9E5B9 /* UIImage+LionheartExtensions.swift */,
-				1E4AFC604D793EF01EAD1227F99965E2 /* UIPrintPageRenderer+LionheartExtensions.swift */,
-				CAA7490AF86A50A7E419F3B467C531CF /* UIScreen+LionheartExtensions.swift */,
-				558784BBC2671ABFB6E8DDD5DC455F3B /* UITextField+LionheartExtensions.swift */,
-				73B66A0915E7210B0ED4AA3ECB660A33 /* UIView+LionheartExtensions.swift */,
-				55A0C37E3D7A5B0C278DB6B6FDF40E8A /* UIViewController+LionheartExtensions.swift */,
-				9FACCD00AA71C1E7DF6B91795DEA741D /* UIWindow+LionheartExtensions.swift */,
-				897332F4E9F61535FA254FFA4C91CBFF /* WKWebView+LionheartExtensions.swift */,
+				72545747D337D67E7466CE7C162E286F /* Pods-CalorieCounterApp.modulemap */,
+				26FC6E53A24871E5B8361B0003C32070 /* Pods-CalorieCounterApp-acknowledgements.markdown */,
+				34692EA17B5030D7C6C1C853549E0067 /* Pods-CalorieCounterApp-acknowledgements.plist */,
+				9573F9BCDE96F790E7B9E9EA51D42FB6 /* Pods-CalorieCounterApp-dummy.m */,
+				33F7B4FBB51EF01D027E2D64A996FFEB /* Pods-CalorieCounterApp-Info.plist */,
+				8E78AC5AA826C24F65B4D8DD9BFCE26C /* Pods-CalorieCounterApp-umbrella.h */,
+				4E1E14D38D1F9942470374500DE3D887 /* Pods-CalorieCounterApp.debug.xcconfig */,
+				5FFF80CC23E4779CD6A642DD0A1A7A3A /* Pods-CalorieCounterApp.release.xcconfig */,
 			);
-			name = Core;
+			name = "Pods-CalorieCounterApp";
+			path = "Target Support Files/Pods-CalorieCounterApp";
 			sourceTree = "<group>";
 		};
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
@@ -232,57 +70,12 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		620356257CD823D94B1A37BC68D4235F /* ConcentricProgressRingView */ = {
+		7C56D3CF3EF9B8457B979B81DBF09D11 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				D6844A5B2C6F30FC5A10540A069ACF36 /* ConcentricProgressRing.swift */,
-				72E6C5AA820D43B40C44D81F067ACC96 /* Support Files */,
-			);
-			name = ConcentricProgressRingView;
-			path = ConcentricProgressRingView;
-			sourceTree = "<group>";
-		};
-		7117ACF3E555ED1E341306E7FE70B463 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				52DF9F65CD632D2CC088757B2A7B0134 /* ConcentricProgressRingView */,
-				2037B90A8BF33291FCFB33F8471705DF /* LionheartExtensions */,
-				380C92673B0E646BB249C734DEB68F02 /* Pods-CalorieCounterApp */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		72E6C5AA820D43B40C44D81F067ACC96 /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				677F34403BE4DECFC5608058FD10A50C /* ConcentricProgressRingView.modulemap */,
-				A99BCDF174FE70F37D842B32211957D1 /* ConcentricProgressRingView-dummy.m */,
-				B34445AC4366902D3D65AA2E7070798B /* ConcentricProgressRingView-Info.plist */,
-				9D4644405A664B0D52FF10B800B50B98 /* ConcentricProgressRingView-prefix.pch */,
-				DB534EFEAD43D5BC0D099DA76EA366D8 /* ConcentricProgressRingView-umbrella.h */,
-				0D9054E80BC10B16282265A2A4171374 /* ConcentricProgressRingView.debug.xcconfig */,
-				696C26CC83E894BA438E52A34C406A50 /* ConcentricProgressRingView.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/ConcentricProgressRingView";
-			sourceTree = "<group>";
-		};
-		A65C5691DE33722A82C398FB9C50105E /* Targets Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				F397E27C87C48431C274DE2111B826AC /* Pods-CalorieCounterApp */,
+				24AE7593D457FA7A15163D7AA2724A6D /* Pods-CalorieCounterApp */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		A99F62C50521F36F66DEC0189F048F04 /* LionheartExtensions */ = {
-			isa = PBXGroup;
-			children = (
-				0FB44A9634487EBAFAE0DDEA1FF27D9B /* Core */,
-				EACF7CFA2908470FA0AA44CE77BC14FB /* Support Files */,
-			);
-			name = LionheartExtensions;
-			path = LionheartExtensions;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -290,9 +83,8 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				0605297EC1B6B596A53C9965F680195E /* Pods */,
-				7117ACF3E555ED1E341306E7FE70B463 /* Products */,
-				A65C5691DE33722A82C398FB9C50105E /* Targets Support Files */,
+				06F2759BB8FDE691FF3DD0C6E65C0A95 /* Products */,
+				7C56D3CF3EF9B8457B979B81DBF09D11 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -304,119 +96,32 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		EACF7CFA2908470FA0AA44CE77BC14FB /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				88D1C3F123F625316EC36BF02BFF8395 /* LionheartExtensions.modulemap */,
-				B654195B78DABBBA6703244EF9F8182D /* LionheartExtensions-dummy.m */,
-				EEBE5689299AA01DBF23A2591B10852B /* LionheartExtensions-Info.plist */,
-				C1C51F5EA08195645FFEA05640C6C607 /* LionheartExtensions-prefix.pch */,
-				651EC23010BA8D649D7C53E75838F614 /* LionheartExtensions-umbrella.h */,
-				ABB3FD052230D2A16CDC93CA3C06643F /* LionheartExtensions.debug.xcconfig */,
-				BBAF970461E329937DDA1C886D263C15 /* LionheartExtensions.release.xcconfig */,
-			);
-			name = "Support Files";
-			path = "../Target Support Files/LionheartExtensions";
-			sourceTree = "<group>";
-		};
-		F397E27C87C48431C274DE2111B826AC /* Pods-CalorieCounterApp */ = {
-			isa = PBXGroup;
-			children = (
-				44CA823102CAAA1D2A4F2CDECDF697E0 /* Pods-CalorieCounterApp.modulemap */,
-				0BF62B2896164A83336138A29983B4A8 /* Pods-CalorieCounterApp-acknowledgements.markdown */,
-				F5CDFA1B97A0C910B20B52240893AA2C /* Pods-CalorieCounterApp-acknowledgements.plist */,
-				5EEFBF24C01E03AD5F810D0E4E591235 /* Pods-CalorieCounterApp-dummy.m */,
-				7BF7C0400BFFF34075517DABEAEB8C99 /* Pods-CalorieCounterApp-frameworks.sh */,
-				07D3B7761B705783B5A1058492AB8E5B /* Pods-CalorieCounterApp-Info.plist */,
-				4FBF3C880D27B7A892422ECC12A13895 /* Pods-CalorieCounterApp-umbrella.h */,
-				FB869153AF97C9BFB5A6E625983684F7 /* Pods-CalorieCounterApp.debug.xcconfig */,
-				2337093038BCFA356AFDB462C742EFDD /* Pods-CalorieCounterApp.release.xcconfig */,
-			);
-			name = "Pods-CalorieCounterApp";
-			path = "Target Support Files/Pods-CalorieCounterApp";
-			sourceTree = "<group>";
-		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		35AD87BE48261B05C7B886AA9934EC46 /* Headers */ = {
+		92128CDA14EBE9184EBAE010CC16B2D5 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				60BFA83C7F6915400026921CB963D574 /* ConcentricProgressRingView-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		5E6B60759FECE16A63223F34726FEFC1 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0554805E4D06A704749F595F005DDFA7 /* LionheartExtensions-umbrella.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B94A7E005186D30B509E6CF34B25DCDE /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				808BA60C48B2FFDFC8798053D41DE4B6 /* Pods-CalorieCounterApp-umbrella.h in Headers */,
+				918063B36B022C88D3D14879D3B151E4 /* Pods-CalorieCounterApp-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		7F9F152482955A392E61D7014E6D153E /* ConcentricProgressRingView */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = BF06730569E961D3FD84D8AE2A050E32 /* Build configuration list for PBXNativeTarget "ConcentricProgressRingView" */;
-			buildPhases = (
-				35AD87BE48261B05C7B886AA9934EC46 /* Headers */,
-				2409780332BE35E27844A14AAD783B0B /* Sources */,
-				3B2330734E200E44382E2F40C7A1AD8E /* Frameworks */,
-				686538116DE2F1F2F2690A184E91AF00 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-				1DE5D8FBEF6779F1DAE8B43E03479CBC /* PBXTargetDependency */,
-			);
-			name = ConcentricProgressRingView;
-			productName = ConcentricProgressRingView;
-			productReference = 52DF9F65CD632D2CC088757B2A7B0134 /* ConcentricProgressRingView */;
-			productType = "com.apple.product-type.framework";
-		};
-		8F4A96A89FB295E15665620AFFCE1DDE /* LionheartExtensions */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = F98CACD3E62C1B83C8336F17BC82B757 /* Build configuration list for PBXNativeTarget "LionheartExtensions" */;
-			buildPhases = (
-				5E6B60759FECE16A63223F34726FEFC1 /* Headers */,
-				CAF6242A052B813DAAA6EF80E69435A6 /* Sources */,
-				461B9166E9D70E00C93D547987BA45BC /* Frameworks */,
-				C071A6CA1023C82B2A6D5A1C6E074BB8 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = LionheartExtensions;
-			productName = LionheartExtensions;
-			productReference = 2037B90A8BF33291FCFB33F8471705DF /* LionheartExtensions */;
-			productType = "com.apple.product-type.framework";
-		};
 		AF4188F3AF1FF7BD60E375DF81E69B78 /* Pods-CalorieCounterApp */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 9C95EB473C9A07DB9A37ED97DDA74279 /* Build configuration list for PBXNativeTarget "Pods-CalorieCounterApp" */;
+			buildConfigurationList = 2C1A63705135FA9FA9AE707E7590ACE8 /* Build configuration list for PBXNativeTarget "Pods-CalorieCounterApp" */;
 			buildPhases = (
-				B94A7E005186D30B509E6CF34B25DCDE /* Headers */,
-				54DC5C7FE8C85CAD09C5D92FA6508E58 /* Sources */,
-				16DA524A638B3A9F8629E6F2428EAD67 /* Frameworks */,
-				D5F15AA9E7165E8C023BE91299FE2CCB /* Resources */,
+				92128CDA14EBE9184EBAE010CC16B2D5 /* Headers */,
+				B1FC2B79D2880F3C4F1497643B83D243 /* Sources */,
+				6EAA02FEFC38FE9087CC0B4075C6DB19 /* Frameworks */,
+				437CB10090E58A7F307FE968F5D0DA3E /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				13C04FD3C785F8DC5235E2B10F151D7F /* PBXTargetDependency */,
-				F0A3A4FE659402FE7945D1BDB54AC8D9 /* PBXTargetDependency */,
 			);
 			name = "Pods-CalorieCounterApp";
 			productName = Pods_CalorieCounterApp;
@@ -441,33 +146,17 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 7117ACF3E555ED1E341306E7FE70B463 /* Products */;
+			productRefGroup = 06F2759BB8FDE691FF3DD0C6E65C0A95 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				7F9F152482955A392E61D7014E6D153E /* ConcentricProgressRingView */,
-				8F4A96A89FB295E15665620AFFCE1DDE /* LionheartExtensions */,
 				AF4188F3AF1FF7BD60E375DF81E69B78 /* Pods-CalorieCounterApp */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		686538116DE2F1F2F2690A184E91AF00 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		C071A6CA1023C82B2A6D5A1C6E074BB8 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		D5F15AA9E7165E8C023BE91299FE2CCB /* Resources */ = {
+		437CB10090E58A7F307FE968F5D0DA3E /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -477,164 +166,20 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		2409780332BE35E27844A14AAD783B0B /* Sources */ = {
+		B1FC2B79D2880F3C4F1497643B83D243 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D317001378154D9DC6FD5BDC263FB29E /* ConcentricProgressRing.swift in Sources */,
-				C322CB0163A493AE105EED80FCAAE950 /* ConcentricProgressRingView-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		54DC5C7FE8C85CAD09C5D92FA6508E58 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				E8D192F0B89856C80A7969AB844F1330 /* Pods-CalorieCounterApp-dummy.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		CAF6242A052B813DAAA6EF80E69435A6 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				368ED343FC11A5832B7D38101C195AA0 /* ActivityIndicatorButton.swift in Sources */,
-				1ACD301DAFA7B095B467E2B63BBE9ED8 /* Any+LionheartExtensions.swift in Sources */,
-				2F3BFCAFF58EF7C782AE136A36025BA2 /* Array+LionheartExtensions.swift in Sources */,
-				4691D87094482EDAD23DF34AC7ED302F /* Bundle+LionheartExtensions.swift in Sources */,
-				F5D30FABE3C7F00F26A71F7E3DF3787B /* CIImage+LionheartExtensions.swift in Sources */,
-				2CC5B0E46DD1355EDBF7AFB144008C99 /* ColorRepresentation.swift in Sources */,
-				4913E745CE536954CC8111C35E1EC0DD /* CustomButtonType.swift in Sources */,
-				73877B8CDA4ACA4AE85F4AE1F603BEF5 /* DateFormatter+LionheartExtensions.swift in Sources */,
-				DF3BA8D7B56E4F44F9D1522E492BDAC8 /* File.swift in Sources */,
-				AAA5860AAE2126F9E1A2D345A083BB46 /* FileManager+LionheartExtensions.swift in Sources */,
-				CB8DFE5FF8F369225ABC8CF080869666 /* Functional.swift in Sources */,
-				900D5DAF23851A32C36273BF8E9E25CC /* IndexPath+LionheartExtensions.swift in Sources */,
-				F17F42BFD3C0D16E02EC8921F135AA51 /* Int+LionheartExtensions.swift in Sources */,
-				7E1BF88BD751DAF41ABB2719B78E81E3 /* LionheartExtensions-dummy.m in Sources */,
-				B48A5FC09A39DBCE9713454C7E44DDEC /* Main.swift in Sources */,
-				F309FB8C666E348BE647269016EB368B /* NSDecimalNumber+LionheartExtensions.swift in Sources */,
-				C6EE4398E11949E6BFE2B54994A1786F /* NSRegularExpression+LionheartExtensions.swift in Sources */,
-				8248EFEA90BB2E4FFB5F698FFB99C563 /* NSURLSession+LionheartExtensions.swift in Sources */,
-				179A3F75255CF0B6199F8F3AA132E062 /* Optional+LionheartExtensions.swift in Sources */,
-				6B76BF25198BEF0E5C1604221E80DFD0 /* String+LionheartExtensions.swift in Sources */,
-				2614BD624173A0EBC72FD3B3DFC75ED9 /* Summable.swift in Sources */,
-				A7AC51DC47B8EC5F35E1D6C33F824FB9 /* TitleButton.swift in Sources */,
-				863762B33D082B00DB761BA503DD5DDF /* UIAlertController+LionheartExtensions.swift in Sources */,
-				9554FE8A9B4109EE45DBFCEA4174BBB1 /* UIApplication+LionheartExtensions.swift in Sources */,
-				5BB24DCF83B3D57F9214C300C2E2DC45 /* UIApplicationDelegate+LionheartExtensions.swift in Sources */,
-				B0AC909653DD8F0A3C09D2B98595C73D /* UIColor+LionheartExtensions.swift in Sources */,
-				44B5335B8A369B7B34CF617C9CB3780F /* UIDevice+LionheartExtensions.swift in Sources */,
-				C4797526232AEC57A89C8AA6C614489F /* UIFont+LionheartExtensions.swift in Sources */,
-				92113DA939DD26782FE809B3A5864D8F /* UIImage+LionheartExtensions.swift in Sources */,
-				4C5B60D4F6A81472A1C77B0C8EDA08D0 /* UIPrintPageRenderer+LionheartExtensions.swift in Sources */,
-				1B96FE56EA83D8C1086593FB3F53585A /* UIScreen+LionheartExtensions.swift in Sources */,
-				FE83E7C968A3036C9BF40EB56F409DF0 /* UITextField+LionheartExtensions.swift in Sources */,
-				182E46FAA2281E3D2B261ED1CAF1181A /* UIView+LionheartExtensions.swift in Sources */,
-				C9BFE29118CC5AF0BED826DCDF935307 /* UIViewController+LionheartExtensions.swift in Sources */,
-				14FFC4C5C8F03C99E8DA91697E19E1C2 /* UIWindow+LionheartExtensions.swift in Sources */,
-				57ABFF954BAF061523F0E7F141318D4A /* WKWebView+LionheartExtensions.swift in Sources */,
+				3EC507C96D9F273563FD87CDE7D74E87 /* Pods-CalorieCounterApp-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXTargetDependency section */
-		13C04FD3C785F8DC5235E2B10F151D7F /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = ConcentricProgressRingView;
-			target = 7F9F152482955A392E61D7014E6D153E /* ConcentricProgressRingView */;
-			targetProxy = F679DB874D0DF4AE00C4CF49A721F0F6 /* PBXContainerItemProxy */;
-		};
-		1DE5D8FBEF6779F1DAE8B43E03479CBC /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = LionheartExtensions;
-			target = 8F4A96A89FB295E15665620AFFCE1DDE /* LionheartExtensions */;
-			targetProxy = 1ADCE85C5FD143F1A871F6FF120BEA12 /* PBXContainerItemProxy */;
-		};
-		F0A3A4FE659402FE7945D1BDB54AC8D9 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = LionheartExtensions;
-			target = 8F4A96A89FB295E15665620AFFCE1DDE /* LionheartExtensions */;
-			targetProxy = 6E12D3E407C0D54C0F41E14DCE4961B4 /* PBXContainerItemProxy */;
-		};
-/* End PBXTargetDependency section */
-
 /* Begin XCBuildConfiguration section */
-		099FE5A10A3D932440A32B991F24EB82 /* Debug */ = {
+		0FFE22ED21BC25C00E213563DC730B22 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = ABB3FD052230D2A16CDC93CA3C06643F /* LionheartExtensions.debug.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/LionheartExtensions/LionheartExtensions-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/LionheartExtensions/LionheartExtensions-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/LionheartExtensions/LionheartExtensions.modulemap";
-				PRODUCT_MODULE_NAME = LionheartExtensions;
-				PRODUCT_NAME = LionheartExtensions;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		1BFCCBCE72EF8A9F7E1F840F3C0FB489 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = BBAF970461E329937DDA1C886D263C15 /* LionheartExtensions.release.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/LionheartExtensions/LionheartExtensions-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/LionheartExtensions/LionheartExtensions-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 13.6;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/LionheartExtensions/LionheartExtensions.modulemap";
-				PRODUCT_MODULE_NAME = LionheartExtensions;
-				PRODUCT_NAME = LionheartExtensions;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				SWIFT_VERSION = 5;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		1D197D299F9B02C044300C66CCB4FF2D /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 2337093038BCFA356AFDB462C742EFDD /* Pods-CalorieCounterApp.release.xcconfig */;
+			baseConfigurationReference = 4E1E14D38D1F9942470374500DE3D887 /* Pods-CalorieCounterApp.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -664,11 +209,10 @@
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
 			};
-			name = Release;
+			name = Debug;
 		};
 		4214E6946993DF02ED98D89047C64016 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -736,10 +280,11 @@
 			};
 			name = Debug;
 		};
-		422A1EB778B000283873B9B19F6496B5 /* Debug */ = {
+		83137010A00DF0225EF921A3A865A470 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 0D9054E80BC10B16282265A2A4171374 /* ConcentricProgressRingView.debug.xcconfig */;
+			baseConfigurationReference = 5FFF80CC23E4779CD6A642DD0A1A7A3A /* Pods-CalorieCounterApp.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -749,55 +294,23 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/ConcentricProgressRingView/ConcentricProgressRingView-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ConcentricProgressRingView/ConcentricProgressRingView-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-CalorieCounterApp/Pods-CalorieCounterApp-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MODULEMAP_FILE = "Target Support Files/ConcentricProgressRingView/ConcentricProgressRingView.modulemap";
-				PRODUCT_MODULE_NAME = ConcentricProgressRingView;
-				PRODUCT_NAME = ConcentricProgressRingView;
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CalorieCounterApp/Pods-CalorieCounterApp.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		BB5F4EEDD1D1A86FB81F9E9EA06F03B3 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 696C26CC83E894BA438E52A34C406A50 /* ConcentricProgressRingView.release.xcconfig */;
-			buildSettings = {
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/ConcentricProgressRingView/ConcentricProgressRingView-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/ConcentricProgressRingView/ConcentricProgressRingView-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MODULEMAP_FILE = "Target Support Files/ConcentricProgressRingView/ConcentricProgressRingView.modulemap";
-				PRODUCT_MODULE_NAME = ConcentricProgressRingView;
-				PRODUCT_NAME = ConcentricProgressRingView;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -867,78 +380,23 @@
 			};
 			name = Release;
 		};
-		DACB33D6EB692B95654C69643F24C6FF /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = FB869153AF97C9BFB5A6E625983684F7 /* Pods-CalorieCounterApp.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-CalorieCounterApp/Pods-CalorieCounterApp-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-CalorieCounterApp/Pods-CalorieCounterApp.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		2C1A63705135FA9FA9AE707E7590ACE8 /* Build configuration list for PBXNativeTarget "Pods-CalorieCounterApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0FFE22ED21BC25C00E213563DC730B22 /* Debug */,
+				83137010A00DF0225EF921A3A865A470 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4214E6946993DF02ED98D89047C64016 /* Debug */,
 				CD85FD90473CFBE797E4264E7BBC70AF /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		9C95EB473C9A07DB9A37ED97DDA74279 /* Build configuration list for PBXNativeTarget "Pods-CalorieCounterApp" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				DACB33D6EB692B95654C69643F24C6FF /* Debug */,
-				1D197D299F9B02C044300C66CCB4FF2D /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		BF06730569E961D3FD84D8AE2A050E32 /* Build configuration list for PBXNativeTarget "ConcentricProgressRingView" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				422A1EB778B000283873B9B19F6496B5 /* Debug */,
-				BB5F4EEDD1D1A86FB81F9E9EA06F03B3 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		F98CACD3E62C1B83C8336F17BC82B757 /* Build configuration list for PBXNativeTarget "LionheartExtensions" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				099FE5A10A3D932440A32B991F24EB82 /* Debug */,
-				1BFCCBCE72EF8A9F7E1F840F3C0FB489 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

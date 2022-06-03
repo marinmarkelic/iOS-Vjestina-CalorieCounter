@@ -40,7 +40,7 @@ class CaloriesHistoryLineChart: LineChartView, IAxisValueFormatter{
         }
         let lineChartDataSet = LineChartDataSet(entries: dataEntries, label: nil)
         lineChartDataSet.drawValuesEnabled = false
-        lineChartDataSet.drawCirclesEnabled = false
+        lineChartDataSet.circleRadius = 2
         lineChartDataSet.lineWidth = 2.5
         lineChartDataSet.mode = .cubicBezier
         lineChartDataSet.cubicIntensity = 0.2

@@ -5,6 +5,7 @@ class MovieTabBarController: UITabBarController, UITabBarControllerDelegate{
     
     var homeViewController: HomeViewController!
     var mealSearchViewController: MealSearchViewController!
+    var userInfoViewController: UserInfoViewController!
     
     init() {
         
@@ -26,11 +27,13 @@ class MovieTabBarController: UITabBarController, UITabBarControllerDelegate{
         
         homeViewController = HomeViewController()
         mealSearchViewController = MealSearchViewController()
+        userInfoViewController = UserInfoViewController()
         
         homeViewController.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house"), selectedImage: nil)
         mealSearchViewController.tabBarItem = UITabBarItem(title: "Add", image: UIImage(systemName: "plus.circle.fill"), selectedImage: nil)
+        userInfoViewController.tabBarItem = UITabBarItem(title: "Info", image: UIImage(systemName: "plus.circle.fill"), selectedImage: nil)
         
-        viewControllers = [homeViewController, mealSearchViewController]
+        viewControllers = [homeViewController, mealSearchViewController, userInfoViewController]
     }
     
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {

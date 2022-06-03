@@ -22,7 +22,7 @@ class ProgressPieChart: PieChartView{
         
         let pieChartDataSet = PieChartDataSet(entries: dataEntries, label: nil)
 //        pieChartDataSet.colors = colorsOfCharts(numbersOfColor: dataPoints.count)
-        pieChartDataSet.colors = [mainColor, .lightGray]
+        pieChartDataSet.colors = [mainColor, .clear]
 //        pieChartDataSet.yValuePosition = .outsideSlice
 //        pieChartDataSet.valueTextColor = .black
         pieChartDataSet.drawValuesEnabled = false
@@ -48,5 +48,5 @@ class ProgressPieChart: PieChartView{
     
     func setColor(color: UIColor){
         mainColor = color
-    }
+    }    
 }

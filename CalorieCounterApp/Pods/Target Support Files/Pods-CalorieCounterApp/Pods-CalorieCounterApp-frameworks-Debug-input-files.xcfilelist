@@ -1,3 +1,4 @@
 ${PODS_ROOT}/Target Support Files/Pods-CalorieCounterApp/Pods-CalorieCounterApp-frameworks.sh
 ${BUILT_PRODUCTS_DIR}/ConcentricProgressRingView/ConcentricProgressRingView.framework
 ${BUILT_PRODUCTS_DIR}/LionheartExtensions/LionheartExtensions.framework
+${BUILT_PRODUCTS_DIR}/PNChartSwift/PNChartSwift.framework

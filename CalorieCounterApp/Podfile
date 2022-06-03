@@ -6,6 +6,7 @@ use_frameworks!
 target 'CalorieCounterApp' do
 
   # Pods for CalorieCounterApp
-  pod "ConcentricProgressRingView"
+  #pod "ConcentricProgressRingView"
+  #pod 'PNChartSwift', :git => 'https://github.com/YichenZhou/PNChart-Swift'
 
 end

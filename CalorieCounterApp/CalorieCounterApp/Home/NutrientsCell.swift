@@ -1,5 +1,6 @@
 import UIKit
 import SnapKit
+import Charts
 
 class NutrientsCell: UICollectionViewCell{
     static let reuseIdentifier = String(describing: NutrientsView.self)
@@ -29,6 +30,7 @@ class NutrientsCell: UICollectionViewCell{
         configureProgressPieChart()
         progressPieChart.notifyDataSetChanged()
         progressPieChart.data!.notifyDataChanged()
+        progressPieChart.animate(yAxisDuration: 0.5, easingOption: .easeOutCirc)
     }
     
     func buildViews(){
