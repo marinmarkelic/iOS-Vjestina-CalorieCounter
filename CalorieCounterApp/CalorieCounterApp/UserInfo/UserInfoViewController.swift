@@ -38,6 +38,10 @@ class UserInfoViewController: UIViewController{
     }
     
     func reloadData(){
+//        load data from repo, mock for now
+        
+        genderSelection.setButtons(genderValue: Gender.male.rawValue)
+        
         heightView.scrollCollectionView(to: 170)
         weightView.scrollCollectionView(to: 70)
     }
@@ -55,7 +59,8 @@ class UserInfoViewController: UIViewController{
         }
         
         genderSelection.snp.makeConstraints{
-            $0.leading.top.trailing.equalToSuperview()
+            $0.top.equalToSuperview().offset(20)
+            $0.leading.trailing.equalToSuperview()
             $0.height.equalTo(100)
         }
         

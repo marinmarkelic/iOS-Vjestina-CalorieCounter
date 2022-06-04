@@ -54,7 +54,6 @@
 		9CCA4F54284A0D2D00542C90 /* ProgressPieChartThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCA4F53284A0D2D00542C90 /* ProgressPieChartThree.swift */; };
 		9CCA4F57284A21AB00542C90 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCA4F56284A21AB00542C90 /* UserInfoViewController.swift */; };
 		9CCA4F59284A234300542C90 /* GenderSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCA4F58284A234300542C90 /* GenderSelection.swift */; };
-		9CCA4F5B284A236100542C90 /* RadioButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCA4F5A284A236100542C90 /* RadioButton.swift */; };
 		9CCA4F5D284A2CAF00542C90 /* HeightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCA4F5C284A2CAF00542C90 /* HeightView.swift */; };
 		9CCA4F5F284A2DCF00542C90 /* HeightViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCA4F5E284A2DCF00542C90 /* HeightViewCell.swift */; };
 		9CCA4F61284A3B5300542C90 /* WeightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCA4F60284A3B5300542C90 /* WeightView.swift */; };
@@ -114,7 +113,6 @@
 		9CCA4F53284A0D2D00542C90 /* ProgressPieChartThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressPieChartThree.swift; sourceTree = "<group>"; };
 		9CCA4F56284A21AB00542C90 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		9CCA4F58284A234300542C90 /* GenderSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderSelection.swift; sourceTree = "<group>"; };
-		9CCA4F5A284A236100542C90 /* RadioButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RadioButton.swift; sourceTree = "<group>"; };
 		9CCA4F5C284A2CAF00542C90 /* HeightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightView.swift; sourceTree = "<group>"; };
 		9CCA4F5E284A2DCF00542C90 /* HeightViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightViewCell.swift; sourceTree = "<group>"; };
 		9CCA4F60284A3B5300542C90 /* WeightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightView.swift; sourceTree = "<group>"; };
@@ -296,7 +294,6 @@
 			children = (
 				9CCA4F56284A21AB00542C90 /* UserInfoViewController.swift */,
 				9CCA4F58284A234300542C90 /* GenderSelection.swift */,
-				9CCA4F5A284A236100542C90 /* RadioButton.swift */,
 				9CCA4F5C284A2CAF00542C90 /* HeightView.swift */,
 				9CCA4F5E284A2DCF00542C90 /* HeightViewCell.swift */,
 				9CCA4F60284A3B5300542C90 /* WeightView.swift */,
@@ -457,7 +454,6 @@
 				9CCA4F5F284A2DCF00542C90 /* HeightViewCell.swift in Sources */,
 				9C66C333284775AE006A6BF0 /* AppRouter.swift in Sources */,
 				9C66C2DA283FD3C4006A6BF0 /* HomeViewController.swift in Sources */,
-				9CCA4F5B284A236100542C90 /* RadioButton.swift in Sources */,
 				9CCA4F61284A3B5300542C90 /* WeightView.swift in Sources */,
 				9CCA4F63284A3BC500542C90 /* WeightViewCell.swift in Sources */,
 				9C66C30128460C69006A6BF0 /* MealSearchViewController.swift in Sources */,

@@ -10,22 +10,22 @@ func calculateDailyCarbsGrams(calories: Float) -> Float{
     return (calories * 0.5) / 4
 }
 
-func calculateDailySugarGrams(/*sex: Sex*/) -> Float{
-    let sex: Sex = .male
-    switch sex {
+func calculateDailySugarGrams(/*gender: gender*/) -> Float{
+    let gender: Gender = .male
+    switch gender {
     case .male:
         return 36
-    case .memale:
+    case .female:
         return 25
     }
 }
 
-func calculateDailyFiberGrams(/*sex: Sex*/) -> Float{
-    let sex: Sex = .male
-    switch sex {
+func calculateDailyFiberGrams(/*gender: gender*/) -> Float{
+    let gender: Gender = .male
+    switch gender {
     case .male:
         return 38
-    case .memale:
+    case .female:
         return 25
     }
 }

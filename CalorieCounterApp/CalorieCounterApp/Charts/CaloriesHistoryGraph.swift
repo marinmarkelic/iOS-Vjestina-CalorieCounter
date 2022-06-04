@@ -99,10 +99,10 @@ extension CaloriesHistoryGraph: ScrollableGraphViewDataSource{
         dateFormatter.dateFormat = "yyyy/dd/MM"
         let formattedDate = dateFormatter.string(from: dateForPoint)
                 
-        let start = formattedDate.index(formattedDate.startIndex, offsetBy: 4)
+        let start = formattedDate.index(formattedDate.startIndex, offsetBy: 5)
         let end = formattedDate.index(formattedDate.startIndex, offsetBy: formattedDate.count - 1)
         
-        return formattedDate[start...end].replacingOccurrences(of: "/", with: " ")
+        return formattedDate[start...end].replacingOccurrences(of: "/", with: ".").appending(".")
     }
 
     func numberOfPoints() -> Int {

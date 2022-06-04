@@ -2,13 +2,14 @@ import UIKit
 import SnapKit
 
 class GenderSelection: UIView{
+    private var gender: Gender?
+    
     var mainView: UIView!
     
     var label: UILabel!
     
-    var maleRadioButton: RadioButton!
-    var femaleRadioButton: RadioButton!
-
+    var maleButton: UIButton!
+    var femaleButton: UIButton!
     
     init(){
         super.init(frame: .zero)
@@ -30,25 +31,57 @@ class GenderSelection: UIView{
         label = UILabel()
         label.text = "Gender"
         
-        maleRadioButton = RadioButton(name: "Male")
-        femaleRadioButton = RadioButton(name: "Female")
+        maleButton = UIButton()
+        maleButton.setTitle("Male", for: .normal)
+        maleButton.addTarget(self, action: #selector(toggleButton), for: .touchUpInside)
+        maleButton.layer.cornerRadius = 8
+        maleButton.tag = 0
         
-        maleRadioButton?.alternateButton = [femaleRadioButton!]
-        femaleRadioButton?.alternateButton = [maleRadioButton!]
-        
-        maleRadioButton.addTarget(self, action: #selector(toggleButton), for: .touchUpInside)
-        maleRadioButton.addTarget(self, action: #selector(toggleButton), for: .touchUpInside)
+        femaleButton = UIButton()
+        femaleButton.setTitle("Female", for: .normal)
+        femaleButton.addTarget(self, action: #selector(toggleButton), for: .touchUpInside)
+        femaleButton.layer.cornerRadius = 8
+        femaleButton.tag = 1
         
         addSubview(mainView)
         mainView.addSubview(label)
-        mainView.addSubview(maleRadioButton)
-        mainView.addSubview(femaleRadioButton)
+        mainView.addSubview(maleButton)
+        mainView.addSubview(femaleButton)
+        
     }
     
     @objc
-    func toggleButton() {
-        print("click")
+    func toggleButton(sender: UIButton) {
+        setButtons(genderValue: sender.tag)
     }
+    
+    func setButtons(genderValue: Int){
+        switch genderValue{
+        case 0:
+            UIView.animate(withDuration: 0.15, delay: 0.0, options: .curveEaseInOut, animations: {
+                self.maleButton.backgroundColor = .lightGray
+                self.femaleButton.backgroundColor = .clear
+            }, completion: {_ in
+                self.gender = .male
+            })
+            
+        case 1:
+            UIView.animate(withDuration: 0.15, delay: 0.0, options: .curveEaseInOut, animations: {
+                self.maleButton.backgroundColor = .clear
+                self.femaleButton.backgroundColor = .lightGray
+            }, completion: {_ in
+                self.gender = .female
+            })
+        default:
+            UIView.animate(withDuration: 0.15, delay: 0.0, options: .curveEaseInOut, animations: {
+                self.maleButton.backgroundColor = .clear
+                self.femaleButton.backgroundColor = .clear
+            }, completion: {_ in
+                self.gender = nil
+            })
+        }
+    }
+    
     
     func addConstraints(){
         mainView.snp.makeConstraints{
@@ -61,20 +94,19 @@ class GenderSelection: UIView{
             $0.top.leading.trailing.equalToSuperview()
         }
         
-        maleRadioButton.snp.makeConstraints{
-            $0.leading.equalTo(label)
+        maleButton.snp.makeConstraints{
+            $0.leading.equalToSuperview()
             $0.top.equalTo(label.snp.bottom).offset(5)
             $0.bottom.equalToSuperview()
             $0.height.equalTo(50)
-            $0.width.equalToSuperview().dividedBy(2)
+            $0.width.equalToSuperview().dividedBy(2.1)
         }
         
-        femaleRadioButton.snp.makeConstraints{
-            $0.leading.equalTo(maleRadioButton.snp.trailing)
+        femaleButton.snp.makeConstraints{
             $0.top.equalTo(label.snp.bottom).offset(5)
             $0.trailing.bottom.equalToSuperview()
             $0.height.equalTo(50)
-            $0.width.equalToSuperview().dividedBy(2)
+            $0.width.equalToSuperview().dividedBy(2.1)
         }
     }
 }
