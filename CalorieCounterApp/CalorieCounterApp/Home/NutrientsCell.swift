@@ -50,13 +50,21 @@ class NutrientsCell: UICollectionViewCell{
     }
     
     func configureProgressPieChart(){
-        progressPieChart.customizeChart(dataPoints: ["done", "remaining"], values: [Double(value), Double(chooseFormula(name: name.text!) - value)])
+        let secondValue: Double
+        if value ?? 0 / chooseFormula(name: name.text!) > 100{
+            secondValue = 0
+        }
+        else{
+            secondValue = Double(chooseFormula(name: name.text!) - value)
+        }
+        
+        progressPieChart.customizeChart(dataPoints: ["done", "remaining"], values: [Double(value), secondValue])
         progressPieChart.drawEntryLabelsEnabled = false
         progressPieChart.isUserInteractionEnabled = false
         progressPieChart.legend.enabled = false
         progressPieChart.holeRadiusPercent = 0.85
         let attributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        let attributedText = NSAttributedString(string: "\(Int(value ?? 0 / chooseFormula(name: name.text!) * 100))%", attributes: attributes)
+        let attributedText = NSAttributedString(string: "\(Int(value ?? 0 / chooseFormula(name: name.text!)))%", attributes: attributes)
         progressPieChart.centerAttributedText = attributedText
         progressPieChart.holeColor = nil
         
@@ -68,9 +76,9 @@ class NutrientsCell: UICollectionViewCell{
         case "Protein":
             return calculateDailyProteinGrams()
         case "Total Fat":
-            return calculateDailyFatGrams(calories: getMockBMR())
+            return calculateDailyFatGrams(calories: calculateBMR())
         case "Carbs":
-            return calculateDailyCarbsGrams(calories: getMockBMR())
+            return calculateDailyCarbsGrams(calories: calculateBMR())
         case "Sugar":
             return calculateDailySugarGrams()
         case "Fiber":

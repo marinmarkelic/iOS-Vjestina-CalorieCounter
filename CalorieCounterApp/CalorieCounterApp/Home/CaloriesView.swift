@@ -43,6 +43,7 @@ class CaloriesView: UIView{
         configureProgressPieChart()
         progressPieChart.notifyDataSetChanged()
         progressPieChart.data!.notifyDataChanged()
+        progressPieChart.animate(yAxisDuration: 0.5, easingOption: .easeOutCirc)
     }
     
     func buildViews(){
@@ -77,14 +78,22 @@ class CaloriesView: UIView{
     }
     
     func configureProgressPieChart(){
+        let secondValue: Double
+        if consumedCalories / calculateBMR() > 1{
+            secondValue = 0
+        }
+        else{
+            secondValue = Double(calculateBMR() - consumedCalories)
+        }
+        
         progressPieChart.animate(xAxisDuration: 0.5, easingOption: .easeInCirc)
-        progressPieChart.customizeChart(dataPoints: ["done", "remaining"], values: [Double(consumedCalories), Double(getMockBMR() - consumedCalories)])
+        progressPieChart.customizeChart(dataPoints: ["done", "remaining"], values: [Double(consumedCalories), secondValue])
         progressPieChart.drawEntryLabelsEnabled = false
         progressPieChart.isUserInteractionEnabled = false
         progressPieChart.legend.enabled = false
         progressPieChart.holeRadiusPercent = 0.85
         let attributes = [NSAttributedString.Key.foregroundColor: UIColor.white]
-        let attributedText = NSAttributedString(string: "\(Int(consumedCalories / getMockBMR() * 100))%", attributes: attributes)
+        let attributedText = NSAttributedString(string: "\(Int(consumedCalories / calculateBMR() * 100))%", attributes: attributes)
         progressPieChart.centerAttributedText = attributedText
         progressPieChart.holeColor = nil
         
