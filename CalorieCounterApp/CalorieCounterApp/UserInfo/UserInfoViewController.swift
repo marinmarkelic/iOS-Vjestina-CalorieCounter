@@ -37,6 +37,11 @@ class UserInfoViewController: UIViewController{
         contentView.addSubview(weightView)
     }
     
+    func reloadData(){
+        heightView.scrollCollectionView(to: 170)
+        weightView.scrollCollectionView(to: 70)
+    }
+    
     func addConstraints(){
         scrollView.snp.makeConstraints{
             $0.top.bottom.equalTo(view.safeAreaLayoutGuide)

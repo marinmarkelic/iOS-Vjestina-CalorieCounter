@@ -42,6 +42,11 @@ class WeightView: UIView{
         addSubview(arrow)
     }
     
+    func scrollCollectionView(to: Int){
+        let rect = self.collectionView.layoutAttributesForItem(at:IndexPath(row: to, section: 0))?.frame
+        self.collectionView.scrollRectToVisible(rect!, animated: true)
+    }
+    
     func addConstraints(){
         label.snp.makeConstraints{
             $0.top.leading.equalToSuperview().offset(20)

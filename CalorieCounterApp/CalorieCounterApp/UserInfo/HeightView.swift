@@ -34,13 +34,21 @@ class HeightView: UIView{
         collectionView.delegate = self
         collectionView.backgroundColor = .none
         collectionView.showsHorizontalScrollIndicator = false
-        
+                
         value = UILabel()
         value.text = " "
         
         addSubview(label)
         addSubview(collectionView)
         addSubview(value)
+    }
+    
+    func scrollCollectionView(to: Int){
+//        collectionView.scrollToItem(at: IndexPath(item: 170, section: 0), at: .bottom, animated: true)
+
+        
+        let rect = self.collectionView.layoutAttributesForItem(at:IndexPath(row: to, section: 0))?.frame
+        self.collectionView.scrollRectToVisible(rect!, animated: true)
     }
     
     func addConstraints(){

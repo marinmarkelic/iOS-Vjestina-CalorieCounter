@@ -4,12 +4,12 @@ import SnapKit
 class HomeViewController: ViewController{
     
     var dailyNutrition: DailyNutritionViewModel!
-        
+    
     var scrollView: UIScrollView!
     var contentView: UIView!
     
     var label: UILabel!
-    var historyView: CaloriesHistoryView!
+    var historyView: CaloriesHistoryGraph!
     var caloriesView: CaloriesView!
     var nutrientsView: NutrientsView!
     var consumedItemsView: ConsumedItemsView!
@@ -43,24 +43,18 @@ class HomeViewController: ViewController{
         nutrientsView.reloadData(dailyNutrition: dailyNutrition)
         consumedItemsView.reloadData(dailyNutrition: dailyNutrition)
         
-        let data = NutritionRepository().fetchAllDailyNutrition()
-        if data != nil{
-            historyView.reloadData(dataPoints: data!.map({$0.date}), values: data!.map({$0.calories}))
-        }
+        let data = NutritionRepository().fetchAllDailyNutritionCalories()
+        historyView.reloadData(data)
     }
     
     func buildViews(){
         view.backgroundColor = appBackgroundColor
-                
+        
         scrollView = UIScrollView()
         scrollView.showsVerticalScrollIndicator = false
         contentView = UIView()
         
-        historyView = CaloriesHistoryView()
-        let data = NutritionRepository().fetchAllDailyNutrition()
-        if data != nil{
-            historyView.reloadData(dataPoints: data!.map({$0.date}), values: data!.map({$0.calories}))
-        }
+        historyView = CaloriesHistoryGraph(values: NutritionRepository().fetchAllDailyNutritionCalories())
         
         label = UILabel()
         label.text = "Today"
@@ -118,11 +112,11 @@ class HomeViewController: ViewController{
         }
         
         consumedItemsView.snp.makeConstraints{
-//            $0.edges.equalToSuperview()
+            //            $0.edges.equalToSuperview()
             $0.top.equalTo(nutrientsView.snp.bottom).offset(10)
             $0.leading.trailing.equalToSuperview()
             $0.bottom.equalToSuperview()
-
+            
         }
     }
 }

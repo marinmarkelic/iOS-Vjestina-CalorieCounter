@@ -23,6 +23,7 @@ class NutritionRepository{
         }
     }
     
+    
     func fetchAllDailyNutrition() -> [DailyNutritionViewModel]?{
         guard let data = databaseDataSource.fetchAllDailyNutrition() else{
             return nil
@@ -34,6 +35,25 @@ class NutritionRepository{
         }
         
         return dailyNutritionViewModelArr
+    }
+    
+    func countAllDailyNutrition() -> Int{
+        guard let data = databaseDataSource.fetchAllDailyNutrition() else{
+            return 0
+        }
+        
+        return data.count
+    }
+    
+    func fetchAllDailyNutritionCalories() -> [Float]{
+        guard let data = databaseDataSource.fetchAllDailyNutrition() else{
+            return [0.0]
+        }
+        
+        return data.map({
+            let d = $0 as DailyNutrition
+            return d.value(forKey: "calories") as? Float ?? 0
+        })
     }
     
     func fetchDailyNutrition() -> DailyNutritionViewModel?{

@@ -59,6 +59,7 @@
 		9CCA4F5F284A2DCF00542C90 /* HeightViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCA4F5E284A2DCF00542C90 /* HeightViewCell.swift */; };
 		9CCA4F61284A3B5300542C90 /* WeightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCA4F60284A3B5300542C90 /* WeightView.swift */; };
 		9CCA4F63284A3BC500542C90 /* WeightViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCA4F62284A3BC500542C90 /* WeightViewCell.swift */; };
+		9CCA4F65284B820F00542C90 /* CaloriesHistoryGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCA4F64284B820F00542C90 /* CaloriesHistoryGraph.swift */; };
 		9CFE49CB2848A12A00017400 /* ConsumedItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFE49CA2848A12A00017400 /* ConsumedItemView.swift */; };
 		DC44FC6C983E98990523B204 /* Pods_CalorieCounterApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F8277843FF4610C92442D6C /* Pods_CalorieCounterApp.framework */; };
 /* End PBXBuildFile section */
@@ -118,6 +119,7 @@
 		9CCA4F5E284A2DCF00542C90 /* HeightViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightViewCell.swift; sourceTree = "<group>"; };
 		9CCA4F60284A3B5300542C90 /* WeightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightView.swift; sourceTree = "<group>"; };
 		9CCA4F62284A3BC500542C90 /* WeightViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightViewCell.swift; sourceTree = "<group>"; };
+		9CCA4F64284B820F00542C90 /* CaloriesHistoryGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaloriesHistoryGraph.swift; sourceTree = "<group>"; };
 		9CFE49CA2848A12A00017400 /* ConsumedItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumedItemView.swift; sourceTree = "<group>"; };
 		D95A26164EF45B1F2FF35C94 /* Pods-CalorieCounterApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalorieCounterApp.debug.xcconfig"; path = "Target Support Files/Pods-CalorieCounterApp/Pods-CalorieCounterApp.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -275,6 +277,7 @@
 				9C66C2E128400972006A6BF0 /* CaloriesHistoryLineChart.swift */,
 				9CCA4F512849FC4900542C90 /* ProgressPieChartTwo.swift */,
 				9CCA4F53284A0D2D00542C90 /* ProgressPieChartThree.swift */,
+				9CCA4F64284B820F00542C90 /* CaloriesHistoryGraph.swift */,
 			);
 			path = Charts;
 			sourceTree = "<group>";
@@ -313,6 +316,7 @@
 				9CA346AD283F80E200F6329A /* Sources */,
 				9CA346AE283F80E200F6329A /* Frameworks */,
 				9CA346AF283F80E200F6329A /* Resources */,
+				43057BF7090F7AE97250EF20 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -377,6 +381,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		43057BF7090F7AE97250EF20 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CalorieCounterApp/Pods-CalorieCounterApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-CalorieCounterApp/Pods-CalorieCounterApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CalorieCounterApp/Pods-CalorieCounterApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		FCB633EA93B6F6D806713D71 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -413,6 +434,7 @@
 				9C66C30E2846AAA3006A6BF0 /* Database.xcdatamodeld in Sources */,
 				9C66C2F12843C040006A6BF0 /* Constants.swift in Sources */,
 				9CCA4F57284A21AB00542C90 /* UserInfoViewController.swift in Sources */,
+				9CCA4F65284B820F00542C90 /* CaloriesHistoryGraph.swift in Sources */,
 				9CCA4F59284A234300542C90 /* GenderSelection.swift in Sources */,
 				9C66C2DE283FD96C006A6BF0 /* Colors.swift in Sources */,
 				9C66C2F32843C062006A6BF0 /* Groups.swift in Sources */,

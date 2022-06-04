@@ -29,9 +29,9 @@ class MovieTabBarController: UITabBarController, UITabBarControllerDelegate{
         mealSearchViewController = MealSearchViewController()
         userInfoViewController = UserInfoViewController()
         
-        homeViewController.tabBarItem = UITabBarItem(title: "Home", image: UIImage(systemName: "house"), selectedImage: nil)
-        mealSearchViewController.tabBarItem = UITabBarItem(title: "Add", image: UIImage(systemName: "plus.circle.fill"), selectedImage: nil)
-        userInfoViewController.tabBarItem = UITabBarItem(title: "Info", image: UIImage(systemName: "plus.circle.fill"), selectedImage: nil)
+        homeViewController.tabBarItem = UITabBarItem(title: .none, image: UIImage(systemName: "house"), selectedImage: nil)
+        mealSearchViewController.tabBarItem = UITabBarItem(title: .none, image: UIImage(systemName: "plus.circle.fill"), selectedImage: nil)
+        userInfoViewController.tabBarItem = UITabBarItem(title: .none, image: UIImage(systemName: "slider.horizontal.3"), selectedImage: nil)
         
         viewControllers = [homeViewController, mealSearchViewController, userInfoViewController]
     }
@@ -41,9 +41,9 @@ class MovieTabBarController: UITabBarController, UITabBarControllerDelegate{
         if let vc = viewController as? HomeViewController {
             vc.reloadData()
         }
-//        else if let vc = viewController as? MealSearchViewController {
-//            vc.reloadData()
-//        }
+        else if let vc = viewController as? UserInfoViewController {
+            vc.reloadData()
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {

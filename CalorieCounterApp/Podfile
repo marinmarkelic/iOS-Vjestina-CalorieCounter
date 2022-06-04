@@ -8,5 +8,5 @@ target 'CalorieCounterApp' do
   # Pods for CalorieCounterApp
   #pod "ConcentricProgressRingView"
   #pod 'PNChartSwift', :git => 'https://github.com/YichenZhou/PNChart-Swift'
-
+  pod 'ScrollableGraphView' 
 end

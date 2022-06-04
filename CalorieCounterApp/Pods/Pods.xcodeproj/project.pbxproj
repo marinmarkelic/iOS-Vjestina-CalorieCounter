@@ -7,59 +7,110 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		3EC507C96D9F273563FD87CDE7D74E87 /* Pods-CalorieCounterApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9573F9BCDE96F790E7B9E9EA51D42FB6 /* Pods-CalorieCounterApp-dummy.m */; };
-		882E49E6ADCAB14A592FFE6E6878F2D9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
-		918063B36B022C88D3D14879D3B151E4 /* Pods-CalorieCounterApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 8E78AC5AA826C24F65B4D8DD9BFCE26C /* Pods-CalorieCounterApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		0608E7AE9C6E4878D916FD293792AB75 /* ScrollableGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF7C3501C28D14225839C578F2D0FA9C /* ScrollableGraphView.swift */; };
+		2E15F2FD61D84995BA365C04C6436294 /* ScrollableGraphViewDrawingDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AB8CD6DB7357762FCC188E7541788CDA /* ScrollableGraphViewDrawingDelegate.swift */; };
+		32190B29E2619E4AFFCBD7F8B1E833D6 /* ReferenceLineDrawingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31CF24CE08D0141462C6D343FD6C1607 /* ReferenceLineDrawingView.swift */; };
+		35CC79940E2468A07925F01CA84DF584 /* ScrollableGraphViewDrawingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 913E5659CB6C874E9344B0FD69F986CC /* ScrollableGraphViewDrawingLayer.swift */; };
+		4414FF9379A788C52F5E22469FA1865D /* GradientDrawingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 35EF8FA069B0023225A2C30C39727445 /* GradientDrawingLayer.swift */; };
+		527E61B5AEA1A57EF47DA522776A78A0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		5626E6EF2901ACFFAC7D1DBE08B6399A /* Pods-CalorieCounterApp-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4FBF3C880D27B7A892422ECC12A13895 /* Pods-CalorieCounterApp-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		5831207A055C144C4F1BC4F457305126 /* Plot.swift in Sources */ = {isa = PBXBuildFile; fileRef = DFC366A764C30C17E5F10ADE2C5F916F /* Plot.swift */; };
+		5EA85BCFE6AAE6C64F38F657776AB2FC /* ReferenceLines.swift in Sources */ = {isa = PBXBuildFile; fileRef = D69C36712CBBE4CBA621FEC923067633 /* ReferenceLines.swift */; };
+		86DF5C0504C7ADCF86E706785CC39006 /* Pods-CalorieCounterApp-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 5EEFBF24C01E03AD5F810D0E4E591235 /* Pods-CalorieCounterApp-dummy.m */; };
+		9114377F244AC63CD1425F593666C6CD /* ScrollableGraphViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 882C021D3EA44C215FF606CC5CC9DE09 /* ScrollableGraphViewDataSource.swift */; };
+		97217D7656F0D78D261A6ABD0EF0A5D1 /* FillDrawingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5F4AEB82BF2DC169C88AD4706A53E3A /* FillDrawingLayer.swift */; };
+		AB6957F8AC3901B3136ACA6DBE1D311F /* ScrollableGraphView-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A467A52D215A39800EF2C98EDB08D3AB /* ScrollableGraphView-dummy.m */; };
+		B139E59B0CD6C04A4BF2DF0634773047 /* BarDrawingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70BBE9BE8EFBBDF13A7EBCFEDE81931D /* BarDrawingLayer.swift */; };
+		B5410C63346D93113AE7804AA1B68561 /* LineDrawingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF028C3A945028FA5E07CCB2606A1E1E /* LineDrawingLayer.swift */; };
+		BB327609B0CA13F4A71902E6C1E03840 /* ScrollableGraphView-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 43A8707244C2B6C2443FA4F2C62C241E /* ScrollableGraphView-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		C2512DBDE1CB00BA6FBC96739A24E50D /* GraphPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 580D46FB24767AC4C12FB4178AA6A4E2 /* GraphPoint.swift */; };
+		CD6A5FEAD8E7711A2FA79DB322A3DA34 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */; };
+		CF9E5A72BF93C0A8DF37F1BC444A0B72 /* BarPlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEF1BB0620C92001AD3AD598DB59E8A /* BarPlot.swift */; };
+		D4B0A5F98016148EE34B5E931744842C /* LabelPool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 58F21AE09C75D7E16F650A4B57EF1619 /* LabelPool.swift */; };
+		D9D301EC4A865E75F44F2886AE2B6E63 /* LinePlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = D579342F82B8546A9D4E886FA1026F42 /* LinePlot.swift */; };
+		DF45459EACE66526AB5479E523706925 /* GraphPointAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD70DAB7EC7675FDA7C1AA5530F8E6ED /* GraphPointAnimation.swift */; };
+		E296AAFCB23D50D296FB1D2F9F06B057 /* DotPlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2817D88CA7E89F2987D82768C15803BB /* DotPlot.swift */; };
+		EB8B2DBB2B8A9FD1267831C76B852E9F /* DotDrawingLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 263CFC2ECC6ACC1E57AFFE658B980624 /* DotDrawingLayer.swift */; };
 /* End PBXBuildFile section */
 
+/* Begin PBXContainerItemProxy section */
+		3BC6E8D540FBAF2B3FA2FC63979B8E0C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 286B8AB3D8EF21F4A7B079A55DDA5790;
+			remoteInfo = ScrollableGraphView;
+		};
+/* End PBXContainerItemProxy section */
+
 /* Begin PBXFileReference section */
-		26FC6E53A24871E5B8361B0003C32070 /* Pods-CalorieCounterApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CalorieCounterApp-acknowledgements.markdown"; sourceTree = "<group>"; };
-		33F7B4FBB51EF01D027E2D64A996FFEB /* Pods-CalorieCounterApp-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CalorieCounterApp-Info.plist"; sourceTree = "<group>"; };
-		34692EA17B5030D7C6C1C853549E0067 /* Pods-CalorieCounterApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CalorieCounterApp-acknowledgements.plist"; sourceTree = "<group>"; };
+		07D3B7761B705783B5A1058492AB8E5B /* Pods-CalorieCounterApp-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CalorieCounterApp-Info.plist"; sourceTree = "<group>"; };
+		0BF62B2896164A83336138A29983B4A8 /* Pods-CalorieCounterApp-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-CalorieCounterApp-acknowledgements.markdown"; sourceTree = "<group>"; };
+		0F00A8D0F19A354FD62CCE9D2D420465 /* ScrollableGraphView.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ScrollableGraphView.debug.xcconfig; sourceTree = "<group>"; };
+		1CEF1BB0620C92001AD3AD598DB59E8A /* BarPlot.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarPlot.swift; path = Classes/Plots/BarPlot.swift; sourceTree = "<group>"; };
+		2337093038BCFA356AFDB462C742EFDD /* Pods-CalorieCounterApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CalorieCounterApp.release.xcconfig"; sourceTree = "<group>"; };
+		263CFC2ECC6ACC1E57AFFE658B980624 /* DotDrawingLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DotDrawingLayer.swift; path = Classes/Drawing/DotDrawingLayer.swift; sourceTree = "<group>"; };
+		2817D88CA7E89F2987D82768C15803BB /* DotPlot.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DotPlot.swift; path = Classes/Plots/DotPlot.swift; sourceTree = "<group>"; };
+		31CF24CE08D0141462C6D343FD6C1607 /* ReferenceLineDrawingView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReferenceLineDrawingView.swift; path = Classes/Drawing/ReferenceLineDrawingView.swift; sourceTree = "<group>"; };
+		35EF8FA069B0023225A2C30C39727445 /* GradientDrawingLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GradientDrawingLayer.swift; path = Classes/Drawing/GradientDrawingLayer.swift; sourceTree = "<group>"; };
 		380C92673B0E646BB249C734DEB68F02 /* Pods-CalorieCounterApp */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-CalorieCounterApp"; path = Pods_CalorieCounterApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		4E1E14D38D1F9942470374500DE3D887 /* Pods-CalorieCounterApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CalorieCounterApp.debug.xcconfig"; sourceTree = "<group>"; };
-		5FFF80CC23E4779CD6A642DD0A1A7A3A /* Pods-CalorieCounterApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CalorieCounterApp.release.xcconfig"; sourceTree = "<group>"; };
-		72545747D337D67E7466CE7C162E286F /* Pods-CalorieCounterApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CalorieCounterApp.modulemap"; sourceTree = "<group>"; };
+		399B7790B093E390D9A960D35B462A56 /* ScrollableGraphView.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = ScrollableGraphView.release.xcconfig; sourceTree = "<group>"; };
+		43A8707244C2B6C2443FA4F2C62C241E /* ScrollableGraphView-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ScrollableGraphView-umbrella.h"; sourceTree = "<group>"; };
+		44CA823102CAAA1D2A4F2CDECDF697E0 /* Pods-CalorieCounterApp.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-CalorieCounterApp.modulemap"; sourceTree = "<group>"; };
+		4FBF3C880D27B7A892422ECC12A13895 /* Pods-CalorieCounterApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CalorieCounterApp-umbrella.h"; sourceTree = "<group>"; };
+		56029CFB6D607D1B380F59B74C554BE7 /* ScrollableGraphView-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "ScrollableGraphView-Info.plist"; sourceTree = "<group>"; };
+		580D46FB24767AC4C12FB4178AA6A4E2 /* GraphPoint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphPoint.swift; path = Classes/Plots/Animation/GraphPoint.swift; sourceTree = "<group>"; };
+		58F21AE09C75D7E16F650A4B57EF1619 /* LabelPool.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LabelPool.swift; path = Classes/Reference/LabelPool.swift; sourceTree = "<group>"; };
+		5EEFBF24C01E03AD5F810D0E4E591235 /* Pods-CalorieCounterApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CalorieCounterApp-dummy.m"; sourceTree = "<group>"; };
+		6EB77110CD1C2B8E27E28A7FAB433FF4 /* ScrollableGraphView.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = ScrollableGraphView.modulemap; sourceTree = "<group>"; };
+		70BBE9BE8EFBBDF13A7EBCFEDE81931D /* BarDrawingLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BarDrawingLayer.swift; path = Classes/Drawing/BarDrawingLayer.swift; sourceTree = "<group>"; };
 		73010CC983E3809BECEE5348DA1BB8C6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
-		8E78AC5AA826C24F65B4D8DD9BFCE26C /* Pods-CalorieCounterApp-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-CalorieCounterApp-umbrella.h"; sourceTree = "<group>"; };
-		9573F9BCDE96F790E7B9E9EA51D42FB6 /* Pods-CalorieCounterApp-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-CalorieCounterApp-dummy.m"; sourceTree = "<group>"; };
+		7BF7C0400BFFF34075517DABEAEB8C99 /* Pods-CalorieCounterApp-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-CalorieCounterApp-frameworks.sh"; sourceTree = "<group>"; };
+		882C021D3EA44C215FF606CC5CC9DE09 /* ScrollableGraphViewDataSource.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScrollableGraphViewDataSource.swift; path = Classes/Protocols/ScrollableGraphViewDataSource.swift; sourceTree = "<group>"; };
+		913E5659CB6C874E9344B0FD69F986CC /* ScrollableGraphViewDrawingLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScrollableGraphViewDrawingLayer.swift; path = Classes/Drawing/ScrollableGraphViewDrawingLayer.swift; sourceTree = "<group>"; };
+		99BAAECDB80FFA415E210CEC6619A454 /* ScrollableGraphView */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = ScrollableGraphView; path = ScrollableGraphView.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A467A52D215A39800EF2C98EDB08D3AB /* ScrollableGraphView-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "ScrollableGraphView-dummy.m"; sourceTree = "<group>"; };
+		AB8CD6DB7357762FCC188E7541788CDA /* ScrollableGraphViewDrawingDelegate.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScrollableGraphViewDrawingDelegate.swift; path = Classes/Protocols/ScrollableGraphViewDrawingDelegate.swift; sourceTree = "<group>"; };
+		AD70DAB7EC7675FDA7C1AA5530F8E6ED /* GraphPointAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GraphPointAnimation.swift; path = Classes/Plots/Animation/GraphPointAnimation.swift; sourceTree = "<group>"; };
+		BF028C3A945028FA5E07CCB2606A1E1E /* LineDrawingLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LineDrawingLayer.swift; path = Classes/Drawing/LineDrawingLayer.swift; sourceTree = "<group>"; };
+		D579342F82B8546A9D4E886FA1026F42 /* LinePlot.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LinePlot.swift; path = Classes/Plots/LinePlot.swift; sourceTree = "<group>"; };
+		D69C36712CBBE4CBA621FEC923067633 /* ReferenceLines.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ReferenceLines.swift; path = Classes/Reference/ReferenceLines.swift; sourceTree = "<group>"; };
+		DF2271608AAF406B162547013CADF888 /* ScrollableGraphView-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "ScrollableGraphView-prefix.pch"; sourceTree = "<group>"; };
+		DFC366A764C30C17E5F10ADE2C5F916F /* Plot.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Plot.swift; path = Classes/Plots/Plot.swift; sourceTree = "<group>"; };
+		E5F4AEB82BF2DC169C88AD4706A53E3A /* FillDrawingLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FillDrawingLayer.swift; path = Classes/Drawing/FillDrawingLayer.swift; sourceTree = "<group>"; };
+		F5CDFA1B97A0C910B20B52240893AA2C /* Pods-CalorieCounterApp-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-CalorieCounterApp-acknowledgements.plist"; sourceTree = "<group>"; };
+		FB869153AF97C9BFB5A6E625983684F7 /* Pods-CalorieCounterApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-CalorieCounterApp.debug.xcconfig"; sourceTree = "<group>"; };
+		FF7C3501C28D14225839C578F2D0FA9C /* ScrollableGraphView.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ScrollableGraphView.swift; path = Classes/ScrollableGraphView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		6EAA02FEFC38FE9087CC0B4075C6DB19 /* Frameworks */ = {
+		14E25D8DEA741C4FE3476A17F779EB3D /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				882E49E6ADCAB14A592FFE6E6878F2D9 /* Foundation.framework in Frameworks */,
+				527E61B5AEA1A57EF47DA522776A78A0 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C4E46417CF861F15052A8927F1F064B2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CD6A5FEAD8E7711A2FA79DB322A3DA34 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		06F2759BB8FDE691FF3DD0C6E65C0A95 /* Products */ = {
+		4A7A51D806430C1A194B21C4B99111C7 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 				380C92673B0E646BB249C734DEB68F02 /* Pods-CalorieCounterApp */,
+				99BAAECDB80FFA415E210CEC6619A454 /* ScrollableGraphView */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		24AE7593D457FA7A15163D7AA2724A6D /* Pods-CalorieCounterApp */ = {
-			isa = PBXGroup;
-			children = (
-				72545747D337D67E7466CE7C162E286F /* Pods-CalorieCounterApp.modulemap */,
-				26FC6E53A24871E5B8361B0003C32070 /* Pods-CalorieCounterApp-acknowledgements.markdown */,
-				34692EA17B5030D7C6C1C853549E0067 /* Pods-CalorieCounterApp-acknowledgements.plist */,
-				9573F9BCDE96F790E7B9E9EA51D42FB6 /* Pods-CalorieCounterApp-dummy.m */,
-				33F7B4FBB51EF01D027E2D64A996FFEB /* Pods-CalorieCounterApp-Info.plist */,
-				8E78AC5AA826C24F65B4D8DD9BFCE26C /* Pods-CalorieCounterApp-umbrella.h */,
-				4E1E14D38D1F9942470374500DE3D887 /* Pods-CalorieCounterApp.debug.xcconfig */,
-				5FFF80CC23E4779CD6A642DD0A1A7A3A /* Pods-CalorieCounterApp.release.xcconfig */,
-			);
-			name = "Pods-CalorieCounterApp";
-			path = "Target Support Files/Pods-CalorieCounterApp";
 			sourceTree = "<group>";
 		};
 		578452D2E740E91742655AC8F1636D1F /* iOS */ = {
@@ -70,10 +121,33 @@
 			name = iOS;
 			sourceTree = "<group>";
 		};
-		7C56D3CF3EF9B8457B979B81DBF09D11 /* Targets Support Files */ = {
+		6FF6A39FC52F2C7BA9AD67617E61F812 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				24AE7593D457FA7A15163D7AA2724A6D /* Pods-CalorieCounterApp */,
+				E9F57005FD9C7E01BACA77901AE6DC2A /* ScrollableGraphView */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		98075835B2831D027DC81B6A802BC583 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				6EB77110CD1C2B8E27E28A7FAB433FF4 /* ScrollableGraphView.modulemap */,
+				A467A52D215A39800EF2C98EDB08D3AB /* ScrollableGraphView-dummy.m */,
+				56029CFB6D607D1B380F59B74C554BE7 /* ScrollableGraphView-Info.plist */,
+				DF2271608AAF406B162547013CADF888 /* ScrollableGraphView-prefix.pch */,
+				43A8707244C2B6C2443FA4F2C62C241E /* ScrollableGraphView-umbrella.h */,
+				0F00A8D0F19A354FD62CCE9D2D420465 /* ScrollableGraphView.debug.xcconfig */,
+				399B7790B093E390D9A960D35B462A56 /* ScrollableGraphView.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/ScrollableGraphView";
+			sourceTree = "<group>";
+		};
+		A65C5691DE33722A82C398FB9C50105E /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F397E27C87C48431C274DE2111B826AC /* Pods-CalorieCounterApp */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
@@ -83,8 +157,9 @@
 			children = (
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				D210D550F4EA176C3123ED886F8F87F5 /* Frameworks */,
-				06F2759BB8FDE691FF3DD0C6E65C0A95 /* Products */,
-				7C56D3CF3EF9B8457B979B81DBF09D11 /* Targets Support Files */,
+				6FF6A39FC52F2C7BA9AD67617E61F812 /* Pods */,
+				4A7A51D806430C1A194B21C4B99111C7 /* Products */,
+				A65C5691DE33722A82C398FB9C50105E /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -96,32 +171,103 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		E9F57005FD9C7E01BACA77901AE6DC2A /* ScrollableGraphView */ = {
+			isa = PBXGroup;
+			children = (
+				70BBE9BE8EFBBDF13A7EBCFEDE81931D /* BarDrawingLayer.swift */,
+				1CEF1BB0620C92001AD3AD598DB59E8A /* BarPlot.swift */,
+				263CFC2ECC6ACC1E57AFFE658B980624 /* DotDrawingLayer.swift */,
+				2817D88CA7E89F2987D82768C15803BB /* DotPlot.swift */,
+				E5F4AEB82BF2DC169C88AD4706A53E3A /* FillDrawingLayer.swift */,
+				35EF8FA069B0023225A2C30C39727445 /* GradientDrawingLayer.swift */,
+				580D46FB24767AC4C12FB4178AA6A4E2 /* GraphPoint.swift */,
+				AD70DAB7EC7675FDA7C1AA5530F8E6ED /* GraphPointAnimation.swift */,
+				58F21AE09C75D7E16F650A4B57EF1619 /* LabelPool.swift */,
+				BF028C3A945028FA5E07CCB2606A1E1E /* LineDrawingLayer.swift */,
+				D579342F82B8546A9D4E886FA1026F42 /* LinePlot.swift */,
+				DFC366A764C30C17E5F10ADE2C5F916F /* Plot.swift */,
+				31CF24CE08D0141462C6D343FD6C1607 /* ReferenceLineDrawingView.swift */,
+				D69C36712CBBE4CBA621FEC923067633 /* ReferenceLines.swift */,
+				FF7C3501C28D14225839C578F2D0FA9C /* ScrollableGraphView.swift */,
+				882C021D3EA44C215FF606CC5CC9DE09 /* ScrollableGraphViewDataSource.swift */,
+				AB8CD6DB7357762FCC188E7541788CDA /* ScrollableGraphViewDrawingDelegate.swift */,
+				913E5659CB6C874E9344B0FD69F986CC /* ScrollableGraphViewDrawingLayer.swift */,
+				98075835B2831D027DC81B6A802BC583 /* Support Files */,
+			);
+			name = ScrollableGraphView;
+			path = ScrollableGraphView;
+			sourceTree = "<group>";
+		};
+		F397E27C87C48431C274DE2111B826AC /* Pods-CalorieCounterApp */ = {
+			isa = PBXGroup;
+			children = (
+				44CA823102CAAA1D2A4F2CDECDF697E0 /* Pods-CalorieCounterApp.modulemap */,
+				0BF62B2896164A83336138A29983B4A8 /* Pods-CalorieCounterApp-acknowledgements.markdown */,
+				F5CDFA1B97A0C910B20B52240893AA2C /* Pods-CalorieCounterApp-acknowledgements.plist */,
+				5EEFBF24C01E03AD5F810D0E4E591235 /* Pods-CalorieCounterApp-dummy.m */,
+				7BF7C0400BFFF34075517DABEAEB8C99 /* Pods-CalorieCounterApp-frameworks.sh */,
+				07D3B7761B705783B5A1058492AB8E5B /* Pods-CalorieCounterApp-Info.plist */,
+				4FBF3C880D27B7A892422ECC12A13895 /* Pods-CalorieCounterApp-umbrella.h */,
+				FB869153AF97C9BFB5A6E625983684F7 /* Pods-CalorieCounterApp.debug.xcconfig */,
+				2337093038BCFA356AFDB462C742EFDD /* Pods-CalorieCounterApp.release.xcconfig */,
+			);
+			name = "Pods-CalorieCounterApp";
+			path = "Target Support Files/Pods-CalorieCounterApp";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
-		92128CDA14EBE9184EBAE010CC16B2D5 /* Headers */ = {
+		41F7CA1EFEB6BE083E66F7C4EFD7A344 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				918063B36B022C88D3D14879D3B151E4 /* Pods-CalorieCounterApp-umbrella.h in Headers */,
+				BB327609B0CA13F4A71902E6C1E03840 /* ScrollableGraphView-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		56F6E11D35143A780E567B5F4351FCC9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5626E6EF2901ACFFAC7D1DBE08B6399A /* Pods-CalorieCounterApp-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXHeadersBuildPhase section */
 
 /* Begin PBXNativeTarget section */
-		AF4188F3AF1FF7BD60E375DF81E69B78 /* Pods-CalorieCounterApp */ = {
+		286B8AB3D8EF21F4A7B079A55DDA5790 /* ScrollableGraphView */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 2C1A63705135FA9FA9AE707E7590ACE8 /* Build configuration list for PBXNativeTarget "Pods-CalorieCounterApp" */;
+			buildConfigurationList = F5F19D18E7C730D3EE8E742DF8B88E2A /* Build configuration list for PBXNativeTarget "ScrollableGraphView" */;
 			buildPhases = (
-				92128CDA14EBE9184EBAE010CC16B2D5 /* Headers */,
-				B1FC2B79D2880F3C4F1497643B83D243 /* Sources */,
-				6EAA02FEFC38FE9087CC0B4075C6DB19 /* Frameworks */,
-				437CB10090E58A7F307FE968F5D0DA3E /* Resources */,
+				41F7CA1EFEB6BE083E66F7C4EFD7A344 /* Headers */,
+				D60FB8BDCB3CA7026FC14F53952F985F /* Sources */,
+				14E25D8DEA741C4FE3476A17F779EB3D /* Frameworks */,
+				A1056940E80F6F530A8D0D0C8D142EDE /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+			);
+			name = ScrollableGraphView;
+			productName = ScrollableGraphView;
+			productReference = 99BAAECDB80FFA415E210CEC6619A454 /* ScrollableGraphView */;
+			productType = "com.apple.product-type.framework";
+		};
+		AF4188F3AF1FF7BD60E375DF81E69B78 /* Pods-CalorieCounterApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 83FE6A02734AA8ADE2B23A0550534E7C /* Build configuration list for PBXNativeTarget "Pods-CalorieCounterApp" */;
+			buildPhases = (
+				56F6E11D35143A780E567B5F4351FCC9 /* Headers */,
+				D9BC772D777537A4DECF2B676FB6D00E /* Sources */,
+				C4E46417CF861F15052A8927F1F064B2 /* Frameworks */,
+				DEF389BAE6B5D00F0CAF60BCFE185AB6 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				354448E1198AA9F4924D2DFEDFB37B96 /* PBXTargetDependency */,
 			);
 			name = "Pods-CalorieCounterApp";
 			productName = Pods_CalorieCounterApp;
@@ -146,17 +292,25 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 06F2759BB8FDE691FF3DD0C6E65C0A95 /* Products */;
+			productRefGroup = 4A7A51D806430C1A194B21C4B99111C7 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				AF4188F3AF1FF7BD60E375DF81E69B78 /* Pods-CalorieCounterApp */,
+				286B8AB3D8EF21F4A7B079A55DDA5790 /* ScrollableGraphView */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		437CB10090E58A7F307FE968F5D0DA3E /* Resources */ = {
+		A1056940E80F6F530A8D0D0C8D142EDE /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEF389BAE6B5D00F0CAF60BCFE185AB6 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -166,54 +320,52 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-		B1FC2B79D2880F3C4F1497643B83D243 /* Sources */ = {
+		D60FB8BDCB3CA7026FC14F53952F985F /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3EC507C96D9F273563FD87CDE7D74E87 /* Pods-CalorieCounterApp-dummy.m in Sources */,
+				B139E59B0CD6C04A4BF2DF0634773047 /* BarDrawingLayer.swift in Sources */,
+				CF9E5A72BF93C0A8DF37F1BC444A0B72 /* BarPlot.swift in Sources */,
+				EB8B2DBB2B8A9FD1267831C76B852E9F /* DotDrawingLayer.swift in Sources */,
+				E296AAFCB23D50D296FB1D2F9F06B057 /* DotPlot.swift in Sources */,
+				97217D7656F0D78D261A6ABD0EF0A5D1 /* FillDrawingLayer.swift in Sources */,
+				4414FF9379A788C52F5E22469FA1865D /* GradientDrawingLayer.swift in Sources */,
+				C2512DBDE1CB00BA6FBC96739A24E50D /* GraphPoint.swift in Sources */,
+				DF45459EACE66526AB5479E523706925 /* GraphPointAnimation.swift in Sources */,
+				D4B0A5F98016148EE34B5E931744842C /* LabelPool.swift in Sources */,
+				B5410C63346D93113AE7804AA1B68561 /* LineDrawingLayer.swift in Sources */,
+				D9D301EC4A865E75F44F2886AE2B6E63 /* LinePlot.swift in Sources */,
+				5831207A055C144C4F1BC4F457305126 /* Plot.swift in Sources */,
+				32190B29E2619E4AFFCBD7F8B1E833D6 /* ReferenceLineDrawingView.swift in Sources */,
+				5EA85BCFE6AAE6C64F38F657776AB2FC /* ReferenceLines.swift in Sources */,
+				0608E7AE9C6E4878D916FD293792AB75 /* ScrollableGraphView.swift in Sources */,
+				AB6957F8AC3901B3136ACA6DBE1D311F /* ScrollableGraphView-dummy.m in Sources */,
+				9114377F244AC63CD1425F593666C6CD /* ScrollableGraphViewDataSource.swift in Sources */,
+				2E15F2FD61D84995BA365C04C6436294 /* ScrollableGraphViewDrawingDelegate.swift in Sources */,
+				35CC79940E2468A07925F01CA84DF584 /* ScrollableGraphViewDrawingLayer.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D9BC772D777537A4DECF2B676FB6D00E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				86DF5C0504C7ADCF86E706785CC39006 /* Pods-CalorieCounterApp-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin XCBuildConfiguration section */
-		0FFE22ED21BC25C00E213563DC730B22 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 4E1E14D38D1F9942470374500DE3D887 /* Pods-CalorieCounterApp.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-CalorieCounterApp/Pods-CalorieCounterApp-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-CalorieCounterApp/Pods-CalorieCounterApp.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
+/* Begin PBXTargetDependency section */
+		354448E1198AA9F4924D2DFEDFB37B96 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = ScrollableGraphView;
+			target = 286B8AB3D8EF21F4A7B079A55DDA5790 /* ScrollableGraphView */;
+			targetProxy = 3BC6E8D540FBAF2B3FA2FC63979B8E0C /* PBXContainerItemProxy */;
 		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
 		4214E6946993DF02ED98D89047C64016 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -280,9 +432,9 @@
 			};
 			name = Debug;
 		};
-		83137010A00DF0225EF921A3A865A470 /* Release */ = {
+		B51CB22070F4F086E7977C9664102EFB /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5FFF80CC23E4779CD6A642DD0A1A7A3A /* Pods-CalorieCounterApp.release.xcconfig */;
+			baseConfigurationReference = 2337093038BCFA356AFDB462C742EFDD /* Pods-CalorieCounterApp.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -380,23 +532,138 @@
 			};
 			name = Release;
 		};
+		E364E344A05E61D03AEFFDA10D97E9D0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 0F00A8D0F19A354FD62CCE9D2D420465 /* ScrollableGraphView.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ScrollableGraphView/ScrollableGraphView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ScrollableGraphView/ScrollableGraphView-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/ScrollableGraphView/ScrollableGraphView.modulemap";
+				PRODUCT_MODULE_NAME = ScrollableGraphView;
+				PRODUCT_NAME = ScrollableGraphView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		E7129BCF0845D17591A4F1DE249F9656 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 399B7790B093E390D9A960D35B462A56 /* ScrollableGraphView.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/ScrollableGraphView/ScrollableGraphView-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/ScrollableGraphView/ScrollableGraphView-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MODULEMAP_FILE = "Target Support Files/ScrollableGraphView/ScrollableGraphView.modulemap";
+				PRODUCT_MODULE_NAME = ScrollableGraphView;
+				PRODUCT_NAME = ScrollableGraphView;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		EC20175A29B437FD2E7CEFDDFFFAC785 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = FB869153AF97C9BFB5A6E625983684F7 /* Pods-CalorieCounterApp.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-CalorieCounterApp/Pods-CalorieCounterApp-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-CalorieCounterApp/Pods-CalorieCounterApp.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		2C1A63705135FA9FA9AE707E7590ACE8 /* Build configuration list for PBXNativeTarget "Pods-CalorieCounterApp" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				0FFE22ED21BC25C00E213563DC730B22 /* Debug */,
-				83137010A00DF0225EF921A3A865A470 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				4214E6946993DF02ED98D89047C64016 /* Debug */,
 				CD85FD90473CFBE797E4264E7BBC70AF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		83FE6A02734AA8ADE2B23A0550534E7C /* Build configuration list for PBXNativeTarget "Pods-CalorieCounterApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EC20175A29B437FD2E7CEFDDFFFAC785 /* Debug */,
+				B51CB22070F4F086E7977C9664102EFB /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F5F19D18E7C730D3EE8E742DF8B88E2A /* Build configuration list for PBXNativeTarget "ScrollableGraphView" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E364E344A05E61D03AEFFDA10D97E9D0 /* Debug */,
+				E7129BCF0845D17591A4F1DE249F9656 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
