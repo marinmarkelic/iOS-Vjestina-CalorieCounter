@@ -43,9 +43,13 @@ class MealAddView: UIView{
         label.text = "Add item"
         label.textColor = elementTitleColor
         
-        amountTextField.text = "100.0"
-        amountTextField.backgroundColor = .black
+        amountTextField.text = "100"
         amountTextField.textColor = .white
+        amountTextField.textAlignment = .center
+        amountTextField.layer.cornerRadius = 8
+        amountTextField.layer.borderColor = UIColor.lightGray.cgColor
+        amountTextField.layer.borderWidth = 1
+        amountTextField.delegate = self
         
         addButton.setTitle("Add", for: .normal)
         addButton.addTarget(self, action: #selector(clickedAddButton), for: .touchUpInside)
@@ -59,6 +63,23 @@ class MealAddView: UIView{
     
     @objc
     func clickedAddButton(){
+        guard let amount = amountTextField.text,
+              amount != "0",
+              amount != "" else{
+                  DispatchQueue.main.async {
+                      let alert = UIAlertController(title: "Invalid amount", message: nil, preferredStyle: UIAlertController.Style.alert)
+                      
+                      // add an action (button)
+                      alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                      
+                      // show the alert
+                      self.window?.rootViewController?.present(alert, animated: true, completion: nil)
+                  }
+                  
+                  return
+              }
+        
+        meal.changeServingSize(servingSize: Float(amount) ?? 100)
         NutritionRepository().addItem(meal){
             var message = ""
             switch $0{
@@ -93,12 +114,32 @@ class MealAddView: UIView{
             $0.leading.equalToSuperview().offset(20)
             $0.top.equalTo(label.snp.bottom).offset(10)
             $0.bottom.equalToSuperview().offset(-10)
+            $0.width.equalTo(45)
         }
         
         addButton.snp.makeConstraints{
             $0.top.equalTo(label.snp.bottom).offset(10)
             $0.bottom.equalToSuperview().offset(-10)
-            $0.leading.equalTo(amountTextField.snp.trailing).offset(20)
+            $0.trailing.equalToSuperview().offset(-20)
         }
+    }
+}
+
+extension MealAddView: UITextFieldDelegate{
+    func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+
+        guard !string.isEmpty else {
+            return true
+        }
+        
+        if Int(string) == nil {
+            return false
+        }
+        
+        if textField.text?.count ?? 0 > 3{
+            return false
+        }
+
+        return true
     }
 }

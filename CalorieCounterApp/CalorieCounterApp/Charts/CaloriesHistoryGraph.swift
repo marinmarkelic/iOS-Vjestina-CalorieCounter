@@ -53,7 +53,7 @@ class CaloriesHistoryGraph: ScrollableGraphView{
         shouldAdaptRange = true
         
         rangeMax = 50
-        direction = .rightToLeft
+        direction = .leftToRight
 
         addReferenceLines(referenceLines: referenceLines)
 

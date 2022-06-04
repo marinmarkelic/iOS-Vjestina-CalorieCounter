@@ -6,17 +6,17 @@ struct NutritionItemsViewModel: Codable{
 
 struct NutritionItemViewModel: Codable{
     let name: String
-    let calories: Float
-    let sugar_g: Float
-    let fiber_g: Float
-    let serving_size_g: Float
-    let fat_saturated_g: Float
-    let protein_g: Float
-    let carbohydrates_total_g: Float
-    let fat_total_g: Float
-    let sodium_mg: Float
-    let potassium_mg: Float
-    let cholesterol_mg: Float
+    var calories: Float
+    var sugar_g: Float
+    var fiber_g: Float
+    var serving_size_g: Float
+    var fat_saturated_g: Float
+    var protein_g: Float
+    var carbohydrates_total_g: Float
+    var fat_total_g: Float
+    var sodium_mg: Float
+    var potassium_mg: Float
+    var cholesterol_mg: Float
     
     init(_ nutritionItem: NutritionItem) {
         name = nutritionItem.name
@@ -31,6 +31,27 @@ struct NutritionItemViewModel: Codable{
         sodium_mg = nutritionItem.sodium_mg
         potassium_mg = nutritionItem.potassium_mg
         cholesterol_mg = nutritionItem.cholesterol_mg
+    }
+    
+    mutating func changeServingSize(servingSize: Float){
+        if servingSize == 0{
+            print("Tried to change serving size to 0")
+            return
+        }
+        
+        let ratio = servingSize / serving_size_g
+        
+        calories *= ratio
+        sugar_g *= ratio
+        fiber_g *= ratio
+        serving_size_g *= ratio
+        fat_saturated_g *= ratio
+        protein_g *= ratio
+        carbohydrates_total_g *= ratio
+        fat_total_g *= ratio
+        sodium_mg *= ratio
+        potassium_mg *= ratio
+        cholesterol_mg *= ratio
     }
     
     func valueForName(name: String) -> Float{
@@ -96,7 +117,7 @@ struct DailyNutritionViewModel{
         
         self.items = items!.map({DailyNutritionItemViewModel($0)})
     }
-    
+        
     func getValue(name: String) -> Float{
         switch name{
         case "Protein":
