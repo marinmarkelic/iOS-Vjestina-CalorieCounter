@@ -6,7 +6,7 @@ class HeightView: UIView{
     
     private var collectionView: UICollectionView!
     private var collectionViewLayout: UICollectionViewFlowLayout!
-    
+        
     var value: UILabel!
     
     init(){
@@ -43,14 +43,6 @@ class HeightView: UIView{
         addSubview(value)
     }
     
-    func scrollCollectionView(to: Int){
-//        collectionView.scrollToItem(at: IndexPath(item: 170, section: 0), at: .bottom, animated: true)
-
-        
-        let rect = self.collectionView.layoutAttributesForItem(at:IndexPath(row: to, section: 0))?.frame
-        self.collectionView.scrollRectToVisible(rect!, animated: true)
-    }
-    
     func addConstraints(){
         label.snp.makeConstraints{
             $0.top.leading.equalToSuperview().offset(20)
@@ -68,6 +60,15 @@ class HeightView: UIView{
             $0.bottom.equalToSuperview()
             $0.centerX.equalToSuperview()
         }
+    }
+    
+    func scrollCollectionView(to: Int){
+        collectionView.layoutIfNeeded()
+        collectionView.scrollToItem(at: IndexPath(item: to, section: 0), at: .centeredHorizontally, animated: true)
+    }
+    
+    func getValue() -> Int?{
+        return try? Int(value.text ?? "1", format: .number)
     }
 }
 
@@ -122,6 +123,10 @@ extension HeightView: UICollectionViewDelegate{
         let indexArr = collectionView.indexPathsForVisibleItems.map({$0[1]})
         let sumOfArr = indexArr.reduce(0, +)
         
-        value.text = String(sumOfArr / indexArr.count)
+        if indexArr.count == 0{
+            return
+        }
+        
+        value.text = String(sumOfArr / indexArr.count + 1)
     }
 }

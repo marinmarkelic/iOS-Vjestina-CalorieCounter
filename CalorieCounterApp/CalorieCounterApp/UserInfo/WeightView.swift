@@ -6,12 +6,15 @@ class WeightView: UIView{
     
     private var collectionView: UICollectionView!
     private var collectionViewLayout: UICollectionViewFlowLayout!
-    
+        
     private var arrow: UIImageView!
     
     init(){
         super.init(frame: .zero)
         
+        
+                         
+                         
         buildViews()
         addConstraints()
     }
@@ -36,15 +39,11 @@ class WeightView: UIView{
         collectionView.showsHorizontalScrollIndicator = false
         
         arrow = UIImageView(image: UIImage(systemName: "arrowtriangle.up.fill"))
+        arrow.tintColor = .white
         
         addSubview(label)
         addSubview(collectionView)
         addSubview(arrow)
-    }
-    
-    func scrollCollectionView(to: Int){
-        let rect = self.collectionView.layoutAttributesForItem(at:IndexPath(row: to, section: 0))?.frame
-        self.collectionView.scrollRectToVisible(rect!, animated: true)
     }
     
     func addConstraints(){
@@ -64,6 +63,18 @@ class WeightView: UIView{
             $0.bottom.equalToSuperview()
             $0.centerX.equalToSuperview()
         }
+    }
+    
+    func scrollCollectionView(to: Int){
+        collectionView.layoutIfNeeded()
+        collectionView.scrollToItem(at: IndexPath(item: to, section: 0), at: .centeredHorizontally, animated: true)
+    }
+    
+    func getValue() -> Int{
+        let indexArr = collectionView.indexPathsForVisibleItems.map({$0[1]})
+        let sumOfArr = indexArr.reduce(0, +)
+        
+        return sumOfArr / indexArr.count
     }
 }
 
@@ -140,16 +151,8 @@ extension WeightView: UICollectionViewDelegateFlowLayout {
 
 extension WeightView: UICollectionViewDelegate{
     
-    func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath){
-        let indexArr = collectionView.indexPathsForVisibleItems.map({$0[1]})
-        let sumOfArr = indexArr.reduce(0, +)
-        
-//        let indexPath = IndexPath(item: sumOfArr / indexArr.count, section: 0)
-//
-//        guard let cell = collectionView.cellForItem(at: indexPath) as? WeightViewCell else{
-//            return
-//        }
-//
-//        cell.enableHighlight()
+    override func didAddSubview(_ subview: UIView) {
+        self.scrollCollectionView(to: 170)
+
     }
 }

@@ -39,10 +39,14 @@ class MovieTabBarController: UITabBarController, UITabBarControllerDelegate{
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
         
         if let vc = viewController as? HomeViewController {
-            vc.reloadData()
+            DispatchQueue.main.async {
+                vc.reloadData()
+            }
         }
         else if let vc = viewController as? UserInfoViewController {
-            vc.reloadData()
+            DispatchQueue.main.async {
+                vc.reloadData()
+            }
         }
     }
     

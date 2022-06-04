@@ -2,23 +2,55 @@ import UIKit
 import SnapKit
 
 class UserInfoViewController: UIViewController{
-    var scrollView: UIScrollView!
-    var contentView: UIView!
+    private var gender: Gender?
+    private var height: Int?
+    private var weight: Int?
     
-    var genderSelection: GenderSelection!
-    var heightView: HeightView!
-    var weightView: WeightView!
+    private var scrollView: UIScrollView!
+    private var contentView: UIView!
+        
+    private var genderSelection: GenderSelection!
+    private var heightView: HeightView!
+    private var weightView: WeightView!
+    
+    private var saveButton: UIButton!
     
     init() {
         super.init(nibName: nil, bundle: nil)
         view.backgroundColor = appBackgroundColor
         
+        loadUserDefaults()
         buildViews()
         addConstraints()
     }
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    func loadUserDefaults(){
+        let userDefaults = UserDefaults.standard
+                
+        if userDefaults.string(forKey: "gender") == nil{
+            gender = nil
+        }
+        else{
+            gender = Gender(rawValue: Int(userDefaults.string(forKey: "gender")!)!)
+        }
+        
+        if userDefaults.string(forKey: "height") == nil{
+            height = nil
+        }
+        else{
+            height = Int(userDefaults.string(forKey: "height")!)
+        }
+        
+        if userDefaults.string(forKey: "weight") == nil{
+            weight = nil
+        }
+        else{
+            weight = Int(userDefaults.string(forKey: "weight")!)
+        }
     }
     
     func buildViews(){
@@ -30,20 +62,40 @@ class UserInfoViewController: UIViewController{
         heightView = HeightView()
         weightView = WeightView()
         
+        saveButton = UIButton()
+        saveButton.setTitle("Save", for: .normal)
+        saveButton.addTarget(self, action: #selector(saveData), for: .touchUpInside)
+        
         view.addSubview(scrollView)
         scrollView.addSubview(contentView)
         contentView.addSubview(genderSelection)
         contentView.addSubview(heightView)
         contentView.addSubview(weightView)
+        contentView.addSubview(saveButton)
+    }
+    
+    @objc
+    func saveData(){
+        
+        let userDefaults = UserDefaults.standard
+        
+
+        if genderSelection.gender != nil{
+            userDefaults.set(String(genderSelection.gender!.rawValue), forKey: "gender")
+        }
+        
+        let h = heightView.getValue() ?? 1
+        userDefaults.set(String(h), forKey: "height")
+        
+        userDefaults.set(String(weightView.getValue()), forKey: "weight")
+
     }
     
     func reloadData(){
-//        load data from repo, mock for now
+        genderSelection.setButtons(genderValue: gender?.rawValue)
         
-        genderSelection.setButtons(genderValue: Gender.male.rawValue)
-        
-        heightView.scrollCollectionView(to: 170)
-        weightView.scrollCollectionView(to: 70)
+        heightView.scrollCollectionView(to: height ?? 170)
+        weightView.scrollCollectionView(to: weight ?? 70)
     }
     
     func addConstraints(){
@@ -73,7 +125,13 @@ class UserInfoViewController: UIViewController{
         weightView.snp.makeConstraints{
             $0.top.equalTo(heightView.snp.bottom).offset(30)
             $0.leading.trailing.equalToSuperview()
+        }
+        
+        saveButton.snp.makeConstraints{
+            $0.top.equalTo(weightView.snp.bottom).offset(30)
+            $0.leading.equalToSuperview().offset(20)
             $0.bottom.equalToSuperview()
         }
     }
 }
+

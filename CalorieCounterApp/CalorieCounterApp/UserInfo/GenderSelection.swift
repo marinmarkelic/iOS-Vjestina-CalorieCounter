@@ -2,14 +2,14 @@ import UIKit
 import SnapKit
 
 class GenderSelection: UIView{
-    private var gender: Gender?
+    var gender: Gender?
     
-    var mainView: UIView!
+    private var mainView: UIView!
     
-    var label: UILabel!
+    private var label: UILabel!
     
-    var maleButton: UIButton!
-    var femaleButton: UIButton!
+    private var maleButton: UIButton!
+    private var femaleButton: UIButton!
     
     init(){
         super.init(frame: .zero)
@@ -55,7 +55,11 @@ class GenderSelection: UIView{
         setButtons(genderValue: sender.tag)
     }
     
-    func setButtons(genderValue: Int){
+    func setButtons(genderValue: Int?){
+        guard let genderValue = genderValue else {
+            return
+        }
+        
         switch genderValue{
         case 0:
             UIView.animate(withDuration: 0.15, delay: 0.0, options: .curveEaseInOut, animations: {

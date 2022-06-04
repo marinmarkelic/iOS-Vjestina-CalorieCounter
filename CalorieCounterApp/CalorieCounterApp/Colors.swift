@@ -13,8 +13,8 @@ let sugarColor = UIColor.white
 let fiberColor = UIColor(red: 3/255, green: 252/255, blue: 94/255, alpha: 1)
 let carbsColor = UIColor(red: 3/255, green: 98/255, blue: 252/255, alpha: 1)
 let fatColor = UIColor(red: 252/255, green: 207/255, blue: 3/255, alpha: 1)
+
 func chooseColor(name: String) -> UIColor{
-    print(name)
     
     switch name{
     case "Calories":
