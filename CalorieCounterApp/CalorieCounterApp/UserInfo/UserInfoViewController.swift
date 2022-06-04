@@ -28,31 +28,6 @@ class UserInfoViewController: UIViewController{
         fatalError("init(coder:) has not been implemented")
     }
     
-    func loadUserDefaults(){
-        let userDefaults = UserDefaults.standard
-                
-        if userDefaults.string(forKey: "gender") == nil{
-            gender = nil
-        }
-        else{
-            gender = Gender(rawValue: Int(userDefaults.string(forKey: "gender")!)!)
-        }
-        
-        if userDefaults.string(forKey: "height") == nil{
-            height = nil
-        }
-        else{
-            height = Int(userDefaults.string(forKey: "height")!)
-        }
-        
-        if userDefaults.string(forKey: "weight") == nil{
-            weight = nil
-        }
-        else{
-            weight = Int(userDefaults.string(forKey: "weight")!)
-        }
-    }
-    
     func buildViews(){
         scrollView = UIScrollView()
         scrollView.showsVerticalScrollIndicator = false
@@ -76,22 +51,37 @@ class UserInfoViewController: UIViewController{
     
     @objc
     func saveData(){
-        
         let userDefaults = UserDefaults.standard
         
 
         if genderSelection.gender != nil{
-            userDefaults.set(String(genderSelection.gender!.rawValue), forKey: "gender")
+            userDefaults.set(genderSelection.gender!.rawValue, forKey: "gender")
         }
         
         let h = heightView.getValue() ?? 1
-        userDefaults.set(String(h), forKey: "height")
+        userDefaults.set(h, forKey: "height")
         
-        userDefaults.set(String(weightView.getValue()), forKey: "weight")
+        userDefaults.set(weightView.getValue(), forKey: "weight")
 
+        reloadData()
+    }
+    
+    func loadUserDefaults(){
+        let userDefaults = UserDefaults.standard
+        
+        let gender = userDefaults.integer(forKey: "gender")
+        let height = userDefaults.integer(forKey: "height")
+        let weight = userDefaults.integer(forKey: "weight")
+        
+        self.gender = Gender(rawValue: gender)
+        self.height = height
+        self.weight = weight
+                
     }
     
     func reloadData(){
+        loadUserDefaults()
+        
         genderSelection.setButtons(genderValue: gender?.rawValue)
         
         heightView.scrollCollectionView(to: height ?? 170)

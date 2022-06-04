@@ -38,6 +38,7 @@ class CaloriesView: UIView{
         self.consumedCalories = consumedCalories
         
         enteredLabel.text = String(consumedCalories)
+        totalLabel.text = "/ \(calculateBMR()) kcal"
 
         configureProgressPieChart()
         progressPieChart.notifyDataSetChanged()
@@ -60,7 +61,7 @@ class CaloriesView: UIView{
         enteredLabel.textColor = elementEnteredTextColor
         
         totalLabel = UILabel()
-        totalLabel.text = "/ \(getMockBMR()) kcal"
+        totalLabel.text = "/ \(calculateBMR()) kcal"
         totalLabel.textColor = elementTotalTextColor
         
         progressPieChart = ProgressPieChart()

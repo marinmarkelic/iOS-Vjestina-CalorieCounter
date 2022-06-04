@@ -66,7 +66,7 @@ class NutrientsCell: UICollectionViewCell{
     func chooseFormula(name: String) -> Float{
         switch name{
         case "Protein":
-            return calculateDailyProteinGrams(weight: 81)
+            return calculateDailyProteinGrams()
         case "Total Fat":
             return calculateDailyFatGrams(calories: getMockBMR())
         case "Carbs":
