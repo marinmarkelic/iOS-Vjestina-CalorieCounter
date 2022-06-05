@@ -44,7 +44,16 @@ class HomeViewController: ViewController{
         consumedItemsView.reloadData(dailyNutrition: dailyNutrition)
         
         let data = NutritionRepository().fetchAllDailyNutritionCalories()
-        historyView.reloadData(data)
+        guard let lpd = historyView.linePlotData else{
+            return
+        }
+        
+        if lpd.count != data.count{
+            historyView = CaloriesHistoryGraph(values: data)
+        }
+        else{
+            historyView.reloadData(data)
+        }
     }
     
     func buildViews(){

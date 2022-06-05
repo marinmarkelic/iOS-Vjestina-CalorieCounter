@@ -42,7 +42,9 @@ class CaloriesHistoryGraph: ScrollableGraphView{
         referenceLines.referenceLineColor = UIColor.white.withAlphaComponent(0.2)
         referenceLines.referenceLineLabelColor = UIColor.white
 
+
         referenceLines.positionType = .relative
+        
         referenceLines.dataPointLabelColor = UIColor.white.withAlphaComponent(0.5)
         
         backgroundFillColor = .clear

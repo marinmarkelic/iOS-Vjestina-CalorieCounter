@@ -63,8 +63,16 @@ class HeightView: UIView{
     }
     
     func scrollCollectionView(to: Int){
+        let myGroup = DispatchGroup()
+        myGroup.enter()
+        
         collectionView.layoutIfNeeded()
         collectionView.scrollToItem(at: IndexPath(item: to, section: 0), at: .centeredHorizontally, animated: true)
+
+        myGroup.leave()
+        myGroup.notify(queue: DispatchQueue.main) {
+            self.value.text = String(to)
+        }
     }
 
     
@@ -132,6 +140,5 @@ extension HeightView: UICollectionViewDelegate{
         }
         
         value.text = String(sumOfArr / indexArr.count)
-        print(value.text)
     }
 }
