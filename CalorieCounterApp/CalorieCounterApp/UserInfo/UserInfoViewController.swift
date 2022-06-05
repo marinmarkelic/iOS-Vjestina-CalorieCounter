@@ -19,9 +19,9 @@ class UserInfoViewController: UIViewController{
         super.init(nibName: nil, bundle: nil)
         view.backgroundColor = appBackgroundColor
         
-        loadUserDefaults()
         buildViews()
         addConstraints()
+        reloadData()
     }
     
     required init?(coder: NSCoder) {
@@ -76,13 +76,17 @@ class UserInfoViewController: UIViewController{
         self.gender = Gender(rawValue: gender)
         self.height = height
         self.weight = weight
-                
     }
     
     func reloadData(){
         loadUserDefaults()
         
         genderSelection.setButtons(genderValue: gender?.rawValue)
+        
+        if height == 0 && weight == 0{
+            height = 170
+            weight = 70
+        }
         
         heightView.scrollCollectionView(to: height ?? 170)
         weightView.scrollCollectionView(to: weight ?? 70)

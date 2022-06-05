@@ -34,9 +34,39 @@ class MovieTabBarController: UITabBarController, UITabBarControllerDelegate{
         userInfoViewController.tabBarItem = UITabBarItem(title: .none, image: UIImage(systemName: "slider.horizontal.3"), selectedImage: nil)
         
         viewControllers = [homeViewController, mealSearchViewController, userInfoViewController]
+        
+        if checkIfUserDefaultsEmpty(){
+            selectedViewController = userInfoViewController
+            
+        }
+    }
+    
+    func checkIfUserDefaultsEmpty() -> Bool{
+        let userDefaults = UserDefaults.standard
+                
+        if userDefaults.integer(forKey: "height") == 0 || userDefaults.integer(forKey: "weight") == 0{
+            return true
+        }
+        
+        return false
     }
     
     func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+        if checkIfUserDefaultsEmpty(){
+            selectedViewController = userInfoViewController
+            
+            DispatchQueue.main.async {
+                let alert = UIAlertController(title: "You have to save your information", message: nil, preferredStyle: UIAlertController.Style.alert)
+                
+                // add an action (button)
+                alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                
+                // show the alert
+                self.present(alert, animated: true, completion: nil)
+            }
+            return
+        }
+        
         
         if let vc = viewController as? HomeViewController {
             DispatchQueue.main.async {

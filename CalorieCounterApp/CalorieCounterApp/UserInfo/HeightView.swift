@@ -7,7 +7,7 @@ class HeightView: UIView{
     private var collectionView: UICollectionView!
     private var collectionViewLayout: UICollectionViewFlowLayout!
         
-    var value: UILabel!
+    private var value: UILabel!
     
     init(){
         super.init(frame: .zero)
@@ -66,6 +66,7 @@ class HeightView: UIView{
         collectionView.layoutIfNeeded()
         collectionView.scrollToItem(at: IndexPath(item: to, section: 0), at: .centeredHorizontally, animated: true)
     }
+
     
     func getValue() -> Int?{
         return try? Int(value.text ?? "1", format: .number)
@@ -119,14 +120,18 @@ extension HeightView: UICollectionViewDelegateFlowLayout {
 }
 
 extension HeightView: UICollectionViewDelegate{
+    
     func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath){
         let indexArr = collectionView.indexPathsForVisibleItems.map({$0[1]})
         let sumOfArr = indexArr.reduce(0, +)
+        
+        print(indexArr)
         
         if indexArr.count == 0{
             return
         }
         
-        value.text = String(sumOfArr / indexArr.count + 1)
+        value.text = String(sumOfArr / indexArr.count)
+        print(value.text)
     }
 }
