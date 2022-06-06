@@ -51,8 +51,9 @@ class MealAddView: UIView{
         amountTextField.layer.borderWidth = 1
         amountTextField.delegate = self
         
-        addButton.setTitle("Add", for: .normal)
+        addButton.setImage(UIImage(systemName: "plus.circle"), for: .normal)
         addButton.addTarget(self, action: #selector(clickedAddButton), for: .touchUpInside)
+        addButton.tintColor = .white
 
         
         addSubview(mainView)
@@ -113,13 +114,13 @@ class MealAddView: UIView{
         amountTextField.snp.makeConstraints{
             $0.leading.equalToSuperview().offset(20)
             $0.top.equalTo(label.snp.bottom).offset(10)
-            $0.bottom.equalToSuperview().offset(-10)
+            $0.bottom.equalToSuperview().offset(-20)
             $0.width.equalTo(45)
         }
         
         addButton.snp.makeConstraints{
             $0.top.equalTo(label.snp.bottom).offset(10)
-            $0.bottom.equalToSuperview().offset(-10)
+            $0.bottom.equalToSuperview().offset(-20)
             $0.trailing.equalToSuperview().offset(-20)
         }
     }
