@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		9C628EEB284EAA260024F4BD /* NumberCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C628EEA284EAA260024F4BD /* NumberCollectionView.swift */; };
+		9C628EEF284EAE110024F4BD /* AgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C628EEE284EAE110024F4BD /* AgeView.swift */; };
 		9C66C2D7283FBCB6006A6BF0 /* Other.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66C2D6283FBCB6006A6BF0 /* Other.swift */; };
 		9C66C2DA283FD3C4006A6BF0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66C2D9283FD3C4006A6BF0 /* HomeViewController.swift */; };
 		9C66C2DC283FD6B8006A6BF0 /* CaloriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66C2DB283FD6B8006A6BF0 /* CaloriesView.swift */; };
@@ -58,7 +59,7 @@
 		9CCA4F5D284A2CAF00542C90 /* HeightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCA4F5C284A2CAF00542C90 /* HeightView.swift */; };
 		9CCA4F5F284A2DCF00542C90 /* HeightViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCA4F5E284A2DCF00542C90 /* HeightViewCell.swift */; };
 		9CCA4F61284A3B5300542C90 /* WeightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCA4F60284A3B5300542C90 /* WeightView.swift */; };
-		9CCA4F63284A3BC500542C90 /* WeightViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCA4F62284A3BC500542C90 /* WeightViewCell.swift */; };
+		9CCA4F63284A3BC500542C90 /* NumberCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCA4F62284A3BC500542C90 /* NumberCell.swift */; };
 		9CCA4F65284B820F00542C90 /* CaloriesHistoryGraph.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCA4F64284B820F00542C90 /* CaloriesHistoryGraph.swift */; };
 		9CFE49CB2848A12A00017400 /* ConsumedItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CFE49CA2848A12A00017400 /* ConsumedItemView.swift */; };
 		DC44FC6C983E98990523B204 /* Pods_CalorieCounterApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8F8277843FF4610C92442D6C /* Pods_CalorieCounterApp.framework */; };
@@ -68,6 +69,7 @@
 		64BB13C933EB2311A9AEAB10 /* Pods-CalorieCounterApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalorieCounterApp.release.xcconfig"; path = "Target Support Files/Pods-CalorieCounterApp/Pods-CalorieCounterApp.release.xcconfig"; sourceTree = "<group>"; };
 		8F8277843FF4610C92442D6C /* Pods_CalorieCounterApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CalorieCounterApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C628EEA284EAA260024F4BD /* NumberCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberCollectionView.swift; sourceTree = "<group>"; };
+		9C628EEE284EAE110024F4BD /* AgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeView.swift; sourceTree = "<group>"; };
 		9C66C2D6283FBCB6006A6BF0 /* Other.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Other.swift; sourceTree = "<group>"; };
 		9C66C2D9283FD3C4006A6BF0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9C66C2DB283FD6B8006A6BF0 /* CaloriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaloriesView.swift; sourceTree = "<group>"; };
@@ -118,7 +120,7 @@
 		9CCA4F5C284A2CAF00542C90 /* HeightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightView.swift; sourceTree = "<group>"; };
 		9CCA4F5E284A2DCF00542C90 /* HeightViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightViewCell.swift; sourceTree = "<group>"; };
 		9CCA4F60284A3B5300542C90 /* WeightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightView.swift; sourceTree = "<group>"; };
-		9CCA4F62284A3BC500542C90 /* WeightViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeightViewCell.swift; sourceTree = "<group>"; };
+		9CCA4F62284A3BC500542C90 /* NumberCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberCell.swift; sourceTree = "<group>"; };
 		9CCA4F64284B820F00542C90 /* CaloriesHistoryGraph.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaloriesHistoryGraph.swift; sourceTree = "<group>"; };
 		9CFE49CA2848A12A00017400 /* ConsumedItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConsumedItemView.swift; sourceTree = "<group>"; };
 		D95A26164EF45B1F2FF35C94 /* Pods-CalorieCounterApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalorieCounterApp.debug.xcconfig"; path = "Target Support Files/Pods-CalorieCounterApp/Pods-CalorieCounterApp.debug.xcconfig"; sourceTree = "<group>"; };
@@ -299,7 +301,8 @@
 				9CCA4F5C284A2CAF00542C90 /* HeightView.swift */,
 				9CCA4F5E284A2DCF00542C90 /* HeightViewCell.swift */,
 				9CCA4F60284A3B5300542C90 /* WeightView.swift */,
-				9CCA4F62284A3BC500542C90 /* WeightViewCell.swift */,
+				9C628EEE284EAE110024F4BD /* AgeView.swift */,
+				9CCA4F62284A3BC500542C90 /* NumberCell.swift */,
 				9C628EEA284EAA260024F4BD /* NumberCollectionView.swift */,
 			);
 			path = UserInfo;
@@ -459,7 +462,8 @@
 				9C66C333284775AE006A6BF0 /* AppRouter.swift in Sources */,
 				9C66C2DA283FD3C4006A6BF0 /* HomeViewController.swift in Sources */,
 				9CCA4F61284A3B5300542C90 /* WeightView.swift in Sources */,
-				9CCA4F63284A3BC500542C90 /* WeightViewCell.swift in Sources */,
+				9C628EEF284EAE110024F4BD /* AgeView.swift in Sources */,
+				9CCA4F63284A3BC500542C90 /* NumberCell.swift in Sources */,
 				9C66C30128460C69006A6BF0 /* MealSearchViewController.swift in Sources */,
 				9CA346DE283FAFDA00F6329A /* ProgressPieChart.swift in Sources */,
 				9C66C2FA2845799E006A6BF0 /* NutritionNetworkDataSource.swift in Sources */,

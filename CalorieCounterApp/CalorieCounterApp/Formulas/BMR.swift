@@ -16,7 +16,7 @@ func calculateBMR() -> Float{
     let gender = userDefaults.integer(forKey: "gender")
     let height = userDefaults.integer(forKey: "height")
     let weight = userDefaults.integer(forKey: "weight")
-    let age = 21
+    let age = userDefaults.integer(forKey: "age")
     
     switch Gender(rawValue: Int(gender)) {
     case .male:

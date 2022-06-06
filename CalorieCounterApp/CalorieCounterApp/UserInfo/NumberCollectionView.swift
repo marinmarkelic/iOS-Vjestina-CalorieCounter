@@ -7,7 +7,7 @@ class NumberCollectionView: UICollectionView{
         collectionViewLayout.scrollDirection = .horizontal
         
         super.init(frame: .zero, collectionViewLayout: collectionViewLayout)
-        register(WeightViewCell.self, forCellWithReuseIdentifier: WeightViewCell.reuseIdentifier)
+        register(NumberCell.self, forCellWithReuseIdentifier: NumberCell.reuseIdentifier)
         dataSource = self
         delegate = self
         backgroundColor = .none
@@ -45,7 +45,7 @@ extension NumberCollectionView: UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         guard
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: WeightViewCell.reuseIdentifier, for: indexPath) as? WeightViewCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: NumberCell.reuseIdentifier, for: indexPath) as? NumberCell
         else {
             fatalError()
         }

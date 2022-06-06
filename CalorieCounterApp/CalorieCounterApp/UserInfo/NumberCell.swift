@@ -1,7 +1,7 @@
 import UIKit
 import SnapKit
 
-class WeightViewCell: UICollectionViewCell{
+class NumberCell: UICollectionViewCell{
     static let reuseIdentifier = String(describing: WeightView.self)
     
     private var label: UILabel!

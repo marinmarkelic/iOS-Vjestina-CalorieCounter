@@ -2,9 +2,10 @@ import UIKit
 import SnapKit
 
 class UserInfoViewController: UIViewController{
-    private var gender: Gender?
-    private var height: Int?
-    private var weight: Int?
+    private var gender: Gender!
+    private var height: Int!
+    private var weight: Int!
+    private var age: Int!
     
     private var scrollView: UIScrollView!
     private var contentView: UIView!
@@ -12,6 +13,7 @@ class UserInfoViewController: UIViewController{
     private var genderSelection: GenderSelection!
     private var heightView: HeightView!
     private var weightView: WeightView!
+    private var ageView: AgeView!
     
     private var saveButton: UIButton!
     
@@ -36,6 +38,7 @@ class UserInfoViewController: UIViewController{
         genderSelection = GenderSelection()
         heightView = HeightView()
         weightView = WeightView()
+        ageView = AgeView()
         
         saveButton = UIButton()
         saveButton.setTitle("Save", for: .normal)
@@ -46,6 +49,7 @@ class UserInfoViewController: UIViewController{
         contentView.addSubview(genderSelection)
         contentView.addSubview(heightView)
         contentView.addSubview(weightView)
+        contentView.addSubview(ageView)
         contentView.addSubview(saveButton)
     }
     
@@ -62,6 +66,7 @@ class UserInfoViewController: UIViewController{
         userDefaults.set(h, forKey: "height")
         
         userDefaults.set(weightView.getValue(), forKey: "weight")
+        userDefaults.set(ageView.getValue(), forKey: "age")
 
         reloadData()
     }
@@ -69,13 +74,10 @@ class UserInfoViewController: UIViewController{
     func loadUserDefaults(){
         let userDefaults = UserDefaults.standard
         
-        let gender = userDefaults.integer(forKey: "gender")
-        let height = userDefaults.integer(forKey: "height")
-        let weight = userDefaults.integer(forKey: "weight")
-        
-        self.gender = Gender(rawValue: gender)
-        self.height = height
-        self.weight = weight
+        self.gender = Gender(rawValue: userDefaults.integer(forKey: "gender"))
+        self.height = userDefaults.integer(forKey: "height")
+        self.weight = userDefaults.integer(forKey: "weight")
+        self.age = userDefaults.integer(forKey: "age")
     }
     
     func reloadData(){
@@ -83,13 +85,15 @@ class UserInfoViewController: UIViewController{
         
         genderSelection.setButtons(genderValue: gender?.rawValue)
         
-        if height == 0 && weight == 0{
+        if height == 0 && weight == 0 && age == 0{
             height = 170
             weight = 70
+            age = 18
         }
-        
+                
         heightView.scrollCollectionView(to: height ?? 170)
         weightView.scrollCollectionView(to: weight ?? 70)
+        ageView.scrollCollectionView(to: age ?? 18)
     }
     
     func addConstraints(){
@@ -121,8 +125,13 @@ class UserInfoViewController: UIViewController{
             $0.leading.trailing.equalToSuperview()
         }
         
-        saveButton.snp.makeConstraints{
+        ageView.snp.makeConstraints{
             $0.top.equalTo(weightView.snp.bottom).offset(30)
+            $0.leading.trailing.equalToSuperview()
+        }
+        
+        saveButton.snp.makeConstraints{
+            $0.top.equalTo(ageView.snp.bottom).offset(30)
             $0.leading.equalToSuperview().offset(20)
             $0.bottom.equalToSuperview()
         }
