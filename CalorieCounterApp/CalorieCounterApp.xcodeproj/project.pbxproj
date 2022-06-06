@@ -52,8 +52,6 @@
 		9CA346D9283FACA100F6329A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9CA346D8283FACA100F6329A /* LaunchScreen.storyboard */; };
 		9CA346DC283FADBF00F6329A /* BMR.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA346DB283FADBF00F6329A /* BMR.swift */; };
 		9CA346DE283FAFDA00F6329A /* ProgressPieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CA346DD283FAFDA00F6329A /* ProgressPieChart.swift */; };
-		9CCA4F522849FC4900542C90 /* ProgressPieChartTwo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCA4F512849FC4900542C90 /* ProgressPieChartTwo.swift */; };
-		9CCA4F54284A0D2D00542C90 /* ProgressPieChartThree.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCA4F53284A0D2D00542C90 /* ProgressPieChartThree.swift */; };
 		9CCA4F57284A21AB00542C90 /* UserInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCA4F56284A21AB00542C90 /* UserInfoViewController.swift */; };
 		9CCA4F59284A234300542C90 /* GenderSelection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCA4F58284A234300542C90 /* GenderSelection.swift */; };
 		9CCA4F5D284A2CAF00542C90 /* HeightView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9CCA4F5C284A2CAF00542C90 /* HeightView.swift */; };
@@ -113,8 +111,6 @@
 		9CA346D8283FACA100F6329A /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		9CA346DB283FADBF00F6329A /* BMR.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BMR.swift; sourceTree = "<group>"; };
 		9CA346DD283FAFDA00F6329A /* ProgressPieChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressPieChart.swift; sourceTree = "<group>"; };
-		9CCA4F512849FC4900542C90 /* ProgressPieChartTwo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressPieChartTwo.swift; sourceTree = "<group>"; };
-		9CCA4F53284A0D2D00542C90 /* ProgressPieChartThree.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressPieChartThree.swift; sourceTree = "<group>"; };
 		9CCA4F56284A21AB00542C90 /* UserInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoViewController.swift; sourceTree = "<group>"; };
 		9CCA4F58284A234300542C90 /* GenderSelection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GenderSelection.swift; sourceTree = "<group>"; };
 		9CCA4F5C284A2CAF00542C90 /* HeightView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeightView.swift; sourceTree = "<group>"; };
@@ -277,8 +273,6 @@
 				9CA346D6283F928300F6329A /* CustomPieChartView.swift */,
 				9CA346DD283FAFDA00F6329A /* ProgressPieChart.swift */,
 				9C66C2E128400972006A6BF0 /* CaloriesHistoryLineChart.swift */,
-				9CCA4F512849FC4900542C90 /* ProgressPieChartTwo.swift */,
-				9CCA4F53284A0D2D00542C90 /* ProgressPieChartThree.swift */,
 				9CCA4F64284B820F00542C90 /* CaloriesHistoryGraph.swift */,
 			);
 			path = Charts;
@@ -431,7 +425,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				9C66C331284774CB006A6BF0 /* MovieTabBarController.swift in Sources */,
-				9CCA4F54284A0D2D00542C90 /* ProgressPieChartThree.swift in Sources */,
 				9C66C2FF284592D9006A6BF0 /* MealChartView.swift in Sources */,
 				9C66C2DC283FD6B8006A6BF0 /* CaloriesView.swift in Sources */,
 				9C66C30E2846AAA3006A6BF0 /* Database.xcdatamodeld in Sources */,
@@ -479,7 +472,6 @@
 				9C66C33F2847C28A006A6BF0 /* ConsumedItemsView.swift in Sources */,
 				9C66C2E228400972006A6BF0 /* CaloriesHistoryLineChart.swift in Sources */,
 				9C66C2E02840082C006A6BF0 /* CaloriesHistoryView.swift in Sources */,
-				9CCA4F522849FC4900542C90 /* ProgressPieChartTwo.swift in Sources */,
 				9CFE49CB2848A12A00017400 /* ConsumedItemView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

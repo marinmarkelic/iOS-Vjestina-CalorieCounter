@@ -48,6 +48,10 @@ class HomeViewController: ViewController{
             return
         }
         
+        if data.count == 1 && data[0] == 0.0{
+            return
+        }
+        
         if lpd.count != data.count{
             historyView = CaloriesHistoryGraph(values: data)
         }
