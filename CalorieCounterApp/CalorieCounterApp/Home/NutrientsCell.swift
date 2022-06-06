@@ -55,10 +55,10 @@ class NutrientsCell: UICollectionViewCell{
             secondValue = 0
         }
         else{
-            secondValue = Double(chooseFormula(name: name.text!) - value)
+            secondValue = Double(100 - value)
         }
         
-        progressPieChart.customizeChart(dataPoints: ["done", "remaining"], values: [Double(value), Double(100 - value)])
+        progressPieChart.customizeChart(dataPoints: ["done", "remaining"], values: [Double(value), secondValue])
         progressPieChart.drawEntryLabelsEnabled = false
         progressPieChart.isUserInteractionEnabled = false
         progressPieChart.legend.enabled = false
