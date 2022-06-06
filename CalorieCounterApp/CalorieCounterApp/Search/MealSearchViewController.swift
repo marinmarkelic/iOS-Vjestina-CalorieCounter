@@ -2,6 +2,7 @@ import UIKit
 import SnapKit
 
 class MealSearchViewController: ViewController{
+    let loadingSpinner = SpinnerViewController()
         
     var scrollView: UIScrollView!
     var contentView: UIView!
@@ -77,14 +78,41 @@ class MealSearchViewController: ViewController{
             $0.top.equalTo(mealDetails.snp.bottom).offset(15)
         }
     }
+    
+    func showSpinnerView() {
+        addChild(loadingSpinner)
+        loadingSpinner.view.frame = view.frame
+        view.addSubview(loadingSpinner.view)
+        loadingSpinner.didMove(toParent: self)
+    }
+    
+    func hideSpinnerView(){
+        loadingSpinner.willMove(toParent: nil)
+        loadingSpinner.view.removeFromSuperview()
+        loadingSpinner.removeFromParent()
+    }
 }
 
 extension MealSearchViewController: SearchBarDelegate{
     func searchedWithText(text: String) {
+        showSpinnerView()
+        
         NutritionRepository().loadNutritionData(itemDescription: text, completionHandler: {
-            self.mealChart.set($0)
-            self.mealDetails.set($0)
-            self.mealAdd.set($0)
+            self.hideSpinnerView()
+            
+            guard let item = $0 else{
+                DispatchQueue.main.async {
+                    let alert = UIAlertController(title: "Couldn't find item", message: nil, preferredStyle: UIAlertController.Style.alert)
+                    alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+                    self.present(alert, animated: true, completion: nil)
+                }
+                
+                return
+            }
+            
+            self.mealChart.set(item)
+            self.mealDetails.set(item)
+            self.mealAdd.set(item)
         })
     }
     

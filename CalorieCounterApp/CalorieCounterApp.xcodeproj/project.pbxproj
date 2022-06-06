@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		9C628EEB284EAA260024F4BD /* NumberCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C628EEA284EAA260024F4BD /* NumberCollectionView.swift */; };
 		9C628EEF284EAE110024F4BD /* AgeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C628EEE284EAE110024F4BD /* AgeView.swift */; };
+		9C628EF1284EB8FE0024F4BD /* SpinnerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C628EF0284EB8FE0024F4BD /* SpinnerViewController.swift */; };
 		9C66C2D7283FBCB6006A6BF0 /* Other.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66C2D6283FBCB6006A6BF0 /* Other.swift */; };
 		9C66C2DA283FD3C4006A6BF0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66C2D9283FD3C4006A6BF0 /* HomeViewController.swift */; };
 		9C66C2DC283FD6B8006A6BF0 /* CaloriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66C2DB283FD6B8006A6BF0 /* CaloriesView.swift */; };
@@ -68,6 +69,7 @@
 		8F8277843FF4610C92442D6C /* Pods_CalorieCounterApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CalorieCounterApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9C628EEA284EAA260024F4BD /* NumberCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberCollectionView.swift; sourceTree = "<group>"; };
 		9C628EEE284EAE110024F4BD /* AgeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgeView.swift; sourceTree = "<group>"; };
+		9C628EF0284EB8FE0024F4BD /* SpinnerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpinnerViewController.swift; sourceTree = "<group>"; };
 		9C66C2D6283FBCB6006A6BF0 /* Other.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Other.swift; sourceTree = "<group>"; };
 		9C66C2D9283FD3C4006A6BF0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9C66C2DB283FD6B8006A6BF0 /* CaloriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaloriesView.swift; sourceTree = "<group>"; };
@@ -201,6 +203,7 @@
 				9C66C30428462153006A6BF0 /* MealDetailsView.swift */,
 				9C66C306284624E7006A6BF0 /* MealDetailsCell.swift */,
 				9C66C3082846812E006A6BF0 /* MealAddView.swift */,
+				9C628EF0284EB8FE0024F4BD /* SpinnerViewController.swift */,
 			);
 			path = Search;
 			sourceTree = "<group>";
@@ -428,6 +431,7 @@
 				9C66C2FF284592D9006A6BF0 /* MealChartView.swift in Sources */,
 				9C66C2DC283FD6B8006A6BF0 /* CaloriesView.swift in Sources */,
 				9C66C30E2846AAA3006A6BF0 /* Database.xcdatamodeld in Sources */,
+				9C628EF1284EB8FE0024F4BD /* SpinnerViewController.swift in Sources */,
 				9C66C2F12843C040006A6BF0 /* Constants.swift in Sources */,
 				9CCA4F57284A21AB00542C90 /* UserInfoViewController.swift in Sources */,
 				9CCA4F65284B820F00542C90 /* CaloriesHistoryGraph.swift in Sources */,

@@ -92,11 +92,7 @@ class MealAddView: UIView{
               amount != "" else{
                   DispatchQueue.main.async {
                       let alert = UIAlertController(title: "Invalid amount", message: nil, preferredStyle: UIAlertController.Style.alert)
-                      
-                      // add an action (button)
                       alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-                      
-                      // show the alert
                       self.window?.rootViewController?.present(alert, animated: true, completion: nil)
                   }
                   

@@ -12,10 +12,11 @@ class NutritionRepository{
 //        databaseDataSource.del()
     }
     
-    func loadNutritionData(itemDescription: String, completionHandler: @escaping (_: NutritionItemViewModel) -> Void){
+    func loadNutritionData(itemDescription: String, completionHandler: @escaping (_: NutritionItemViewModel?) -> Void){
         networkDataSource.loadNutritionData(itemDescription: itemDescription){
             guard let items = $0,
             let first = items.items.first else{
+                completionHandler(nil)
                 return
             }
             
