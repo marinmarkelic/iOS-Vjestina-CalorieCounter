@@ -185,3 +185,77 @@ class NutritionDatabaseDataSource{
         try? managedContext.save()
     }
 }
+
+
+/*
+ 
+ func fetchFavorites() -> Favorites?{
+     let fetchRequest = Favorites.fetchRequest()
+
+     do{
+         return try managedContext.fetch(fetchRequest).first
+     }catch let error as NSError{
+         print("Error \(error), Info: \(error.userInfo)")
+         return nil
+     }
+ }
+ 
+ func isItemInFavorites(_ name: String) -> Bool{
+     let fetchRequest = Favorites.fetchRequest()
+             
+     do{
+         let favorites = try managedContext.fetch(fetchRequest).first
+         
+         guard let favorites = favorites else{
+             return false
+         }
+         
+         
+         let itemsSet = favorites.value(forKey: "items") as! NSSet
+         let itemsArr = itemsSet.allObjects as NSArray
+         let items = itemsArr as! [DailyNutritionItem]
+                     
+         if items.filter({$0.name?.lowercased() == name.lowercased()}).count == 0{
+             return false
+         }
+         
+         return true
+         
+     }catch let error as NSError{
+         print("Error \(error), Info: \(error.userInfo)")
+         return false
+     }
+ }
+ 
+ func addItemToFavorites(_ item: NutritionItemViewModel){
+     if isItemInFavorites(item.name) == true{
+         print("already in favorites")
+         return
+     }
+     
+     var favorites: Favorites
+     
+     if fetchFavorites() == nil{
+         let entity = NSEntityDescription.entity(forEntityName: "Favorites", in: managedContext)!
+         favorites = Favorites(entity: entity, insertInto: managedContext)
+     }
+     else{
+         favorites = fetchFavorites()!
+     }
+     
+     
+     let entity = NSEntityDescription.entity(forEntityName: "DailyNutritionItem", in: managedContext)!
+     let dailyNutritionItem = DailyNutritionItem(item: item, entity: entity, insertInto: managedContext)
+     favorites.addToItems(dailyNutritionItem)
+     
+     do{
+         try managedContext.save()
+         return
+     }
+     catch let error as NSError{
+         print("Error \(error), Info: \(error.userInfo)")
+         return
+     }
+ }
+ 
+ */

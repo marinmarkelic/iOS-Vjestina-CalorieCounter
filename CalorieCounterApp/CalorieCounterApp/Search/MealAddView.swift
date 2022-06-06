@@ -7,6 +7,7 @@ class MealAddView: UIView{
     var mainView: UIView!
     
     var label: UILabel!
+    var caloriesLabel: UILabel!
     
     var addButton: UIButton!
     
@@ -20,11 +21,14 @@ class MealAddView: UIView{
         fatalError("init(coder:) has not been implemented")
     }
     
-    func set(_ items: NutritionItemViewModel){
-        self.meal = items
+    func set(_ item: NutritionItemViewModel){
+        self.meal = item
                 
         buildViews()
         addConstraints()
+        
+        caloriesLabel.text = String(item.calories) + " kcal"
+
     }
     
     func buildViews(){
@@ -50,16 +54,35 @@ class MealAddView: UIView{
         amountTextField.layer.borderColor = UIColor.lightGray.cgColor
         amountTextField.layer.borderWidth = 1
         amountTextField.delegate = self
+        amountTextField.addTarget(self, action: #selector(refreshCaloriesAmount), for: .editingChanged)
+
         
         addButton.setImage(UIImage(systemName: "plus.circle"), for: .normal)
         addButton.addTarget(self, action: #selector(clickedAddButton), for: .touchUpInside)
         addButton.tintColor = .white
 
+        caloriesLabel = UILabel()
+        caloriesLabel.textColor = elementTotalTextColor
         
         addSubview(mainView)
         mainView.addSubview(label)
         mainView.addSubview(amountTextField)
-        addSubview(addButton)
+        mainView.addSubview(addButton)
+        mainView.addSubview(caloriesLabel)
+    }
+    
+    @objc
+    func refreshCaloriesAmount(){
+        guard let meal = meal,
+              let text = amountTextField.text,
+              let value = Float(text) else{
+                  caloriesLabel.text = "0.0 kcal"
+                  
+                  return
+              }
+                
+//        caloriesLabel.text = String((value / meal.serving_size_g) * meal.calories) + " kcal"
+        caloriesLabel.text = String(format: "%.1f kcal", (value / meal.serving_size_g) * meal.calories)
     }
     
     @objc
@@ -102,6 +125,8 @@ class MealAddView: UIView{
         }
     }
     
+    
+    
     func addConstraints(){
         mainView.snp.makeConstraints{
             $0.edges.equalToSuperview()
@@ -114,19 +139,29 @@ class MealAddView: UIView{
         amountTextField.snp.makeConstraints{
             $0.leading.equalToSuperview().offset(20)
             $0.top.equalTo(label.snp.bottom).offset(10)
-            $0.bottom.equalToSuperview().offset(-20)
             $0.width.equalTo(45)
         }
         
         addButton.snp.makeConstraints{
             $0.top.equalTo(label.snp.bottom).offset(10)
-            $0.bottom.equalToSuperview().offset(-20)
             $0.trailing.equalToSuperview().offset(-20)
+        }
+        
+        caloriesLabel.snp.makeConstraints{
+            $0.leading.equalToSuperview().offset(20)
+            $0.top.equalTo(amountTextField.snp.bottom).offset(10)
+            $0.bottom.equalToSuperview().offset(-20)
+
         }
     }
 }
 
 extension MealAddView: UITextFieldDelegate{
+    
+    func textFieldDidEndEditing(_ textField: UITextField) {
+        refreshCaloriesAmount()
+    }
+    
     func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
 
         guard !string.isEmpty else {
