@@ -32,7 +32,7 @@ class ConsumedItemView: UIView{
         
         title = UILabel()
         title.textColor = elementEnteredTextColor
-        title.text = dailyNutritionItem.name
+        title.text = dailyNutritionItem.name.capitalized
         
         time = UILabel()
         time.textColor = elementTitleColor
@@ -43,8 +43,9 @@ class ConsumedItemView: UIView{
         calories.text = "\(dailyNutritionItem.calories) kcal"
         
         closeButton = UIButton()
-        closeButton.setImage(UIImage(systemName: "cross"), for: .normal)
+        closeButton.setImage(UIImage(systemName: "minus.circle"), for: .normal)
         closeButton.addTarget(self, action: #selector(clickedCloseButton), for: .touchUpInside)
+        closeButton.tintColor = .white
 
         addSubview(title)
         addSubview(time)
@@ -66,21 +67,21 @@ class ConsumedItemView: UIView{
     
     func addConstraints(){
         title.snp.makeConstraints{
-            $0.leading.top.equalToSuperview().offset(10)
+            $0.leading.top.equalToSuperview().offset(20)
         }
         
         time.snp.makeConstraints{
-            $0.top.equalTo(title)
+            $0.top.bottom.equalTo(title)
             $0.leading.equalTo(title.snp.trailing).offset(10)
         }
         
         calories.snp.makeConstraints{
-            $0.leading.equalToSuperview().offset(10)
+            $0.leading.equalTo(title)
             $0.top.equalTo(title.snp.bottom).offset(20)
         }
         
         closeButton.snp.makeConstraints{
-            $0.bottom.trailing.equalToSuperview().offset(-10)
+            $0.bottom.trailing.equalToSuperview().offset(-20)
         }
     }
     

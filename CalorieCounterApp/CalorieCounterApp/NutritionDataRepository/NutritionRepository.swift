@@ -2,8 +2,8 @@
 
 class NutritionRepository{
     
-    var networkDataSource: NutritionNetworkDataSource!
-    var databaseDataSource: NutritionDatabaseDataSource!
+    private var networkDataSource: NutritionNetworkDataSource!
+    private var databaseDataSource: NutritionDatabaseDataSource!
     
     init() {
         networkDataSource = NutritionNetworkDataSource()
