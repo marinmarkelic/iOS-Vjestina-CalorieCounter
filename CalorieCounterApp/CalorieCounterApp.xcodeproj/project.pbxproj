@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9C628EEB284EAA260024F4BD /* NumberCollectionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C628EEA284EAA260024F4BD /* NumberCollectionView.swift */; };
 		9C66C2D7283FBCB6006A6BF0 /* Other.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66C2D6283FBCB6006A6BF0 /* Other.swift */; };
 		9C66C2DA283FD3C4006A6BF0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66C2D9283FD3C4006A6BF0 /* HomeViewController.swift */; };
 		9C66C2DC283FD6B8006A6BF0 /* CaloriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66C2DB283FD6B8006A6BF0 /* CaloriesView.swift */; };
@@ -66,6 +67,7 @@
 /* Begin PBXFileReference section */
 		64BB13C933EB2311A9AEAB10 /* Pods-CalorieCounterApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CalorieCounterApp.release.xcconfig"; path = "Target Support Files/Pods-CalorieCounterApp/Pods-CalorieCounterApp.release.xcconfig"; sourceTree = "<group>"; };
 		8F8277843FF4610C92442D6C /* Pods_CalorieCounterApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CalorieCounterApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		9C628EEA284EAA260024F4BD /* NumberCollectionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NumberCollectionView.swift; sourceTree = "<group>"; };
 		9C66C2D6283FBCB6006A6BF0 /* Other.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Other.swift; sourceTree = "<group>"; };
 		9C66C2D9283FD3C4006A6BF0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9C66C2DB283FD6B8006A6BF0 /* CaloriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaloriesView.swift; sourceTree = "<group>"; };
@@ -298,6 +300,7 @@
 				9CCA4F5E284A2DCF00542C90 /* HeightViewCell.swift */,
 				9CCA4F60284A3B5300542C90 /* WeightView.swift */,
 				9CCA4F62284A3BC500542C90 /* WeightViewCell.swift */,
+				9C628EEA284EAA260024F4BD /* NumberCollectionView.swift */,
 			);
 			path = UserInfo;
 			sourceTree = "<group>";
@@ -440,6 +443,7 @@
 				9C66C2EF2843C01C006A6BF0 /* Codables.swift in Sources */,
 				9C66C3092846812E006A6BF0 /* MealAddView.swift in Sources */,
 				9CA346DC283FADBF00F6329A /* BMR.swift in Sources */,
+				9C628EEB284EAA260024F4BD /* NumberCollectionView.swift in Sources */,
 				9C66C33D284783DF006A6BF0 /* DailyNutritionItem+CoreDataProperties.swift in Sources */,
 				9CA346D7283F928300F6329A /* CustomPieChartView.swift in Sources */,
 				9C66C2EB2843B595006A6BF0 /* Result.swift in Sources */,
