@@ -61,18 +61,6 @@ class NutritionDatabaseDataSource{
     func loadDailyNutrition() -> DailyNutrition{
         var dailyNutrition: DailyNutrition
         
-        ////    If there is only one or no dailyNutritions adds an empty one for yesterday so that the graph renders correctly
-        if fetchAllDailyNutrition()?.count ?? 0 <= 1{
-            print("entered")
-            let entity = NSEntityDescription.entity(forEntityName: "DailyNutrition", in: managedContext)!
-            dailyNutrition = DailyNutrition(entity: entity, insertInto: managedContext)
-                            
-            let yesterday = Calendar.current.date(byAdding: .day, value: -1, to: Date.now)!
-            
-            let dateFormatter = DateFormatter()
-            dateFormatter.dateFormat = "yyyy/MM/dd"
-            dailyNutrition.date = dateFormatter.string(from: yesterday)
-        }
         
         if fetchDailyNutrition() == nil{
             let entity = NSEntityDescription.entity(forEntityName: "DailyNutrition", in: managedContext)!

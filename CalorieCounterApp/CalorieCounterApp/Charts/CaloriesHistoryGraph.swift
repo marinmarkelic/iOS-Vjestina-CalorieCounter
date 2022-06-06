@@ -48,10 +48,9 @@ class CaloriesHistoryGraph: ScrollableGraphView{
         referenceLines.dataPointLabelColor = UIColor.white.withAlphaComponent(0.5)
         
         backgroundFillColor = .clear
-        
         dataPointSpacing = 80
-
         shouldAnimateOnStartup = true
+        shouldRangeAlwaysStartAtZero = true
         shouldAdaptRange = true
         
         rangeMax = 50

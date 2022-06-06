@@ -132,9 +132,7 @@ extension HeightView: UICollectionViewDelegate{
     func collectionView(_ collectionView: UICollectionView, didEndDisplaying cell: UICollectionViewCell, forItemAt indexPath: IndexPath){
         let indexArr = collectionView.indexPathsForVisibleItems.map({$0[1]})
         let sumOfArr = indexArr.reduce(0, +)
-        
-        print(indexArr)
-        
+                
         if indexArr.count == 0{
             return
         }
