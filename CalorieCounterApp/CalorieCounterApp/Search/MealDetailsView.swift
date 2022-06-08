@@ -13,6 +13,9 @@ class MealDetailsView: UIView{
 
     init() {
         super.init(frame: .zero)
+        
+        buildViews()
+        addConstraints()
     }
     
     required init?(coder: NSCoder) {
@@ -22,40 +25,29 @@ class MealDetailsView: UIView{
     func set(_ items: NutritionItemViewModel){
         self.meal = items
         
-        buildViews()
-        addConstraints()
+        portionSizeLabel.text = "Portion size: " + String(meal.serving_size_g) + " g"
+        collectionView.reloadData()
     }
     
     func buildViews(){
-        if mainView == nil{
-            mainView = UIView()
-            
-            let collectionViewLayout = UICollectionViewFlowLayout()
-            collectionViewLayout.scrollDirection = .horizontal
-            collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout)
-            
-            portionSizeLabel = UILabel()
-        }
-        
-        
+        mainView = UIView()
+
         mainView.backgroundColor = .none
         mainView.layer.cornerRadius = 8
         mainView.clipsToBounds = true
         
+        let collectionViewLayout = UICollectionViewFlowLayout()
+        collectionViewLayout.scrollDirection = .horizontal
+        collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout)
         collectionView.register(MealDetailsCell.self, forCellWithReuseIdentifier: MealDetailsCell.reuseIdentifier)
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.backgroundColor = .none
         collectionView.showsHorizontalScrollIndicator = false
         
+        portionSizeLabel = UILabel()
         portionSizeLabel.textColor = elementTitleColor
-        if meal == nil{
-            portionSizeLabel.text = "Portion size: " + String(0) + " g"
-
-        }
-        else{
-            portionSizeLabel.text = "Portion size: " + String(meal.serving_size_g) + " g"
-        }
+        portionSizeLabel.text = "Portion size: " + String(0) + " g"
         
         addSubview(mainView)
         mainView.addSubview(collectionView)

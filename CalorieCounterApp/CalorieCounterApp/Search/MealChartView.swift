@@ -9,17 +9,22 @@ class MealChartView: UIView{
     var titleLabel: UILabel!
     var itemNameLabel: UILabel!
     
+    var favoriteButton: UIButton!
+    
     var pieChart: CustomPieChartView!
     
     init() {
         super.init(frame: .zero)
+        
+        buildViews()
+        addConstraints()
     }
     
     func set(_ items: NutritionItemViewModel){
         self.items = items
                 
-        buildViews()
-        addConstraints()
+        itemNameLabel.text = items.name.capitalized
+        pieChart.customizeChart(dataPoints: items.getArrayOfNamesForGrams(), values: items.getArrayOfValuesForGrams().map({Double($0)}))
     }
     
     required init?(coder: NSCoder) {
@@ -27,29 +32,27 @@ class MealChartView: UIView{
     }
     
     func buildViews(){
-        if mainView == nil{
-            mainView = UIView()
-            titleLabel = UILabel()
-            itemNameLabel = UILabel()
-            pieChart = CustomPieChartView()
-        }
-        
+        mainView = UIView()
         mainView.backgroundColor = elementBackgroundColor
         mainView.layer.cornerRadius = 8
         
+        titleLabel = UILabel()
         titleLabel.text = "Nutritional information"
         titleLabel.textColor = elementTitleColor
         
-        itemNameLabel.text = items.name.capitalized
+        itemNameLabel = UILabel()
         itemNameLabel.textColor = elementEnteredTextColor
         
+        favoriteButton = UIButton()
+        
+        pieChart = CustomPieChartView()
         configurePieChart()
-        pieChart.customizeChart(dataPoints: items.getArrayOfNamesForGrams(), values: items.getArrayOfValuesForGrams().map({Double($0)}))
 
         
         addSubview(mainView)
         mainView.addSubview(titleLabel)
         mainView.addSubview(itemNameLabel)
+        mainView.addSubview(favoriteButton)
         mainView.addSubview(pieChart)
     }
     
@@ -65,9 +68,13 @@ class MealChartView: UIView{
         }
         
         itemNameLabel.snp.makeConstraints{
-            $0.trailing.equalToSuperview()
             $0.top.equalTo(titleLabel.snp.bottom)
             $0.leading.equalToSuperview().offset(20)
+        }
+        
+        favoriteButton.snp.makeConstraints{
+            $0.top.equalTo(itemNameLabel)
+            $0.trailing.equalToSuperview()
         }
         
         pieChart.snp.makeConstraints{

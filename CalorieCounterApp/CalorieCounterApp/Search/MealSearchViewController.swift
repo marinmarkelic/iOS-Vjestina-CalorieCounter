@@ -7,6 +7,8 @@ class MealSearchViewController: ViewController{
     var scrollView: UIScrollView!
     var contentView: UIView!
     
+    var subViewsContainer: UIView!
+    
     var searchBar: SearchBarView!
     var mealChart: MealChartView!
     var mealDetails: MealDetailsView!
@@ -30,6 +32,9 @@ class MealSearchViewController: ViewController{
         scrollView.showsVerticalScrollIndicator = false
         contentView = UIView()
         
+        subViewsContainer = UIView()
+        subViewsContainer.isHidden = true
+        
         searchBar = SearchBarView()
         searchBar.delegate = self
         
@@ -42,9 +47,10 @@ class MealSearchViewController: ViewController{
         view.addSubview(scrollView)
         scrollView.addSubview(contentView)
         contentView.addSubview(searchBar)
-        contentView.addSubview(mealChart)
-        contentView.addSubview(mealDetails)
-        contentView.addSubview(mealAdd)
+        contentView.addSubview(subViewsContainer)
+        subViewsContainer.addSubview(mealChart)
+        subViewsContainer.addSubview(mealDetails)
+        subViewsContainer.addSubview(mealAdd)
     }
     
     func addConstraints(){
@@ -61,6 +67,11 @@ class MealSearchViewController: ViewController{
         
         searchBar.snp.makeConstraints{
             $0.leading.trailing.top.equalToSuperview()
+        }
+        
+        subViewsContainer.snp.makeConstraints{
+            $0.top.equalTo(searchBar.snp.bottom)
+            $0.leading.trailing.bottom.equalToSuperview()
         }
         
         mealChart.snp.makeConstraints{
@@ -113,6 +124,10 @@ extension MealSearchViewController: SearchBarDelegate{
             self.mealChart.set(item)
             self.mealDetails.set(item)
             self.mealAdd.set(item)
+            
+            if self.subViewsContainer.isHidden == true{
+                self.subViewsContainer.isHidden = false
+            }
         })
     }
     

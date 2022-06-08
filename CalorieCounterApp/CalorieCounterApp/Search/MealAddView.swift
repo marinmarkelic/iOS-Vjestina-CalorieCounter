@@ -15,6 +15,9 @@ class MealAddView: UIView{
 
     init() {
         super.init(frame: .zero)
+        
+        buildViews()
+        addConstraints()
     }
     
     required init?(coder: NSCoder) {
@@ -24,39 +27,31 @@ class MealAddView: UIView{
     func set(_ item: NutritionItemViewModel){
         self.meal = item
                 
-        buildViews()
-        addConstraints()
-        
         caloriesLabel.text = String(item.calories) + " kcal"
-
     }
     
     func buildViews(){
-        if mainView == nil{
-            mainView = UIView()
-            amountTextField = UITextField()
-            label = UILabel()
-            addButton = UIButton()
-
-        }
-        
+        mainView = UIView()
         mainView.backgroundColor = elementBackgroundColor
         mainView.layer.cornerRadius = 8
         mainView.clipsToBounds = true
         
+        label = UILabel()
         label.text = "Add item"
         label.textColor = elementTitleColor
         
+        amountTextField = UITextField()
         amountTextField.text = "100"
         amountTextField.textColor = .white
         amountTextField.textAlignment = .center
-        amountTextField.layer.cornerRadius = 8
-        amountTextField.layer.borderColor = UIColor.lightGray.cgColor
+        amountTextField.layer.cornerRadius = 6
+//        amountTextField.layer.borderColor = UIColor.lightGray.cgColor
+        amountTextField.backgroundColor = UIColor.lightGray
         amountTextField.layer.borderWidth = 1
         amountTextField.delegate = self
         amountTextField.addTarget(self, action: #selector(refreshCaloriesAmount), for: .editingChanged)
 
-        
+        addButton = UIButton()
         addButton.setImage(UIImage(systemName: "plus.circle"), for: .normal)
         addButton.addTarget(self, action: #selector(clickedAddButton), for: .touchUpInside)
         addButton.tintColor = .white
