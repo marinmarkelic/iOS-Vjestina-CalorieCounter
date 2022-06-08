@@ -4,7 +4,7 @@ import SnapKit
 class MealChartView: UIView{
     var mainView: UIView!
     
-    var items: NutritionItemViewModel!
+    private var items: NutritionItemViewModel!
     
     var titleLabel: UILabel!
     var itemNameLabel: UILabel!
@@ -25,6 +25,13 @@ class MealChartView: UIView{
                 
         itemNameLabel.text = items.name.capitalized
         pieChart.customizeChart(dataPoints: items.getArrayOfNamesForGrams(), values: items.getArrayOfValuesForGrams().map({Double($0)}))
+        
+        if NutritionRepository().isItemFavorite(name: items.name){
+            favoriteButton.isSelected = true
+        }
+        else{
+            favoriteButton.isSelected = false
+        }
     }
     
     required init?(coder: NSCoder) {
@@ -44,6 +51,10 @@ class MealChartView: UIView{
         itemNameLabel.textColor = elementEnteredTextColor
         
         favoriteButton = UIButton()
+        favoriteButton.tintColor = .white
+        favoriteButton.addTarget(self, action: #selector(clickedFavoriteButton), for: .touchUpInside)
+        favoriteButton.setImage(UIImage(systemName: "heart"), for: .normal)
+        favoriteButton.setImage(UIImage(systemName: "heart.fill"), for: .selected)
         
         pieChart = CustomPieChartView()
         configurePieChart()
@@ -54,6 +65,18 @@ class MealChartView: UIView{
         mainView.addSubview(itemNameLabel)
         mainView.addSubview(favoriteButton)
         mainView.addSubview(pieChart)
+    }
+    
+    @objc
+    func clickedFavoriteButton(sender: UIButton){
+        if sender.isSelected{
+            NutritionRepository().removeItemFromFavorites(items!)
+            sender.isSelected = false
+        }
+        else{
+            NutritionRepository().addItemToFavorites(items!)
+            sender.isSelected = true
+        }
     }
     
     func addConstraints(){
@@ -74,7 +97,7 @@ class MealChartView: UIView{
         
         favoriteButton.snp.makeConstraints{
             $0.top.equalTo(itemNameLabel)
-            $0.trailing.equalToSuperview()
+            $0.trailing.equalToSuperview().offset(-20)
         }
         
         pieChart.snp.makeConstraints{

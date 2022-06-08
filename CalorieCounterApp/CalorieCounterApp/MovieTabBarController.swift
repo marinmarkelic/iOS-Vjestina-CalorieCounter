@@ -6,6 +6,7 @@ class MovieTabBarController: UITabBarController, UITabBarControllerDelegate{
     var homeViewController: HomeViewController!
     var mealSearchViewController: MealSearchViewController!
     var userInfoViewController: UserInfoViewController!
+    var favoritesViewController: FavoritesViewController!
     
     init() {
         
@@ -28,12 +29,14 @@ class MovieTabBarController: UITabBarController, UITabBarControllerDelegate{
         homeViewController = HomeViewController()
         mealSearchViewController = MealSearchViewController()
         userInfoViewController = UserInfoViewController()
+        favoritesViewController = FavoritesViewController()
         
         homeViewController.tabBarItem = UITabBarItem(title: .none, image: UIImage(systemName: "house"), selectedImage: nil)
         mealSearchViewController.tabBarItem = UITabBarItem(title: .none, image: UIImage(systemName: "plus.circle.fill"), selectedImage: nil)
+        favoritesViewController.tabBarItem = UITabBarItem(title: .none, image: UIImage(systemName: "heart"), selectedImage: nil)
         userInfoViewController.tabBarItem = UITabBarItem(title: .none, image: UIImage(systemName: "slider.horizontal.3"), selectedImage: nil)
         
-        viewControllers = [homeViewController, mealSearchViewController, userInfoViewController]
+        viewControllers = [homeViewController, mealSearchViewController, favoritesViewController, userInfoViewController]
         
         if checkIfUserDefaultsEmpty(){
             selectedViewController = userInfoViewController
@@ -74,6 +77,11 @@ class MovieTabBarController: UITabBarController, UITabBarControllerDelegate{
             }
         }
         else if let vc = viewController as? UserInfoViewController {
+            DispatchQueue.main.async {
+                vc.reloadData()
+            }
+        }
+        else if let vc = viewController as? FavoritesViewController {
             DispatchQueue.main.async {
                 vc.reloadData()
             }

@@ -72,4 +72,26 @@ class NutritionRepository{
         completionHandler(result)
     }
     
+    
+    
+    func addItemToFavorites(_ item: NutritionItemViewModel){
+        databaseDataSource.addItemToFavorites(item)
+    }
+    
+    func removeItemFromFavorites(_ item: NutritionItemViewModel){
+        databaseDataSource.removeItemFromFavorites(item)
+    }
+    
+    func isItemFavorite(name: String) -> Bool{
+        return databaseDataSource.isItemInFavorites(name)
+    }
+    
+    func getAllFavorites() -> [DailyNutritionItem]{
+        guard let favorites = databaseDataSource.getAllFavorites() else{
+            return []
+        }
+        
+        return favorites
+    }
+    
 }

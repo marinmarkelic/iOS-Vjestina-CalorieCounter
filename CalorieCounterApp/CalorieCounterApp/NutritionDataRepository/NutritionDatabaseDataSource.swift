@@ -161,6 +161,135 @@ class NutritionDatabaseDataSource{
         }
     }
     
+    func fetchFavorites() -> Favorites?{
+        let fetchRequest = Favorites.fetchRequest()
+
+        do{
+            return try managedContext.fetch(fetchRequest).first
+        }catch let error as NSError{
+            print("Error \(error), Info: \(error.userInfo)")
+            return nil
+        }
+    }
+    
+    func isItemInFavorites(_ name: String) -> Bool{
+        let fetchRequest = Favorites.fetchRequest()
+                
+        do{
+            let favorites = try managedContext.fetch(fetchRequest).first
+            
+            guard let favorites = favorites else{
+                return false
+            }
+            
+            
+            let itemsSet = favorites.value(forKey: "favoriteItems") as! NSSet
+            let itemsArr = itemsSet.allObjects as NSArray
+            let items = itemsArr as! [DailyNutritionItem]
+                        
+            if items.filter({$0.name?.lowercased() == name.lowercased()}).count == 0{
+                return false
+            }
+            
+            return true
+            
+        }catch let error as NSError{
+            print("Error \(error), Info: \(error.userInfo)")
+            return false
+        }
+    }
+    
+    func addItemToFavorites(_ item: NutritionItemViewModel){
+        if isItemInFavorites(item.name) == true{
+            print("already in favorites")
+            return
+        }
+        
+        var favorites: Favorites
+        
+        if fetchFavorites() == nil{
+            let entity = NSEntityDescription.entity(forEntityName: "Favorites", in: managedContext)!
+            favorites = Favorites(entity: entity, insertInto: managedContext)
+        }
+        else{
+            favorites = fetchFavorites()!
+        }
+        
+        
+        let entity = NSEntityDescription.entity(forEntityName: "DailyNutritionItem", in: managedContext)!
+        let dailyNutritionItem = DailyNutritionItem(item: item, entity: entity, insertInto: managedContext)
+        favorites.addToFavoriteItems(dailyNutritionItem)
+        
+        do{
+            try managedContext.save()
+            print("added item")
+            return
+        }
+        catch let error as NSError{
+            print("Error \(error), Info: \(error.userInfo)")
+            return
+        }
+    }
+    
+    func removeItemFromFavorites(_ item: NutritionItemViewModel){
+        if isItemInFavorites(item.name) == false{
+            return
+        }
+        
+        var favorites: Favorites
+        
+        if fetchFavorites() == nil{
+            let entity = NSEntityDescription.entity(forEntityName: "Favorites", in: managedContext)!
+            favorites = Favorites(entity: entity, insertInto: managedContext)
+        }
+        else{
+            favorites = fetchFavorites()!
+        }
+        
+        
+        let itemsSet = favorites.value(forKey: "favoriteItems") as! NSSet
+        let itemsArr = itemsSet.allObjects as NSArray
+        let items = itemsArr as! [DailyNutritionItem]
+
+        
+        managedContext.delete(items.filter({$0.name == item.name})[0])
+        
+        do{
+            try managedContext.save()
+            print("removed item")
+            return
+        }
+        catch let error as NSError{
+            print("Error \(error), Info: \(error.userInfo)")
+            return
+        }
+    }
+    
+    func getAllFavorites() -> [DailyNutritionItem]?{
+        let fetchRequest = Favorites.fetchRequest()
+                
+        do{
+            let favorites = try managedContext.fetch(fetchRequest).first
+            
+            guard let favorites = favorites else{
+                return nil
+            }
+            
+            let itemsSet = favorites.value(forKey: "favoriteItems") as! NSSet
+            let itemsArr = itemsSet.allObjects as NSArray
+            let items = itemsArr as! [DailyNutritionItem]
+            
+            return items
+            
+        }catch let error as NSError{
+            print("Error \(error), Info: \(error.userInfo)")
+            return nil
+        }
+    }
+    
+    
+    
+    
     func del(){
         managedContext.reset()
 

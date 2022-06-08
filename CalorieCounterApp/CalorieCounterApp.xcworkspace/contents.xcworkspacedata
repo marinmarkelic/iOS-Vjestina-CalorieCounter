@@ -2,6 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:/Users/marin/Documents/iOS-Vjestina-CalorieCounter/CalorieCounterApp/CalorieCounterApp/CoreDataObjects/Favorites+CoreDataProperties.swift">
+   </FileRef>
+   <FileRef
       location = "group:CalorieCounterApp.xcodeproj">
    </FileRef>
    <FileRef
