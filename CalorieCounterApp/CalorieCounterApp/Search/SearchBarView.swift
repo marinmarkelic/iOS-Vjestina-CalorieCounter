@@ -37,13 +37,21 @@ class SearchBarView: UIView{
         textField.delegate = self
         
         deleteButton = UIButton()
-        deleteButton.setImage(UIImage(systemName: "multiply"), for: .normal)
+        deleteButton.setImage(UIImage(systemName: "multiply", withConfiguration: UIImage.SymbolConfiguration(scale: .large)), for: .normal)
         deleteButton.isHidden = true
         deleteButton.addTarget(self, action: #selector(clickedDeleteButton), for: .touchUpInside)
+        deleteButton.tintColor = .black
         
         searchButton = UIButton()
-        searchButton.setTitle("Search", for: .normal)
-        searchButton.setTitleColor(.white, for: .normal)
+//        searchButton.setTitle("Search", for: .normal)
+//        searchButton.setTitleColor(.white, for: .normal)
+        
+        searchButton.setImage(UIImage(systemName: "magnifyingglass", withConfiguration: UIImage.SymbolConfiguration(scale: .large)), for: .normal)
+        searchButton.tintColor = .white
+        
+        
+
+
         searchButton.isHidden = true
         searchButton.addTarget(self, action: #selector(clickedSearchButton), for: .touchUpInside)
         
@@ -104,6 +112,7 @@ class SearchBarView: UIView{
         
         searchButton.snp.makeConstraints{
             $0.trailing.equalToSuperview()
+            $0.width.equalTo(30)
         }
         
     }

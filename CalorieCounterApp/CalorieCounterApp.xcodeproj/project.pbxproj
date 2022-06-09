@@ -42,7 +42,7 @@
 		9C66C327284749BD006A6BF0 /* DailyNutrition+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66C326284749BD006A6BF0 /* DailyNutrition+CoreDataProperties.swift */; };
 		9C66C32D28476330006A6BF0 /* NutrientsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66C32C28476330006A6BF0 /* NutrientsView.swift */; };
 		9C66C32F28476C24006A6BF0 /* NutrientsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66C32E28476C24006A6BF0 /* NutrientsCell.swift */; };
-		9C66C331284774CB006A6BF0 /* MovieTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66C330284774CB006A6BF0 /* MovieTabBarController.swift */; };
+		9C66C331284774CB006A6BF0 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66C330284774CB006A6BF0 /* TabBarController.swift */; };
 		9C66C333284775AE006A6BF0 /* AppRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66C332284775AE006A6BF0 /* AppRouter.swift */; };
 		9C66C33C284783DF006A6BF0 /* DailyNutritionItem+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66C33A284783DF006A6BF0 /* DailyNutritionItem+CoreDataClass.swift */; };
 		9C66C33D284783DF006A6BF0 /* DailyNutritionItem+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66C33B284783DF006A6BF0 /* DailyNutritionItem+CoreDataProperties.swift */; };
@@ -106,7 +106,7 @@
 		9C66C326284749BD006A6BF0 /* DailyNutrition+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DailyNutrition+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		9C66C32C28476330006A6BF0 /* NutrientsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutrientsView.swift; sourceTree = "<group>"; };
 		9C66C32E28476C24006A6BF0 /* NutrientsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutrientsCell.swift; sourceTree = "<group>"; };
-		9C66C330284774CB006A6BF0 /* MovieTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTabBarController.swift; sourceTree = "<group>"; };
+		9C66C330284774CB006A6BF0 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		9C66C332284775AE006A6BF0 /* AppRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppRouter.swift; sourceTree = "<group>"; };
 		9C66C33A284783DF006A6BF0 /* DailyNutritionItem+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DailyNutritionItem+CoreDataClass.swift"; sourceTree = "<group>"; };
 		9C66C33B284783DF006A6BF0 /* DailyNutritionItem+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "DailyNutritionItem+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -271,7 +271,7 @@
 				9CA346C8283F870600F6329A /* Test */,
 				9CA346B4283F80E200F6329A /* AppDelegate.swift */,
 				9C66C332284775AE006A6BF0 /* AppRouter.swift */,
-				9C66C330284774CB006A6BF0 /* MovieTabBarController.swift */,
+				9C66C330284774CB006A6BF0 /* TabBarController.swift */,
 				9CA346B8283F80E200F6329A /* ViewController.swift */,
 				9CA346BD283F80E400F6329A /* Assets.xcassets */,
 				9CA346C2283F80E400F6329A /* Info.plist */,
@@ -447,7 +447,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9C66C331284774CB006A6BF0 /* MovieTabBarController.swift in Sources */,
+				9C66C331284774CB006A6BF0 /* TabBarController.swift in Sources */,
 				9C66C2FF284592D9006A6BF0 /* MealChartView.swift in Sources */,
 				9C66C2DC283FD6B8006A6BF0 /* CaloriesView.swift in Sources */,
 				9C66C30E2846AAA3006A6BF0 /* Database.xcdatamodeld in Sources */,

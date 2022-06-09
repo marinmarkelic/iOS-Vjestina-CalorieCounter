@@ -53,8 +53,8 @@ class MealChartView: UIView{
         favoriteButton = UIButton()
         favoriteButton.tintColor = .white
         favoriteButton.addTarget(self, action: #selector(clickedFavoriteButton), for: .touchUpInside)
-        favoriteButton.setImage(UIImage(systemName: "heart"), for: .normal)
-        favoriteButton.setImage(UIImage(systemName: "heart.fill"), for: .selected)
+        favoriteButton.setImage(UIImage(systemName: "heart", withConfiguration: UIImage.SymbolConfiguration(scale: .large)), for: .normal)
+        favoriteButton.setImage(UIImage(systemName: "heart.fill", withConfiguration: UIImage.SymbolConfiguration(scale: .large)), for: .selected)
         
         pieChart = CustomPieChartView()
         configurePieChart()

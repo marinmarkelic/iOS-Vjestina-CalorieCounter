@@ -11,9 +11,9 @@ class AppRouter: AppRouterProtocol{
     func setStartScreen(in window: UIWindow?){
         
         
-        let movieTabBarController = MovieTabBarController()
+        let TabBarController = TabBarController()
 
-        navigationController.pushViewController(movieTabBarController, animated: false)
+        navigationController.pushViewController(TabBarController, animated: false)
                 
         window?.rootViewController = navigationController
         window?.makeKeyAndVisible()

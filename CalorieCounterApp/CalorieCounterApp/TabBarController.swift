@@ -1,6 +1,6 @@
 import UIKit
 
-class MovieTabBarController: UITabBarController, UITabBarControllerDelegate{
+class TabBarController: UITabBarController, UITabBarControllerDelegate{
 //    var movieSelectedDelegate: MovieSelectedDelegate!
     
     var homeViewController: HomeViewController!
@@ -25,6 +25,7 @@ class MovieTabBarController: UITabBarController, UITabBarControllerDelegate{
         view.backgroundColor = UIColor(red: 11.0/256.0, green: 37.0/256.0, blue: 63.0/256.0, alpha: 1.0)
         
         tabBar.backgroundColor = .white
+        tabBar.tintColor = .black
         
         homeViewController = HomeViewController()
         mealSearchViewController = MealSearchViewController()

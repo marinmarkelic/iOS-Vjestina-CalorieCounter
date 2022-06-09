@@ -43,7 +43,7 @@ class ConsumedItemView: UIView{
         calories.text = "\(dailyNutritionItem.calories) kcal"
         
         closeButton = UIButton()
-        closeButton.setImage(UIImage(systemName: "minus.circle"), for: .normal)
+        closeButton.setImage(UIImage(systemName: "minus.circle", withConfiguration: UIImage.SymbolConfiguration(scale: .large)), for: .normal)
         closeButton.addTarget(self, action: #selector(clickedCloseButton), for: .touchUpInside)
         closeButton.tintColor = .white
 

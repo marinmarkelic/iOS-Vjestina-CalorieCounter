@@ -57,7 +57,7 @@ class MealAddView: UIView{
         gramsLabel.text = "g"
 
         addButton = UIButton()
-        addButton.setImage(UIImage(systemName: "plus.circle"), for: .normal)
+        addButton.setImage(UIImage(systemName: "plus.circle", withConfiguration: UIImage.SymbolConfiguration(scale: .large)), for: .normal)
         addButton.addTarget(self, action: #selector(clickedAddButton), for: .touchUpInside)
         addButton.tintColor = .white
 
