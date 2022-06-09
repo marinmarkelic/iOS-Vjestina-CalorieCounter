@@ -24,7 +24,8 @@ class HeightView: UIView{
         
         label = UILabel()
         label.text = "Height"
-        
+        label.textColor = .white.withAlphaComponent(0.8)
+
         collectionViewLayout = UICollectionViewFlowLayout()
         collectionViewLayout.scrollDirection = .horizontal
         
@@ -36,6 +37,7 @@ class HeightView: UIView{
         collectionView.showsHorizontalScrollIndicator = false
                 
         value = UILabel()
+        value.textColor = .white
         value.text = " "
         
         addSubview(label)

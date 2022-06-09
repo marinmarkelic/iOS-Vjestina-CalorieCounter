@@ -44,6 +44,7 @@ class ConsumedItemsView: UIView{
         label.text = "Consumed items"
         label.textColor = .lightGray
         
+        
         stackView = UIStackView()
         stackView.axis = .vertical
         stackView.alignment = .leading // 2.

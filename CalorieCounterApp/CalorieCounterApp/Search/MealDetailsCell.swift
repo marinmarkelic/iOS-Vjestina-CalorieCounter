@@ -35,7 +35,7 @@ class MealDetailsCell: UICollectionViewCell{
         
         value = UILabel()
         value.textAlignment = .center
-        value.textColor = elementTotalTextColor
+        value.textColor = elementTitleColor
         
         addSubview(name)
         addSubview(value)

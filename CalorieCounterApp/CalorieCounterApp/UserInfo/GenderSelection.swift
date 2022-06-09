@@ -30,7 +30,8 @@ class GenderSelection: UIView{
         
         label = UILabel()
         label.text = "Gender"
-        
+        label.textColor = .white.withAlphaComponent(0.8)
+
         maleButton = UIButton()
         maleButton.setTitle("Male", for: .normal)
         maleButton.addTarget(self, action: #selector(toggleButton), for: .touchUpInside)
@@ -63,7 +64,7 @@ class GenderSelection: UIView{
         switch genderValue{
         case 0:
             UIView.animate(withDuration: 0.15, delay: 0.0, options: .curveEaseInOut, animations: {
-                self.maleButton.backgroundColor = .lightGray
+                self.maleButton.backgroundColor = .lightGray.withAlphaComponent(0.6)
                 self.femaleButton.backgroundColor = .clear
             }, completion: {_ in
                 self.gender = .male
@@ -72,7 +73,7 @@ class GenderSelection: UIView{
         case 1:
             UIView.animate(withDuration: 0.15, delay: 0.0, options: .curveEaseInOut, animations: {
                 self.maleButton.backgroundColor = .clear
-                self.femaleButton.backgroundColor = .lightGray
+                self.femaleButton.backgroundColor = .lightGray.withAlphaComponent(0.6)
             }, completion: {_ in
                 self.gender = .female
             })

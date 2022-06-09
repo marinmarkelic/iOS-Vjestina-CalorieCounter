@@ -23,7 +23,8 @@ class WeightView: UIView{
         
         label = UILabel()
         label.text = "Weight"
-        
+        label.textColor = .white.withAlphaComponent(0.8)
+
         numberCollectionView = NumberCollectionView()
                 
         arrow = UIImageView(image: UIImage(systemName: "arrowtriangle.up.fill"))

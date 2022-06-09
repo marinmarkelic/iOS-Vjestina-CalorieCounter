@@ -45,7 +45,7 @@ class FavoriteCell: UIView{
         name.textColor = elementEnteredTextColor
         
         calories = UILabel()
-        calories.textColor = elementTotalTextColor
+        calories.textColor = elementTitleColor
         
         favoriteButton = UIButton()
         favoriteButton.tintColor = .white
@@ -54,7 +54,7 @@ class FavoriteCell: UIView{
         
         addButton = UIButton()
         addButton.tintColor = .white
-        addButton.setTitle("Add", for: .normal)
+        addButton.setImage(UIImage(systemName: "plus", withConfiguration: UIImage.SymbolConfiguration(scale: .large)), for: .normal)
         addButton.addTarget(self, action: #selector(clickedAddButton), for: .touchUpInside)
         
         amountTextField = UITextField()
@@ -135,17 +135,7 @@ class FavoriteCell: UIView{
         }
     }
     
-    @objc
-    func clickedExpandButton(){
-        snp.makeConstraints{
-            $0.height.equalTo(150)
-        }
-    }
-    
     func addConstraints(){
-//        snp.makeConstraints{
-//            $0.height.equalTo(100)
-//        }
         
         name.snp.makeConstraints{
             $0.leading.top.equalToSuperview().offset(20)
@@ -168,13 +158,13 @@ class FavoriteCell: UIView{
         
         favoriteButton.snp.makeConstraints{
             $0.top.equalTo(name)
-            $0.trailing.equalToSuperview().offset(-20)
+            $0.centerX.equalTo(addButton)
         }
         
         addButton.snp.makeConstraints{
             $0.top.equalTo(amountTextField)
             $0.trailing.equalToSuperview().offset(-20)
-            $0.bottom.equalToSuperview().offset(-10)
+            $0.bottom.equalToSuperview().offset(-20)
         }
     }
 }

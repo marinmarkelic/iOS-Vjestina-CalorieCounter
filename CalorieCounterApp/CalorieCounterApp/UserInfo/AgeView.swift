@@ -23,7 +23,8 @@ class AgeView: UIView{
         
         label = UILabel()
         label.text = "Age"
-        
+        label.textColor = .white.withAlphaComponent(0.8)
+
         numberCollectionView = NumberCollectionView()
                 
         arrow = UIImageView(image: UIImage(systemName: "arrowtriangle.up.fill"))

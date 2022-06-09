@@ -35,6 +35,7 @@ class FavoritesViewController: UIViewController{
         
         label = UILabel()
         label.text = "Favorites"
+        label.textColor = .lightGray
                 
         stackViewContainer = UIView()
         stackViewContainer.clipsToBounds = true

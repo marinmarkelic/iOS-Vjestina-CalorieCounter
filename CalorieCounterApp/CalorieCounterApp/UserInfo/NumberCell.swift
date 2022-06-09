@@ -10,7 +10,7 @@ class NumberCell: UICollectionViewCell{
         super.init(frame: frame)
                         
         label = UILabel()
-        label.textColor = .lightGray
+        label.textColor = .lightGray.withAlphaComponent(0.6)
         label.textAlignment = .center
         
         addSubview(label)

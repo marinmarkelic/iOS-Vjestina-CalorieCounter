@@ -115,18 +115,18 @@ class UserInfoViewController: UIViewController{
         }
         
         heightView.snp.makeConstraints{
-            $0.top.equalTo(genderSelection.snp.bottom).offset(30)
+            $0.top.equalTo(genderSelection.snp.bottom).offset(35)
             $0.leading.trailing.equalToSuperview()
 //            $0.height.equalTo(80)
         }
         
         weightView.snp.makeConstraints{
-            $0.top.equalTo(heightView.snp.bottom).offset(30)
+            $0.top.equalTo(heightView.snp.bottom).offset(35)
             $0.leading.trailing.equalToSuperview()
         }
         
         ageView.snp.makeConstraints{
-            $0.top.equalTo(weightView.snp.bottom).offset(30)
+            $0.top.equalTo(weightView.snp.bottom).offset(35)
             $0.leading.trailing.equalToSuperview()
         }
         

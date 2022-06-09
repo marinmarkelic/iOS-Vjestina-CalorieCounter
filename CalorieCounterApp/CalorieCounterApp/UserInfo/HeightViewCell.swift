@@ -7,7 +7,7 @@ class HeightViewCell: UICollectionViewCell{
     override init(frame: CGRect) {
         super.init(frame: frame)
                 
-        backgroundColor = .lightGray
+        backgroundColor = .lightGray.withAlphaComponent(0.6)
     }
     
     required init?(coder: NSCoder) {
