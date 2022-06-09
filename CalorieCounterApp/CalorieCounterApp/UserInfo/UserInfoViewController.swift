@@ -43,6 +43,9 @@ class UserInfoViewController: UIViewController{
         saveButton = UIButton()
         saveButton.setTitle("Save", for: .normal)
         saveButton.addTarget(self, action: #selector(saveData), for: .touchUpInside)
+        saveButton.layer.cornerRadius = 8
+        saveButton.backgroundColor = .lightGray.withAlphaComponent(0.6)
+
         
         view.addSubview(scrollView)
         scrollView.addSubview(contentView)
@@ -67,6 +70,13 @@ class UserInfoViewController: UIViewController{
         
         userDefaults.set(weightView.getValue(), forKey: "weight")
         userDefaults.set(ageView.getValue(), forKey: "age")
+        
+        DispatchQueue.main.async {
+            let alert = UIAlertController(title: "Saved user info", message: nil, preferredStyle: UIAlertController.Style.alert)
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
+        }
+
 
         reloadData()
     }
@@ -133,6 +143,7 @@ class UserInfoViewController: UIViewController{
         saveButton.snp.makeConstraints{
             $0.top.equalTo(ageView.snp.bottom).offset(30)
             $0.leading.equalToSuperview().offset(20)
+            $0.width.equalTo(60)
             $0.bottom.equalToSuperview()
         }
     }

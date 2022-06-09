@@ -1,7 +1,7 @@
 import UIKit
 import SnapKit
 
-class MealSearchViewController: ViewController{
+class SearchViewController: ViewController{
     let loadingSpinner = SpinnerViewController()
         
     var scrollView: UIScrollView!
@@ -104,7 +104,7 @@ class MealSearchViewController: ViewController{
     }
 }
 
-extension MealSearchViewController: SearchBarDelegate{
+extension SearchViewController: SearchBarDelegate{
     func searchedWithText(text: String) {
         showSpinnerView()
         

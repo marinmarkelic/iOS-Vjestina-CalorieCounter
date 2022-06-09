@@ -4,7 +4,7 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate{
 //    var movieSelectedDelegate: MovieSelectedDelegate!
     
     var homeViewController: HomeViewController!
-    var mealSearchViewController: MealSearchViewController!
+    var searchViewController: SearchViewController!
     var userInfoViewController: UserInfoViewController!
     var favoritesViewController: FavoritesViewController!
     
@@ -28,16 +28,16 @@ class TabBarController: UITabBarController, UITabBarControllerDelegate{
         tabBar.tintColor = .black
         
         homeViewController = HomeViewController()
-        mealSearchViewController = MealSearchViewController()
+        searchViewController = SearchViewController()
         userInfoViewController = UserInfoViewController()
         favoritesViewController = FavoritesViewController()
         
         homeViewController.tabBarItem = UITabBarItem(title: .none, image: UIImage(systemName: "house"), selectedImage: nil)
-        mealSearchViewController.tabBarItem = UITabBarItem(title: .none, image: UIImage(systemName: "plus.circle.fill"), selectedImage: nil)
+        searchViewController.tabBarItem = UITabBarItem(title: .none, image: UIImage(systemName: "plus.circle.fill"), selectedImage: nil)
         favoritesViewController.tabBarItem = UITabBarItem(title: .none, image: UIImage(systemName: "heart"), selectedImage: nil)
         userInfoViewController.tabBarItem = UITabBarItem(title: .none, image: UIImage(systemName: "slider.horizontal.3"), selectedImage: nil)
         
-        viewControllers = [homeViewController, mealSearchViewController, favoritesViewController, userInfoViewController]
+        viewControllers = [homeViewController, searchViewController, favoritesViewController, userInfoViewController]
         
         if checkIfUserDefaultsEmpty(){
             selectedViewController = userInfoViewController
