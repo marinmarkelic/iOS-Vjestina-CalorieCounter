@@ -3,7 +3,7 @@ import Foundation
 class NutritionNetworkDataSource{
         
     func loadNutritionData(itemDescription: String, completionHandler: @escaping (_ nutritionItems: NutritionItems?) -> Void){
-        guard let url = URL(string: NUTRITION_DATA_REQUEST_URL + itemDescription) else { return }
+        guard let url = URL(string: NUTRITION_DATA_REQUEST_URL + itemDescription.replacingOccurrences(of: " ", with: "+")) else { return }
         
         
         var request = URLRequest(url: url)

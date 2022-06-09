@@ -2,16 +2,17 @@ import UIKit
 import SnapKit
 
 class MealAddView: UIView{
-    var meal: NutritionItemViewModel!
+    private var meal: NutritionItemViewModel!
     
-    var mainView: UIView!
+    private var mainView: UIView!
     
-    var label: UILabel!
-    var caloriesLabel: UILabel!
+    private var label: UILabel!
+    private var caloriesLabel: UILabel!
     
-    var addButton: UIButton!
+    private var addButton: UIButton!
     
-    var amountTextField: UITextField!
+    private var amountTextField: UITextField!
+    private var gramsLabel: UILabel!
 
     init() {
         super.init(frame: .zero)
@@ -46,10 +47,14 @@ class MealAddView: UIView{
         amountTextField.textAlignment = .center
         amountTextField.layer.cornerRadius = 6
 //        amountTextField.layer.borderColor = UIColor.lightGray.cgColor
-        amountTextField.backgroundColor = UIColor.lightGray
+        amountTextField.backgroundColor = UIColor.lightGray.withAlphaComponent(0.3)
         amountTextField.layer.borderWidth = 1
         amountTextField.delegate = self
         amountTextField.addTarget(self, action: #selector(refreshCaloriesAmount), for: .editingChanged)
+        
+        gramsLabel = UILabel()
+        gramsLabel.textColor = .lightGray
+        gramsLabel.text = "g"
 
         addButton = UIButton()
         addButton.setImage(UIImage(systemName: "plus.circle"), for: .normal)
@@ -62,6 +67,7 @@ class MealAddView: UIView{
         addSubview(mainView)
         mainView.addSubview(label)
         mainView.addSubview(amountTextField)
+        mainView.addSubview(gramsLabel)
         mainView.addSubview(addButton)
         mainView.addSubview(caloriesLabel)
     }
@@ -130,7 +136,11 @@ class MealAddView: UIView{
         amountTextField.snp.makeConstraints{
             $0.leading.equalToSuperview().offset(20)
             $0.top.equalTo(label.snp.bottom).offset(10)
-            $0.width.equalTo(45)
+        }
+        
+        gramsLabel.snp.makeConstraints{
+            $0.top.equalTo(amountTextField)
+            $0.leading.equalTo(amountTextField.snp.trailing).offset(5)
         }
         
         addButton.snp.makeConstraints{

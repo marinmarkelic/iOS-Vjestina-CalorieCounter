@@ -2,11 +2,13 @@ import UIKit
 import SnapKit
 
 class FavoritesViewController: UIViewController{
-    var mainView: UIView!
+    var scrollView: UIScrollView!
+    var contentView: UIView!
     
     var label: UILabel!
-    
-    var collectionView: UICollectionView!
+        
+    var stackViewContainer: UIView!
+    var stackView: UIStackView!
     
     init() {
         super.init(nibName: nil, bundle: nil)
@@ -21,106 +23,78 @@ class FavoritesViewController: UIViewController{
     }
     
     func reloadData(){
-        collectionView.layoutIfNeeded()
-        collectionView.reloadData()
+        for view in stackView.arrangedSubviews {
+            view.removeFromSuperview()
+        }
+        addStackViewElements()
     }
     
     func buildViews(){
-        mainView = UIView()
+        scrollView = UIScrollView()
+        contentView = UIView()
         
         label = UILabel()
         label.text = "Favorites"
+                
+        stackViewContainer = UIView()
+        stackViewContainer.clipsToBounds = true
         
-        let collectionViewLayout = UICollectionViewFlowLayout()
-        collectionViewLayout.scrollDirection = .vertical
-        collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout)
-        collectionView.register(FavoriteCell.self, forCellWithReuseIdentifier: FavoriteCell.reuseIdentifier)
-        collectionView.dataSource = self
-        collectionView.delegate = self
-        collectionView.backgroundColor = .none
-        collectionView.showsVerticalScrollIndicator = false
+        stackView = UIStackView()
+        stackView.axis = .vertical
+        stackView.alignment = .leading // 2.
+        stackView.distribution = .equalSpacing // 3.
+        stackView.spacing = 10
         
-        view.addSubview(mainView)
-        mainView.addSubview(label)
-        mainView.addSubview(collectionView)
+        view.addSubview(scrollView)
+        scrollView.addSubview(contentView)
+        contentView.addSubview(label)
+        contentView.addSubview(stackViewContainer)
+        stackViewContainer.addSubview(stackView)
+    }
+    
+    func addStackViewElements(){
+        
+        for i in NutritionRepository().getAllFavorites(){
+            let view = FavoriteCell()
+            view.set(i, delegate: self)
+            stackView.addArrangedSubview(view)
+                                    
+            view.snp.makeConstraints{
+//                $0.height.equalTo(100)
+                $0.leading.trailing.equalToSuperview()
+            }
+        }
     }
     
     func addConstraints(){
-        mainView.snp.makeConstraints{
+        scrollView.snp.makeConstraints{
             $0.top.bottom.equalTo(view.safeAreaLayoutGuide)
-            $0.leading.equalToSuperview().offset(20)
-            $0.trailing.equalToSuperview().offset(-20)
+            $0.leading.equalTo(view.safeAreaLayoutGuide).offset(10)
+            $0.trailing.equalTo(view.safeAreaLayoutGuide).offset(-10)
+        }
+        
+        contentView.snp.makeConstraints{
+            $0.edges.equalToSuperview()
+            $0.width.equalToSuperview()
         }
         
         label.snp.makeConstraints{
             $0.leading.top.equalToSuperview().offset(20)
         }
         
-        collectionView.snp.makeConstraints{
+        stackViewContainer.snp.makeConstraints{
             $0.top.equalTo(label.snp.bottom).offset(10)
             $0.leading.trailing.bottom.equalToSuperview()
         }
-    }
-}
-
-extension FavoritesViewController: UICollectionViewDataSource {
-    
-    func numberOfSections(in collectionView: UICollectionView) -> Int {
-        1
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print(NutritionRepository().getAllFavorites().count)
-        return NutritionRepository().getAllFavorites().count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        guard
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FavoriteCell.reuseIdentifier, for: indexPath) as? FavoriteCell
-        else {
-            fatalError()
+        stackView.snp.makeConstraints{
+            $0.edges.equalToSuperview()
         }
-         
-        cell.set(NutritionRepository().getAllFavorites()[indexPath.row], delegate: self)
-        
-        return cell
     }
 }
-
-extension FavoritesViewController: UICollectionViewDelegateFlowLayout {
-
-    //postavlja dimenziju celija
-    func collectionView(
-        _ collectionView: UICollectionView,
-        layout collectionViewLayout: UICollectionViewLayout,
-        sizeForItemAt indexPath: IndexPath
-    ) -> CGSize {
-
-        
-        let itemWidth = collectionView.frame.width
-        let itemHeight = 100
-
-        return CGSize(width: Double(itemWidth), height: Double(itemHeight))
-        
-    }
-}
-
-extension FavoritesViewController: UICollectionViewDelegate{
-    
-}
-
 extension FavoritesViewController: FavoriteCellDelegate{
     func unfavoritedItem(_ name: String){
         print("reloading")
-        DispatchQueue.main.async {
-
-            self.collectionView.deleteItems(at: [IndexPath(row: 0, section: NutritionRepository().getAllFavorites().firstIndex(where: {
-                $0.name == name
-            }) ?? 0)])
-//            self.collectionView.layoutIfNeeded()
-
-//            self.collectionView.reloadData()
-        }
+        
     }
 }
