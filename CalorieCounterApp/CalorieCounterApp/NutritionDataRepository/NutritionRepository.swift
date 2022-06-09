@@ -86,12 +86,12 @@ class NutritionRepository{
         return databaseDataSource.isItemInFavorites(name)
     }
     
-    func getAllFavorites() -> [DailyNutritionItem]{
+    func getAllFavorites() -> [DailyNutritionItemViewModel]{
         guard let favorites = databaseDataSource.getAllFavorites() else{
             return []
         }
         
-        return favorites
+        return favorites.map({DailyNutritionItemViewModel($0)})
     }
     
 }

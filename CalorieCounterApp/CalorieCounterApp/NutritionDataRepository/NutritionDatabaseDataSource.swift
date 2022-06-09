@@ -267,7 +267,8 @@ class NutritionDatabaseDataSource{
     
     func getAllFavorites() -> [DailyNutritionItem]?{
         let fetchRequest = Favorites.fetchRequest()
-                
+        
+        
         do{
             let favorites = try managedContext.fetch(fetchRequest).first
             
@@ -279,7 +280,7 @@ class NutritionDatabaseDataSource{
             let itemsArr = itemsSet.allObjects as NSArray
             let items = itemsArr as! [DailyNutritionItem]
             
-            return items
+            return items.sorted(by: {$0.name ?? "" < $1.name ?? ""})
             
         }catch let error as NSError{
             print("Error \(error), Info: \(error.userInfo)")

@@ -13,6 +13,7 @@
 		9C628EF42850E8A60024F4BD /* FavoritesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C628EF32850E8A60024F4BD /* FavoritesViewController.swift */; };
 		9C628EFA2850FC800024F4BD /* Favorites+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C628EF92850FC800024F4BD /* Favorites+CoreDataProperties.swift */; };
 		9C628EFC2850FD2A0024F4BD /* Favorites+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C628EFB2850FD2A0024F4BD /* Favorites+CoreDataClass.swift */; };
+		9C628EFE28510CF70024F4BD /* FavoriteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C628EFD28510CF70024F4BD /* FavoriteCell.swift */; };
 		9C66C2D7283FBCB6006A6BF0 /* Other.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66C2D6283FBCB6006A6BF0 /* Other.swift */; };
 		9C66C2DA283FD3C4006A6BF0 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66C2D9283FD3C4006A6BF0 /* HomeViewController.swift */; };
 		9C66C2DC283FD6B8006A6BF0 /* CaloriesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9C66C2DB283FD6B8006A6BF0 /* CaloriesView.swift */; };
@@ -76,6 +77,7 @@
 		9C628EF32850E8A60024F4BD /* FavoritesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesViewController.swift; sourceTree = "<group>"; };
 		9C628EF92850FC800024F4BD /* Favorites+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "Favorites+CoreDataProperties.swift"; path = "/Users/marin/Documents/iOS-Vjestina-CalorieCounter/CalorieCounterApp/CalorieCounterApp/CoreDataObjects/Favorites+CoreDataProperties.swift"; sourceTree = "<absolute>"; };
 		9C628EFB2850FD2A0024F4BD /* Favorites+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "Favorites+CoreDataClass.swift"; path = "CalorieCounterApp/CoreDataObjects/Favorites+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		9C628EFD28510CF70024F4BD /* FavoriteCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteCell.swift; sourceTree = "<group>"; };
 		9C66C2D6283FBCB6006A6BF0 /* Other.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Other.swift; sourceTree = "<group>"; };
 		9C66C2D9283FD3C4006A6BF0 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		9C66C2DB283FD6B8006A6BF0 /* CaloriesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CaloriesView.swift; sourceTree = "<group>"; };
@@ -165,6 +167,7 @@
 			isa = PBXGroup;
 			children = (
 				9C628EF32850E8A60024F4BD /* FavoritesViewController.swift */,
+				9C628EFD28510CF70024F4BD /* FavoriteCell.swift */,
 			);
 			path = Favorites;
 			sourceTree = "<group>";
@@ -459,6 +462,7 @@
 				9CA346B9283F80E200F6329A /* ViewController.swift in Sources */,
 				9C66C2EF2843C01C006A6BF0 /* Codables.swift in Sources */,
 				9C66C3092846812E006A6BF0 /* MealAddView.swift in Sources */,
+				9C628EFE28510CF70024F4BD /* FavoriteCell.swift in Sources */,
 				9C628EFA2850FC800024F4BD /* Favorites+CoreDataProperties.swift in Sources */,
 				9CA346DC283FADBF00F6329A /* BMR.swift in Sources */,
 				9C628EEB284EAA260024F4BD /* NumberCollectionView.swift in Sources */,

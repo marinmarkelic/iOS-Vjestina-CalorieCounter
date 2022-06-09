@@ -33,6 +33,21 @@ struct NutritionItemViewModel: Codable{
         cholesterol_mg = nutritionItem.cholesterol_mg
     }
     
+    init(_ item: DailyNutritionItemViewModel) {
+        name = item.name
+        calories = item.calories
+        sugar_g = item.sugar_g
+        fiber_g = item.fiber_g
+        serving_size_g = item.serving_size_g
+        fat_saturated_g = item.fat_saturated_g
+        protein_g = item.protein_g
+        carbohydrates_total_g = item.carbohydrates_total_g
+        fat_total_g = item.fat_total_g
+        sodium_mg = item.sodium_mg
+        potassium_mg = item.potassium_mg
+        cholesterol_mg = item.cholesterol_mg
+    }
+    
     mutating func changeServingSize(servingSize: Float){
         if servingSize == 0{
             print("Tried to change serving size to 0")

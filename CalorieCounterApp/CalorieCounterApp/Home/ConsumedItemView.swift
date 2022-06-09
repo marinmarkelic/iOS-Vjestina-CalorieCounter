@@ -54,9 +54,7 @@ class ConsumedItemView: UIView{
     }
     
     @objc
-    func clickedCloseButton(){
-        print("click")
-        
+    func clickedCloseButton(){        
         UIView.animate(withDuration: 0.3, animations: {
             self.isHidden = true
         }, completion: {_ in

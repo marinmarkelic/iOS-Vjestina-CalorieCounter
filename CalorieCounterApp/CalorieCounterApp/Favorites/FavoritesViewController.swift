@@ -21,6 +21,7 @@ class FavoritesViewController: UIViewController{
     }
     
     func reloadData(){
+        collectionView.layoutIfNeeded()
         collectionView.reloadData()
     }
     
@@ -33,7 +34,7 @@ class FavoritesViewController: UIViewController{
         let collectionViewLayout = UICollectionViewFlowLayout()
         collectionViewLayout.scrollDirection = .vertical
         collectionView = UICollectionView(frame: .zero, collectionViewLayout: collectionViewLayout)
-        collectionView.register(HeightViewCell.self, forCellWithReuseIdentifier: HeightViewCell.reuseIdentifier)
+        collectionView.register(FavoriteCell.self, forCellWithReuseIdentifier: FavoriteCell.reuseIdentifier)
         collectionView.dataSource = self
         collectionView.delegate = self
         collectionView.backgroundColor = .none
@@ -69,17 +70,19 @@ extension FavoritesViewController: UICollectionViewDataSource {
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        NutritionRepository().getAllFavorites().count
+        print(NutritionRepository().getAllFavorites().count)
+        return NutritionRepository().getAllFavorites().count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         guard
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: HeightViewCell.reuseIdentifier, for: indexPath) as? HeightViewCell
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: FavoriteCell.reuseIdentifier, for: indexPath) as? FavoriteCell
         else {
             fatalError()
         }
          
+        cell.set(NutritionRepository().getAllFavorites()[indexPath.row], delegate: self)
         
         return cell
     }
@@ -94,13 +97,30 @@ extension FavoritesViewController: UICollectionViewDelegateFlowLayout {
         sizeForItemAt indexPath: IndexPath
     ) -> CGSize {
 
-        let itemWidth = 10
-        let itemHeight = 10
+        
+        let itemWidth = collectionView.frame.width
+        let itemHeight = 100
 
-        return CGSize(width: itemWidth, height: itemHeight)    }
+        return CGSize(width: Double(itemWidth), height: Double(itemHeight))
+        
+    }
 }
 
 extension FavoritesViewController: UICollectionViewDelegate{
     
 }
 
+extension FavoritesViewController: FavoriteCellDelegate{
+    func unfavoritedItem(_ name: String){
+        print("reloading")
+        DispatchQueue.main.async {
+
+            self.collectionView.deleteItems(at: [IndexPath(row: 0, section: NutritionRepository().getAllFavorites().firstIndex(where: {
+                $0.name == name
+            }) ?? 0)])
+//            self.collectionView.layoutIfNeeded()
+
+//            self.collectionView.reloadData()
+        }
+    }
+}
